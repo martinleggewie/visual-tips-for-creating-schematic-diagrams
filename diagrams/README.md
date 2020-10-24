@@ -30,18 +30,26 @@ Of course, the more pixels there are in the bitmap, the more memory the bitmap n
 
 Now, draw.io also needs to decide how fine or coarse the raster should be.
 When I create a diagram in draw.io, I choose the sizes of boxes, texts and so in such a way that still quite some information is visible when using a 100% zoom factor for viewing the diagram.
-But when you then look at the PNG file, you'll see that the rasterized bitmap is small and coerse, and therefore it is difficult to read the diagram's information.
+For example, a typical box has a size of 160x40 pt.
 
-Example diagram with standard raster:
+But when you then look at the PNG file, you'll see that the rasterized bitmap is small and coarse, and therefore it is difficult to read the diagram's information.
+
+Below there is an example diagram with standard raster.
+You will notice that the straight lines and the text are jagged because of the small raster.
 
 ![draw.io raster example, 100%](drawio_raster-example_100percent.png)
 
-To avoid this, you need to tell draw.io to use a finer raster.
+To avoid jagged diagram elements, you need to tell draw.io to use a finer raster.
 To do this, open the file properties dialog and change the zoom value from 100% to 400%.
-After that change, the amount of pixels will be quadrupled in both dimensions each.
-But as the information in the diagram still consumes the same space, this results in a resolution which is 4 times higher, and this means that when you look at the bitmap in a typical zoom setting, you won't see any pixels.
+After that change, the overall resolution of the raster will be quadrupled.
+There will be 4 times as many pixels in both x and y dimension, resulting in a bitmap which has 16 times more pixels compared to the standard raster.
+
+Since the objects in the diagram still consume the same space relative to each other, having a 4 times higher resolution significantly reduces the "jaggedness".
+When you look at the bitmap in a typical zoom setting, you won't see any pixels.
 Hence, the readability will be much better compared to the standard raster setting.
 
-The same example diagram, now with a 4 times bigger raster factor
+To visualize this, please look at the diagram below. It shows the very same information as the first image, but now with a 4 times bigger raster factor.
 
 ![draw.io raster example, 400%](drawio_raster-example_400percent.png)
+
+At a normal zoom level, I guess you cannot see any pixels anymore.
