@@ -2,6 +2,14 @@
 An article which describes my personal view on how we can improve the readability of diagrams.
 
 
+## About text
+
+### Choose font size inside boxes to be big enough compared to the size of the box
+
+![text font size small vs big](diagrams/text_fontsize_small-vs-big.png)
+
+
+
 ## First, some hand-drawn images
 
 This section shows all the concept art I have created to prepare writing this article.
