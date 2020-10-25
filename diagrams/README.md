@@ -36,9 +36,8 @@ But when you then look at the PNG file, you'll see that the rasterized bitmap is
 
 Below there is an example diagram with standard raster.
 Depending on the rendering engine your application uses to display the diagram on the screen, straight lines and the text are either jagged (for example, when using the MacOS finder preview), or blurred (for example, when using Safari).
-.
 
-![draw.io raster example, 100%](drawio_raster-example_100percent.png)
+<img src="drawio_raster-example_100percent.png" width="800">
 
 To avoid blurred or jagged diagram elements, you need to tell draw.io to use a finer raster.
 To do this, **open the file properties dialog** and **change the zoom value from 100% to 400%**.
@@ -51,7 +50,7 @@ Hence, the readability will be much better compared to the standard raster setti
 
 To visualize this, please look at the diagram below. It shows the very same information as the first image, but now with a 4 times bigger raster factor.
 
-![draw.io raster example, 400%](drawio_raster-example_400percent.png)
+<img src="drawio_raster-example_400percent.png" width="800">
 
 At a normal zoom level, I guess you cannot see any pixels anymore.
 To do a fair comparison, zoom in or out in such a way that both example diagrams appear in the same size before you compare them with each other.
