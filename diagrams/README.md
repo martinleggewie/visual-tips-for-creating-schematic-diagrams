@@ -32,15 +32,16 @@ Now, draw.io also needs to decide how fine or coarse the raster should be.
 When I create a diagram in draw.io, I choose the sizes of boxes, texts and so in such a way that still quite some information is visible when using a 100% zoom factor for viewing the diagram.
 For example, a typical box has a size of 160x40 pt.
 
-But when you then look at the PNG file, you'll see that the rasterized bitmap is small and coarse, and therefore it is difficult to read the diagram's information.
+But when you then look at the PNG file, you'll see that the rasterized bitmap is small and coarse, and therefore it can be difficult to read the diagram's information.
 
 Below there is an example diagram with standard raster.
-You will notice that the straight lines and the text are jagged because of the small raster.
+Depending on the rendering engine your application uses to display the diagram on the screen, straight lines and the text are either jagged (for example, when using the MacOS finder preview), or blurred (for example, when using Safari).
+.
 
 ![draw.io raster example, 100%](drawio_raster-example_100percent.png)
 
-To avoid jagged diagram elements, you need to tell draw.io to use a finer raster.
-To do this, open the file properties dialog and change the zoom value from 100% to 400%.
+To avoid blurred or jagged diagram elements, you need to tell draw.io to use a finer raster.
+To do this, **open the file properties dialog** and **change the zoom value from 100% to 400%**.
 After that change, the overall resolution of the raster will be quadrupled.
 There will be 4 times as many pixels in both x and y dimension, resulting in a bitmap which has 16 times more pixels compared to the standard raster.
 
@@ -53,3 +54,10 @@ To visualize this, please look at the diagram below. It shows the very same info
 ![draw.io raster example, 400%](drawio_raster-example_400percent.png)
 
 At a normal zoom level, I guess you cannot see any pixels anymore.
+To do a fair comparison, zoom in or out in such a way that both example diagrams appear in the same size before you compare them with each other.
+Then you will see that the second diagram contains way more visual detail and therefore no blur or jaggedness, whereas the first still is blurred or jagged.
+
+Maybe you think that I am too picky about such details :-)
+But caring about such details is the whole point of this article.
+Actually, this is the overall statement I want to make:
+All these details applied together can make it significantly easier for the reader to get the messages you want to convey, even when most of these details might only be "just tiny things", when being looked at in an isolated way.
