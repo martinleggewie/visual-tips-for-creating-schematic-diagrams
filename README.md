@@ -1,5 +1,11 @@
 # Visual tips for system diagrams
-An article describing visual tips which make it easier for the audience to understand information contained in system diagrams.
+Martin Leggewie, 2020-11-04
+
+## Abstract
+
+This article describes a collection of visual tips for creating so-called system diagrams.
+As the goal of such diagrams is to convey information to the audience and be the basis for discussions, it is a good advice to keep the diagrams as simple as possible.
+If you want/need to create such diagrams yourself, then these tips can support you in reaching this "as simple as possible" goal.
 
 
 ## Introduction
@@ -7,10 +13,17 @@ An article describing visual tips which make it easier for the audience to under
 Before we start with the actual tips, let us first define what a system diagram is and what it is good for.
 
 
-### Definition: System diagram
+### Definition and goal: System diagram
 
-A **system diagram** is a visual communication tool to explain how different systems are connected to each other, and which users interact with them.
-Typically, the visual language of such diagrams consists of
+A **system diagram** is a visual representation of a given real-world system landscape.
+In such a landscape a collection of systems and contained system components are connected to each other in order to achieve a specific functionality.
+The goal of a system landscape is to make this functionality available to their users.
+
+The **goal of a system diagram** is to explain how the structure of a system landscape looks like, and how the users interact with it.
+A system diagram is a visual communication tool, not more, not less.
+Its sole purpose is to explain the system landscape, and be the basis for dicussions.
+
+Typically, the **visual language of system diagrams** consists of
 
 * stick figures,
 * boxes,
@@ -44,41 +57,94 @@ But this time the creator applied a different visual style to the diagram elemen
 
 ![example system diagram - distracting and even hurting the eye](diagrams/example-systemdiagram_distracting.png)
 
-In my point-of-view this diagram is much more difficult to read, and it is more difficult to understand what all the elements are, and how they are related to each other.
-The reason for this is a suboptimal usage of colors, fonts, shapes, and sizes and arrangement of elements in relation to each other.
+In my point-of-view this diagram is much more difficult to read.
+It is difficult to understand what all the elements are, and how they are related to each other.
+The reason for this IMHO is a suboptimal usage of colors, fonts, shapes, and sizes and arrangement of elements in relation to each other.
 
 Maybe you think that it was me who has created this second diagram in this difficult-to-read way on purpose, just to make a point, and that I exaggerated quite a bit.
 The answer is: Yes, and no.
-Yes, I created the diagram intentionally like this, to make my point.
-But no, I did not exaggerate :-)
+
+* Yes, I created the diagram intentionally like this, to make my point.
+* No, I did not exaggerate.
+
 If you don't believe me, please do an Internet search for the term "system diagram", and check the images your preferred search engine returns.
 Some of them will be in a clean style, maybe similar to the first example diagram shown above.
 But also there will be quite some images which are visually closer to the second example diagram.
 
 Please don't misunderstand me:
-**I do not want to finger-point** on others who have created such diagrams.
+I do not want to finger-point on others who have created such diagrams.
 Most of us including me are not trained designers who had some education about the use of such visual elements.
 Also, in my opinion, the visual tools out there not always provide a default configuration which would help us with creating simple designs.
 
+But I do think that if we put effort in the creation process to come to simple diagrams which strip unneeded clutter, the audience will thank us because it will be easier for them to get the information.
+After all, these diagrams are not meant to be pieces of art.
+Instead their sole purpuse is to convey information and to trigger people to talk about the diagram's topic.
 
 ## What is in for you?
 
-If you agree with me that the second diagram shown in the previous section is somehow suboptimal, and if you also agree that the creator should and could have done better, then we are on the same page.
+If you agree with me that the second diagram is somehow suboptimal, and if you also agree that the creator should and could have done better, then we are on the same page.
 
-I believe in the following rule:
+I strongly believe in the following rule:
 
-> *It is better if one person (that is, me, the creator) puts enough effort in the creation than if many persons (the audience) have to all put the effort in understanding the creation.*
+> *It is better if one person (the creator) invests effort in the creation than if many persons (the audience) have to all invest the effort in understanding the creation.*
 
 To follow this rule, I have experimented a lot with visual tools which can be used to create system diagrams over the past years.
 From those experiment results I distilled some general tips and tricks I now (try to) apply when I need to create such diagrams.
-These tips helped me creating diagrams which I liked because of their clean structure and simplicity.
+These tips helped me creating diagrams with a clean and consistent structure.
 
 Now, if you invest your precious time in reading this text, you will find the list of all these tips.
-Each tip has the goal to make it easier for the audience to understand the information the system diagram wants to convey.
-
-I am aware that these tips will most likely not change the world, but maybe you can take-away something which supports you the next time you have to create such diagrams yourselves.
+I am aware that these tips will most likely not change the world, but maybe you can take-away some ideas which support you the next time you have to create such diagrams yourselves.
 
 Let's get started.
+
+
+## General guidelines
+
+The foundation of all the tips to come is a list of general rules.
+These rules are the **mission statement** for the visual representation of a system landscape.
+
+
+### Keep visual attributes as simple as possible
+
+* No color gradients. TODO: Add example what happens if the same gradient is applied to boxes of different sizes.
+* No 3d effects. TODO: Add example comparison of a system diagram with several boxes and arrows. Show that the 3d effect breaks down if you attach the connection arrow to the front.
+* No drop shadows. TODO: Add example comparison.
+
+
+### Add a legend to the diagram
+
+Always add a legend to your diagram.
+A legend explains the meaning of all visual elements and attributes used in the diagram.
+
+---
+**Example:** The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway).
+
+![example system diagram - reduced to the max, now with legend](diagrams/example-systemdiagram_reduced-to-the-max_with-legend.png)
+
+---
+
+Without this legend, the audience has no other choice than to interprete the meaning of the elements of your visual language.
+And if the audience needs to interprete, then this will surely cause misunderstandings.
+
+Even if you use a well-defined visual language like UML for your diagrams, add a legend to your diagram.
+Maybe you know all the elements of - for example - UML deployment diagram style (see https://en.wikipedia.org/wiki/Deployment_diagram), but you cannot assume that the audience knows this as well.
+Adding a legend becomes even more important if you use your own visual language (like I do all the time).
+If you don't define this language, the audience cannot know what a box with rounded corners means and how it is different from the boxes with sharp corners, or what is the difference between yellow and green fill style.
+
+A very typical confusion arises when the diagram contains directed connections.
+What does the direction stand for?
+Do the arrow heads show the direction in which data flows, or do they show which systems call which other systems?
+We cannot know until there is a legend which clearly defines this.
+
+
+### Apply high-contrast coloring style
+
+TODO: Describe that high contrast makes it easier for the audience to recognize the boundaries of the visual elements.
+Best contrast is black and white, but typically you need color as an attribute to represent differences in one dimension.
+Therefore you need more than just white. Use dark colors (dark: colors with a low luminosity value) for boundaries, use bright colors (bright: colors with a high luminosity value) as a background or fill color.
+
+TODO: Add a comparison example, showing the same scenario in a high-contrast and a low-contrast situation.
+
 
 ---
 CONTINUE HERE
