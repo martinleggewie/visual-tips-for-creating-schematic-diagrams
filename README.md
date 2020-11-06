@@ -15,11 +15,11 @@ Before we start with the actual tips, let us first define what a system diagram 
 
 ### Definition and goal: System diagram
 
-A **system diagram** is a visual representation of a given real-world system landscape.
+A **system diagram** is a visual representation of a given real-world system landscape, typically located in the IT world.
 In such a landscape a collection of systems and contained system components are connected to each other in order to achieve a specific functionality.
-The goal of a system landscape is to make this functionality available to their users.
+The goal of a system landscape is to make this functionality available to its users.
 
-The **goal of a system diagram** is to explain how the structure of a system landscape looks like, and how the users interact with it.
+Now, the **goal of a system diagram** is to explain how the structure of a system landscape looks like, and how the users interact with it.
 A system diagram is a visual communication tool, not more, not less.
 Its sole purpose is to explain the system landscape, and be the basis for dicussions.
 
@@ -30,13 +30,24 @@ Typically, the **visual language of system diagrams** consists of
 * cylinders,
 * clouds,
 * arrows which connect shapes with each other, and
-* text which are place either inside or next to the shapes.
+* texts which are place either inside or next to the shapes.
 
 In addition, certain types of shapes (typically the boxes) can be placed inside other shapes which allows a recursive structure.
 
 
-### Example system diagram in two different visual styles
+### Why should you care about how system diagrams look like?
 
+Maybe you think that it is more important to create system diagrams correctly, compared to how they look like.
+To follow this "A over B" catch phrase style used in the https://agilemanifesto.org and https://www.halfarsedagilemanifesto.org:
+
+"Correct and useful content over simple and easy-to-understand visuals"
+
+I absolutely agree.
+
+Of course we first need to make sure that the our diagrams contain the correct information, specifically created for the intended type of audience.
+But then, once we have the correct structure defined, we should also make sure that the audience does not need to suffer too much when trying to understand the information.
+
+I would like to demonstrate what I mean with a concrete example.
 Below you see an example of a system diagram:
 
 ![example system diagram - reduced to the max](diagrams/example-systemdiagram_reduced-to-the-max.png)
