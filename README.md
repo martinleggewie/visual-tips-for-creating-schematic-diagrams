@@ -117,9 +117,14 @@ Always add a legend to your diagram.
 A legend explains the meaning of all visual elements and attributes used in the diagram.
 
 ---
-**Example:** The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway).
+_**Example:** The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway)._
 
 ![example system diagram - reduced to the max, now with legend](diagrams/example-systemdiagram_reduced-to-the-max_with-legend.png)
+
+_You might notice another small change in the diagram compared to the first version shown in the introduction section:
+The connection arrow from "User" to "System A" has a "uses" annotation.
+I could have put this type of relation "User uses system" also as an additional entry in the legend, next to the "System calls system" annotation.
+But as this "User uses system" relation type only exists once in the diagram, I find it easier for the reader if the type of relation (i.e., "uses") appears directly next to the connection arrow._
 
 ---
 
