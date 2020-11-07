@@ -147,7 +147,7 @@ As long as you do not plan to create a three-dimensional world in which the thir
 In my opinion, you will only stumble upon this additional dimension of complexity for no good.
 
 **Example:** 
-The two example diagrams on the right side above both apply an isometric 3D perspective.
+In the example below, the two diagrams on the right side both apply an isometric 3D perspective.
 
 ![2D vs 3D](diagrams/general-guideline_no-3d-elements.png)
 
@@ -210,8 +210,8 @@ What does the direction stand for?
 Do the arrow heads show the direction in which data flows, or do they show which systems call which other systems?
 We cannot know until there is a legend which clearly defines this.
 
-
-**Example:** The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway).
+**Example:**
+The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway).
 
 ![example system diagram - reduced to the max, now with legend](diagrams/example-systemdiagram_reduced-to-the-max_with-legend.png)
 
@@ -223,12 +223,33 @@ But as this "User uses system" relation type only exists once in the diagram, I 
 
 ### Guideline 3: Apply high-contrast coloring style
 
-TODO: Describe that high contrast makes it easier for the audience to recognize the boundaries of the visual elements.
-Best contrast is black and white, but typically you need color as an attribute to represent differences in one dimension.
-Therefore you need more than just white. Use dark colors (dark: colors with a low luminosity value) for boundaries, use bright colors (bright: colors with a high luminosity value) as a background or fill color.
+If you apply "enough" contrast to your diagrams, it becomes easier for the audience to tell all the contained elements apart.
 
-TODO: Add a comparison example, showing the same scenario in a high-contrast and a low-contrast situation.
+In the visual domain, the term "contrast" defines the difference in either luminosity and/or color when comparing visual elements.
+For a given visual element (say, a rectangle) luminosity defines how much light the element emits/reflects whereas color defines the wavelength of the light the element emits or reflects.
 
+To achieve the highest possible **contrast with luminosity**, you need to put a black (= the complete absence of light) element next to a white (= all the light there is, of all wavelengths) element.
+
+To achieve the highest possible **contrast with color**, you need to put elements with their corresponding complementary colors next to each other.
+
+**Example:**
+The diagram below, left side, shows one way of achieving high contrast:
+Use black as the color for borders and arrows, as well as for text in these boxes, and use bright colors to fill the boxes.
+
+![high vs. low contrast](diagrams/general-guideline_high-contrast.png)
+
+On the right side you see the very same system landscape, but this time the brightness of all four different fill colors is significantly decreased while at the same time the color for borders and arrows is increased.
+
+This results in a lower contrast because
+
+* the black text is now closer to the luminosity value of the fill colors, and 
+* the grey color of the borders and arrows is now closer to the white background color.
+
+In principle we should always use white as the fill color of boxes when we have black as the color for the borders around the boxes.
+But
+
+* we might need different fill colors in the same diagram because fill color is one major visual aspect we can use to express different values for the same type of system attribute, and
+* we also have white as the background color. If all the boxes are white, as well as the background, then again it might become a little bit difficult to separate everything.
 
 ---
 CONTINUE HERE
