@@ -48,14 +48,14 @@ Of course we first need to make sure that the our diagrams contain the correct i
 But then, once we have the correct structure defined, we should also make sure that the audience does not need to suffer too much when trying to understand the information.
 
 I would like to demonstrate what I mean with a concrete example.
-Below you see an example of a system diagram:
+Below you see a system diagram:
 
 ![example system diagram - reduced to the max](diagrams/example-systemdiagram_reduced-to-the-max.png)
 
 I don't know about you, but I think that this diagram is already quite readable, and the audience should be able to understand
 * with which system the user interacts,
 * which systems store something in the database,
-* which system are somehow connected to which other systems,
+* which systems are somehow connected to which other systems,
 * and what are the boundaries of the different elements.
 
 Admittedly, this diagram is not very complicated because it contains only one user, three systems, one database, and in total six connection arrows.
@@ -111,18 +111,43 @@ Let's get started.
 
 ## General guidelines
 
-The foundation of all the tips to come is a list of general rules.
-These rules are the **mission statement** for the visual representation of a system landscape.
+The foundation of all the tips to come are some general rules.
+These rules are the **mission statement** for the style of visual representation for system landscapes.
+Each of the following subsections explain one such rule.
 
 
-### Keep visual attributes as simple as possible
+### Guideline 1: Use simple visual attributes, avoid the "bling-bling"
 
-* No color gradients. TODO: Add example what happens if the same gradient is applied to boxes of different sizes.
-* No 3d effects. TODO: Add example comparison of a system diagram with several boxes and arrows. Show that the 3d effect breaks down if you attach the connection arrow to the front.
-* No drop shadows. TODO: Add example comparison.
+Only use simple visual attributes like solid fill colors and 2d elements, and avoid any unneccessary other visual expression ways like drop shadows, pseudo 3d elements, and color gradients just "because you can".
+Any type of visual aspect you use in your diagram should be connected to one type of information.
+If you use a visual aspect just because your graphics software offers it, then resist the temptation and don't use it the visual aspect does not add any information to your diagram.
+
+In the following I would like to show you three visual aspects I normally strongly recommend not to use.
 
 
-### Add a legend to the diagram
+#### Do not use color gradients (just because you find them visually appealing)
+
+![solid vs gradient color fill](diagrams/general-guideline_no-color-gradients.png)
+
+Using a color gradient just because it "looks cool" is not very helpful.
+It irritates the audience because they think that this gradient has some special meaning which it does not.
+And the gradient effect breaks down completely when you apply it to visual elements of different sizes.
+In the diagram above the "Huge Other System" box is significantly taller than the other two boxes.
+When we apply the same gradient effect to all three boxes, the taller box provides a different visual impression than the other two boxes because the gradient fill has a longer path and can hence give more space to the different colors.
+As a result, the boxes give a different color fill impression although there is no different meaning connected to the color.
+
+
+#### Do not use 3d effects
+
+TODO: Add example comparison of a system diagram with several boxes and arrows. Show that the 3d effect breaks down if you attach the connection arrow to the front.
+
+
+#### Do not use drop shadows
+
+TODO: Add example comparison.
+
+
+### Guideline 2: Add a legend to the diagram
 
 Always add a legend to your diagram.
 A legend explains the meaning of all visual elements and attributes used in the diagram.
@@ -153,7 +178,7 @@ Do the arrow heads show the direction in which data flows, or do they show which
 We cannot know until there is a legend which clearly defines this.
 
 
-### Apply high-contrast coloring style
+### Guideline 3: Apply high-contrast coloring style
 
 TODO: Describe that high contrast makes it easier for the audience to recognize the boundaries of the visual elements.
 Best contrast is black and white, but typically you need color as an attribute to represent differences in one dimension.
