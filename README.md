@@ -131,11 +131,14 @@ Using a color gradient just because it "looks cool" is not very helpful.
 It irritates the audience because they think that this gradient has some special meaning which it does not.
 And the gradient effect breaks down completely when you apply it to visual elements of different sizes.
 
+**Example:**
+The diagram below compares the solid fill color with a gradient fill color.
+Besides the fact that the gradient in general makes it harder to read the text, it surely breaks down in the "Huge Other System" box because it is significantly taller than the other two boxes.
+
 ![solid vs gradient color fill](diagrams/general-guideline_no-color-gradients.png)
 
-In the diagram above the "Huge Other System" box is significantly taller than the other two boxes.
-When we apply the same gradient effect to all three boxes, the taller box provides a different visual impression than the other two boxes because the gradient fill has a longer path and can hence give more space to the different colors.
-As a result, the boxes give a different color fill impression although there is no different meaning connected to the color.
+When we apply the same gradient effect to all three boxes, the taller box provides a different visual impression than the other two boxes because the gradient fill has a longer path and can hence give more space to all the intermediate colors.
+As a result, the taller box provides a different impression compared to the two smaller ones although all three boxes actually should just have the very same fill color.
 
 
 #### Do not use 3D elements
