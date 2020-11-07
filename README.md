@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2020-11-04
+Martin Leggewie, 2020-11-07
 
 ## Abstract
 
@@ -118,33 +118,69 @@ Each of the following subsections explain one such rule.
 
 ### Guideline 1: Use simple visual attributes, avoid the "bling-bling"
 
-Only use simple visual attributes like solid fill colors and 2d elements, and avoid any unneccessary other visual expression ways like drop shadows, pseudo 3d elements, and color gradients just "because you can".
+Only use simple visual attributes like solid fill colors and 2D elements, and avoid any unneccessary other visual expression ways like drop shadows, pseudo 3D elements, and color gradients just "because you can".
 Any type of visual aspect you use in your diagram should be connected to one type of information.
 If you use a visual aspect just because your graphics software offers it, then resist the temptation and don't use it the visual aspect does not add any information to your diagram.
 
-In the following I would like to show you three visual aspects I normally strongly recommend not to use.
+In the following I would like to show you some visual aspects I normally strongly recommend not to use.
 
 
 #### Do not use color gradients (just because you find them visually appealing)
 
-![solid vs gradient color fill](diagrams/general-guideline_no-color-gradients.png)
-
 Using a color gradient just because it "looks cool" is not very helpful.
 It irritates the audience because they think that this gradient has some special meaning which it does not.
 And the gradient effect breaks down completely when you apply it to visual elements of different sizes.
+
+![solid vs gradient color fill](diagrams/general-guideline_no-color-gradients.png)
+
 In the diagram above the "Huge Other System" box is significantly taller than the other two boxes.
 When we apply the same gradient effect to all three boxes, the taller box provides a different visual impression than the other two boxes because the gradient fill has a longer path and can hence give more space to the different colors.
 As a result, the boxes give a different color fill impression although there is no different meaning connected to the color.
 
 
-#### Do not use 3d effects
+#### Do not use 3D elements
 
-TODO: Add example comparison of a system diagram with several boxes and arrows. Show that the 3d effect breaks down if you attach the connection arrow to the front.
+As long as you do not plan to create a three-dimensional world in which the third dimension really has some specific meaning, stay away from any 3D perspective.
+In my opinion, you will only stumble upon this additional dimension of complexity for no good.
+
+![2D vs 3D](diagrams/general-guideline_no-3d-elements.png)
+
+The two example diagrams on the right side above both apply an isometric 3D perspective, and this shows the problems which arise because of not using 2D.
+
+* In the upper right diagram the drawing tool's connection feature is used.
+As the tool does not support real 3D, it applies the connectors in a wrong inconsistent way.
+
+* In the lower right diagram I have manually corrected the inconsistencies, but now some arrow heads (visually correctly!) vanish.
+
+Either way, you will only have some extra work to do with no real benefit as the third dimension does not convey any additional information.
 
 
 #### Do not use drop shadows
 
-TODO: Add example comparison.
+Using drop shadows is a little bit like using 3D for the diagrams:
+It might look "more pleasing" or maybe even "more professional" (some say this is very important if you work in an enterprise environment).
+But drop shadows do not provide any additional information; instead, they just add visual clutter to the scenery.
+Therefore we should not use drop shadows at all.
+
+![without and with drop shadows](diagrams/general-guideline_no-drop-shadows.png)
+
+The example diagram shows directly what the problem with the drop shadows are:
+Especially for the connection arrows it can look like as if there is another arrow directly below or next to the main ones.
+This can be confusing, and even if not, the audience need some extra effort to realize that there are no additional arrows, and that these drop shadows do not have any meaning whatsoever.
+
+
+#### Do not use the "sketch" visual style
+
+Some graphical tools seem to "know" that they are typically used in concept phases, and that the created diagrams represent something which is not yet implemented, but still in draft.
+To represent this draft status, these tools provide some "sketch" or "concept" or "draft" or "scribble" mode.
+In such a mode, the diagram should look like as if a human being has manually drawn everything by hand.
+The problem with such sketchy-looking diagrams is that it is just more difficult for the audience to understand what the diagrams want to say.
+Therefore, just don't use these sketch modes.
+
+![normal vs. sketch mode](diagrams/general-guideline_no-sketch-mode.png)
+
+The example above shows the difference when comparing the normal style with the sketch style.
+While I have to admit that the sketch style looks appealing, it adds visual clutter which is not neccessary, and therefore I would strongly vote for the normal style.
 
 
 ### Guideline 2: Add a legend to the diagram
