@@ -125,7 +125,7 @@ If you use a visual aspect just because your graphics software offers it, then r
 In the following I would like to show you some visual aspects I normally strongly recommend not to use.
 
 
-#### Do not use color gradients (just because you find them visually appealing)
+#### Do not use color gradients
 
 Using a color gradient just because it "looks cool" is not very helpful.
 It irritates the audience because they think that this gradient has some special meaning which it does not.
@@ -143,9 +143,12 @@ As a result, the boxes give a different color fill impression although there is 
 As long as you do not plan to create a three-dimensional world in which the third dimension really has some specific meaning, stay away from any 3D perspective.
 In my opinion, you will only stumble upon this additional dimension of complexity for no good.
 
+**Example:** 
+The two example diagrams on the right side above both apply an isometric 3D perspective.
+
 ![2D vs 3D](diagrams/general-guideline_no-3d-elements.png)
 
-The two example diagrams on the right side above both apply an isometric 3D perspective, and this shows the problems which arise because of not using 2D.
+This shows the problems which arise because of not using 2D.
 
 * In the upper right diagram the drawing tool's connection feature is used.
 As the tool does not support real 3D, it applies the connectors in a wrong inconsistent way.
@@ -162,9 +165,11 @@ It might look "more pleasing" or maybe even "more professional" (some say this i
 But drop shadows do not provide any additional information; instead, they just add visual clutter to the scenery.
 Therefore we should not use drop shadows at all.
 
+**Example:** 
+The following example diagram shows directly what the problems with the drop shadows are:
+
 ![without and with drop shadows](diagrams/general-guideline_no-drop-shadows.png)
 
-The example diagram shows directly what the problem with the drop shadows are:
 Especially for the connection arrows it can look like as if there is another arrow directly below or next to the main ones.
 This can be confusing, and even if not, the audience need some extra effort to realize that there are no additional arrows, and that these drop shadows do not have any meaning whatsoever.
 
@@ -177,9 +182,11 @@ In such a mode, the diagram should look like as if a human being has manually dr
 The problem with such sketchy-looking diagrams is that it is just more difficult for the audience to understand what the diagrams want to say.
 Therefore, just don't use these sketch modes.
 
+**Example:** 
+The example below shows the difference when comparing the normal style with the sketch style.
+
 ![normal vs. sketch mode](diagrams/general-guideline_no-sketch-mode.png)
 
-The example above shows the difference when comparing the normal style with the sketch style.
 While I have to admit that the sketch style looks appealing, it adds visual clutter which is not neccessary, and therefore I would strongly vote for the normal style.
 
 
@@ -187,19 +194,6 @@ While I have to admit that the sketch style looks appealing, it adds visual clut
 
 Always add a legend to your diagram.
 A legend explains the meaning of all visual elements and attributes used in the diagram.
-
----
-_**Example:** The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway)._
-
-![example system diagram - reduced to the max, now with legend](diagrams/example-systemdiagram_reduced-to-the-max_with-legend.png)
-
-_You might notice another small change in the diagram compared to the first version shown in the introduction section:
-The connection arrow from "User" to "System A" has a "uses" annotation.
-I could have put this type of relation "User uses system" also as an additional entry in the legend, next to the "System calls system" annotation.
-But as this "User uses system" relation type only exists once in the diagram, I find it easier for the reader if the type of relation (i.e., "uses") appears directly next to the connection arrow._
-
----
-
 Without this legend, the audience has no other choice than to interprete the meaning of the elements of your visual language.
 And if the audience needs to interprete, then this will surely cause misunderstandings.
 
@@ -212,6 +206,16 @@ A very typical confusion arises when the diagram contains directed connections.
 What does the direction stand for?
 Do the arrow heads show the direction in which data flows, or do they show which systems call which other systems?
 We cannot know until there is a legend which clearly defines this.
+
+
+**Example:** The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway).
+
+![example system diagram - reduced to the max, now with legend](diagrams/example-systemdiagram_reduced-to-the-max_with-legend.png)
+
+You might notice another small change in the diagram compared to the first version shown in the introduction section:
+The connection arrow from "User" to "System A" has a "uses" annotation.
+I could have put this type of relation "User uses system" also as an additional entry in the legend, next to the "System calls system" annotation.
+But as this "User uses system" relation type only exists once in the diagram, I find it easier for the reader if the type of relation (i.e., "uses") appears directly next to the connection arrow.
 
 
 ### Guideline 3: Apply high-contrast coloring style
