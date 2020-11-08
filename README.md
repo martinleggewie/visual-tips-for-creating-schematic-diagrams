@@ -334,7 +334,7 @@ TODO
 
 ## Layout
 
-TODO. At the moment I only have one general rule for layoiut. Let's see then if it makes sense to have a separate chapter when there is only one subsection.
+TODO. At the moment I only have one general rule for layout. Let's see then if it makes sense to have a separate chapter when there is only one subsection.
 
 ### Apply a "hidden grid" when positioning shapes
 
@@ -451,8 +451,11 @@ TODO
 ![slice 13](images/slice13.png)
 
 
----
-CONTINUE HERE
+## Closing words
 
----
-
+TODO.
+* Thank the audience for spending their time.
+* Hope that it has been useful for the audience.
+* Invite audience to provide feedback.
+* Add contact information.
+* Recommend my favorite graphical application for creating system diagrams (which is draw.io). Make clear that I am not related to draw.io in any way. This is not advertisement.
