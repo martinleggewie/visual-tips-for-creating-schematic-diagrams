@@ -91,6 +91,7 @@ But I do think that if we put effort in the creation process to come to simple d
 After all, these diagrams are not meant to be pieces of art.
 Instead their sole purpuse is to convey information and to trigger people to talk about the diagram's topic.
 
+
 ## What is in for you?
 
 If you agree with me that the second diagram is somehow suboptimal, and if you also agree that the creator should and could have done better, then we are on the same page.
@@ -106,7 +107,11 @@ These tips helped me creating diagrams with a clean and consistent structure.
 Now, if you invest your precious time in reading this text, you will find the list of all these tips.
 I am aware that these tips will most likely not change the world, but maybe you can take-away some ideas which support you the next time you have to create such diagrams yourselves.
 
-Let's get started.
+
+### Mind-map of the things to come
+
+TODO: Create a proper and readable version of the following mind-map
+![slice 14](images/slice14.png)
 
 
 ## General guidelines
@@ -262,47 +267,192 @@ But
 * we might need different fill colors in the same diagram because fill color is one major visual aspect we can use to express different values for the same type of system attribute, and
 * we also have white as the background color. If all the boxes are white, as well as the background, then again it might become a little bit difficult to separate everything.
 
+
+## Canvas
+
+TODO
+
+### Set-up a square-like grid
+
+TODO. Example: 10x10, unit is in fact meaningless if you use a vector based graphics program.
+
+### Enable snap to grid
+
+TODO.
+
+### Use infinite space, disable any page size
+
+TODO
+![slice 17](images/slice17.png)
+
+
+## Text
+
+TODO
+
+### Use sans-serif font face
+
+TODO
+![slice 04](images/slice4.png)
+
+
+### Select font size in relation to canvas grid size.
+
+TODO
+![text font size small vs big](diagrams/text_fontsize_small-vs-big.png)
+![slice 05](images/slice5.png)
+
+### Select font style according to the type of texts
+
+TODO
+
+#### Use bold font style for all important names
+
+TODO
+![slice 02](images/slice2.png)
+
+
+#### Use normal font style for all companion text
+
+TODO
+
+#### Do not use italics font style
+
+TODO
+![slice 03](images/slice3.png)
+
+
+## Lines
+
+TODO. At the moment I only have one general rule for lines. Let's see then if it makes sense to have a separate chapter when there is only one subsection.
+
+### Choose line thickness
+
+TODO
+![slice 18](images/slice18.png)
+
+
+## Layout
+
+TODO. At the moment I only have one general rule for layoiut. Let's see then if it makes sense to have a separate chapter when there is only one subsection.
+
+### Apply a "hidden grid" when positioning shapes
+
+TODO
+
+
+## Shapes
+
+TODO
+
+### Use same size for all boxes representing the same element style
+
+TODO
+![slice 06](images/slice6.png)
+
+### Use size for inner-most elements to be even multiples of canvas grid size
+
+TODO
+![slice 22](images/slice22.png)
+
+
+### Use well-defined height-width ratio for inner-most elements
+
+TODO. 1:2, 1:3, 1:4, 2:3, 3:4, 3:5
+![slice 15](images/slice15.png)
+![slice 16](images/slice16.png)
+
+### Watch out when using rounded corners for boxes
+
+TODO
+![slice 01](images/slice1.png)
+
+
+## Arrows
+
+TODO
+
+### Choose arrow heads to be big enough compared to diagram size
+
+TODO
+
+### Define exactly what the arrow directions mean
+
+TODO. Call dependency? Data flow direction?
+
+### Avoid arrow heads in both directions.
+
+TODO. To me having arrow heads in both directions have a strong smell of being lazy or not precise enough.
+
+### Attach a bigger dot at the arrow start
+
+TODO. This is especially useful if you cannot avoid that arrows cross each other because then the audience can make a difference between a real connection or just the restriction of the 2D projection.
+![slice 07](images/slice7.png)
+
+## Color
+
+TODO
+
+### Choose color so that audience's attention will be guided to the most important diagram elements first
+
+TODO
+![slice 21](images/slice21.png)
+
+### Color styles
+
+TODO
+![slice 19](images/slice19.png)
+
+#### Black border, normal fill
+
+TODO
+
+#### Black border, inverted fill
+
+TODO
+
+#### No border, inverted fill
+
+TODO
+
+
+## Layout of shapes and their connection arrows
+
+TODO
+
+### Flow either top-to-down or left-to-right
+
+TODO
+![slice 11](images/slice11.png)
+![slice 12](images/slice12.png)
+
+### Try to avoid crossing connection arrows
+
+TODO
+
+### Never ever allow overlapping connection arrows
+
+TODO
+![slice 10](images/slice10.png)
+
+### Don't start or end different connection arrows at the same point
+
+TODO
+![slice 09](images/slice9.png)
+
+### Connection routing path styles
+
+TODO
+![slice 08](images/slice8.png)
+
+### Choose gap between boxes
+
+TODO
+![slice 13](images/slice13.png)
+
+
 ---
 CONTINUE HERE
 
 ---
 
-## About text
-
-### Choose font size inside boxes to be big enough compared to the size of the box
-
-![text font size small vs big](diagrams/text_fontsize_small-vs-big.png)
-
-
-
-## First, some hand-drawn images
-
-This section shows all the concept art I have created to prepare writing this article.
-Using a hand-drawn approach helped me because a) it actually makes fun to draw something, and b) forces me to use a different skill set than just typing on a computer keyboard. 
-
-![slice 14](images/slice14.png)
-
-![slice 01](images/slice1.png)
-![slice 02](images/slice2.png)
-![slice 03](images/slice3.png)
-![slice 04](images/slice4.png)
-![slice 05](images/slice5.png)
-![slice 06](images/slice6.png)
-![slice 07](images/slice7.png)
-![slice 08](images/slice8.png)
-![slice 09](images/slice9.png)
-![slice 10](images/slice10.png)
-![slice 11](images/slice11.png)
-![slice 12](images/slice12.png)
-![slice 13](images/slice13.png)
-![slice 15](images/slice15.png)
-![slice 16](images/slice16.png)
-![slice 17](images/slice17.png)
-![slice 18](images/slice18.png)
-![slice 19](images/slice19.png)
-![slice 20](images/slice20.png)
-![slice 21](images/slice21.png)
-![slice 22](images/slice22.png)
-![slice 23](images/slice23.png)
-![slice 24](images/slice24.png)
-![slice 25](images/slice25.png)
