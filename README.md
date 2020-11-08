@@ -120,7 +120,8 @@ Each of the following subsections explain one such rule.
 
 Only use simple visual attributes like solid fill colors and 2D elements, and avoid any unneccessary other visual expression ways like drop shadows, pseudo 3D elements, and color gradients just "because you can".
 Any type of visual aspect you use in your diagram should be connected to one type of information.
-If you use a visual aspect just because your graphics software offers it, then resist the temptation and don't use it the visual aspect does not add any information to your diagram.
+If you use a visual aspect just because your graphics software offers it, then resist the temptation.
+Don't use it if it does not add any information to your diagram.
 
 In the following I would like to show you some visual aspects I normally strongly recommend not to use.
 
@@ -128,17 +129,27 @@ In the following I would like to show you some visual aspects I normally strongl
 #### Do not use color gradients
 
 Using a color gradient just because it "looks cool" is not very helpful.
-It irritates the audience because they think that this gradient has some special meaning which it does not.
-And the gradient effect breaks down completely when you apply it to visual elements of different sizes.
+It irritates the audience because they think that this gradient has some special meaning which in fact it does not.
+And the gradient effect typically breaks down when you apply it to visual elements of different sizes.
 
 **Example:**
-The diagram below compares the solid fill color with a gradient fill color.
-Besides the fact that the gradient in general makes it harder to read the text, it surely breaks down in the "Huge Other System" box because it is significantly taller than the other two boxes.
+The diagram below compares two system diagrams using solid and gradient fill colors for the boxes, respectively.
+The gradient from top to bottom starts with yellow and ends with blue.
+The fill algorithm of the graphical application I have used to create this diagram calculates all the colors in between in a linear transition.
 
 ![solid vs gradient color fill](diagrams/general-guideline_no-color-gradients.png)
 
-When we apply the same gradient effect to all three boxes, the taller box provides a different visual impression than the other two boxes because the gradient fill has a longer path and can hence give more space to all the intermediate colors.
-As a result, the taller box provides a different impression compared to the two smaller ones although all three boxes actually should just have the very same fill color.
+The visuals of the diagram on the right side introduce some problems:
+
+* The gradient fill makes it harder to read the text. Of course, you could apply a brighter color as blue, but then there would not much be left from the gradient. A gradient from a bright color to another bright color does not create much color transition.
+
+* The gradient fill color looks different when comparing the taller box ("Huge Other System") with the other two.
+As the taller box offers more vertical space to be filled, the audience can see more of all the intermediate colors.
+In the example, a (quite muddy) green-ish color appears in the vertical middle.
+The other two smaller boxes do not show this green-ish color because there is just not enough room available.
+All in all this creates a different color appearance for the taller box although all three boxes should get the same color.
+
+* Maybe just a minor thing: At least in my perception the intermediate colors look somewhat polluted, as if there was some dust cover which has not been removed by the cleaning personnel.
 
 
 #### Do not use 3D elements
