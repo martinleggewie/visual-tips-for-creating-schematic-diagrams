@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2020-11-07
+Martin Leggewie, 2020-11-09
 
 ## Abstract
 
@@ -22,6 +22,11 @@ The goal of a system landscape is to make this functionality available to its us
 Now, the **goal of a system diagram** is to explain how the structure of a system landscape looks like, and how the users interact with it.
 A system diagram is a visual communication tool, not more, not less.
 Its sole purpose is to explain the system landscape, and be the basis for dicussions.
+
+A system diagram could look like something shown below:
+
+![example system diagram - horizontal layout](diagrams/example-systemdiagram_horizontal-layout.png)
+
 
 Typically, the **visual language of system diagrams** consists of
 
@@ -48,7 +53,7 @@ Of course we first need to make sure that the our diagrams contain the correct i
 But then, once we have the correct structure defined, we should also make sure that the audience does not need to suffer too much when trying to understand the information.
 
 I would like to demonstrate what I mean with a concrete example.
-Below you see a system diagram:
+Below you see an example system diagram:
 
 ![example system diagram - reduced to the max](diagrams/example-systemdiagram_reduced-to-the-max.png)
 
