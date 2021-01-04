@@ -1,10 +1,11 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2020-11-09
+Martin Leggewie, 2021-01-04
 
 ## Abstract
 
 This article describes a collection of visual tips for creating so-called system diagrams.
-As the goal of such diagrams is to convey information to the audience and be the basis for discussions, it is a good advice to keep the diagrams as simple as possible.
+The goal of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
+Therefore, it is a good advice to keep these diagrams as simple as possible.
 If you want/need to create such diagrams yourself, then these tips can support you in reaching this "as simple as possible" goal.
 
 
@@ -21,7 +22,7 @@ The goal of a system landscape is to make this functionality available to its us
 
 Now, the **goal of a system diagram** is to explain how the structure of a system landscape looks like, and how the users interact with it.
 A system diagram is a visual communication tool, not more, not less.
-Its sole purpose is to explain the system landscape, and be the basis for dicussions.
+Its sole purpose is to explain the system landscape, and be the basis for discussions.
 
 A system diagram could look like something shown below:
 
@@ -43,13 +44,13 @@ In addition, certain types of shapes (typically the boxes) can be placed inside 
 ### Why should you care about how system diagrams look like?
 
 Maybe you think that it is more important to create system diagrams correctly, compared to how they look like.
-To follow this "A over B" catch phrase style used in the https://agilemanifesto.org and https://www.halfarsedagilemanifesto.org:
+To follow this "A over B" catchphrase style used in the <https://agilemanifesto.org> and <https://www.halfarsedagilemanifesto.org>:
 
 "Correct and useful content over simple and easy-to-understand visuals"
 
 I absolutely agree.
 
-Of course we first need to make sure that the our diagrams contain the correct information, specifically created for the intended type of audience.
+Of course, we first need to make sure that our diagrams contain the correct information, specifically created for the intended type of audience.
 But then, once we have the correct structure defined, we should also make sure that the audience does not need to suffer too much when trying to understand the information.
 
 I would like to demonstrate what I mean with a concrete example.
@@ -60,8 +61,8 @@ Below you see an example system diagram:
 I don't know about you, but I think that this diagram is already quite readable, and the audience should be able to understand
 * with which system the user interacts,
 * which systems store something in the database,
-* which systems are somehow connected to which other systems,
-* and what are the boundaries of the different elements.
+* which systems are somehow connected to which other systems, and
+* what are the boundaries of the different elements.
 
 Admittedly, this diagram is not very complicated because it contains only one user, three systems, one database, and in total six connection arrows.
 With such a simple example, it should not be so important to put much emphasis on the visual style.
@@ -85,7 +86,7 @@ The answer is: Yes, and no.
 
 If you don't believe me, please do an Internet search for the term "system diagram", and check the images your preferred search engine returns.
 Some of them will be in a clean style, maybe similar to the first example diagram shown above.
-But also there will be quite some images which are visually closer to the second example diagram.
+But there also will be quite some images which are visually closer to the second example diagram.
 
 Please don't misunderstand me:
 I do not want to finger-point on others who have created such diagrams.
@@ -94,7 +95,7 @@ Also, in my opinion, the visual tools out there not always provide a default con
 
 But I do think that if we put effort in the creation process to come to simple diagrams which strip unneeded clutter, the audience will thank us because it will be easier for them to get the information.
 After all, these diagrams are not meant to be pieces of art.
-Instead their sole purpuse is to convey information and to trigger people to talk about the diagram's topic.
+Instead, their sole purpose is to convey information and to trigger people to talk about the diagram's topic.
 
 
 ## What is in for you?
@@ -107,7 +108,7 @@ I strongly believe in the following rule:
 
 To follow this rule, I have experimented a lot with visual tools which can be used to create system diagrams over the past years.
 From those experiment results I distilled some general tips and tricks I now (try to) apply when I need to create such diagrams.
-These tips helped me creating diagrams with a clean and consistent structure.
+These tips helped me to create diagrams with a clean and consistent structure.
 
 Now, if you invest your precious time in reading this text, you will find the list of all these tips.
 I am aware that these tips will most likely not change the world, but maybe you can take-away some ideas which support you the next time you have to create such diagrams yourselves.
@@ -128,7 +129,7 @@ Each of the following subsections explain one such rule.
 
 ### Guideline 1: Use simple visual attributes, avoid the "bling-bling"
 
-Only use simple visual attributes like solid fill colors and 2D elements, and avoid any unneccessary other visual expression ways like drop shadows, pseudo 3D elements, and color gradients just "because you can".
+Only use simple visual attributes like solid fill colors and 2D elements, and avoid any unnecessary other visual expression ways like drop shadows, pseudo 3D elements, and color gradients just "because you can".
 Any type of visual aspect you use in your diagram should be connected to one type of information.
 If you use a visual aspect just because your graphics software offers it, then resist the temptation.
 Don't use it if it does not add any information to your diagram.
@@ -167,7 +168,7 @@ All in all this creates a different color appearance for the taller box although
 As long as you do not plan to create a three-dimensional world in which the third dimension really has some specific meaning, stay away from any 3D perspective.
 In my opinion, you will only stumble upon this additional dimension of complexity for no good.
 
-**Example:** 
+**Example:**
 In the example below, the two diagrams on the right side both apply an isometric 3D perspective.
 
 ![2D vs 3D](diagrams/general-guideline_no-3d-elements.png)
@@ -184,10 +185,9 @@ Either way, you will only have some extra work to do with no real benefit as the
 
 #### Do not use drop shadows
 
-Using drop shadows is a little bit like using 3D for the diagrams:
+Using drop shadows is a bit like using 3D for the diagrams:
 It might look "more pleasing" or maybe even "more professional" (some say this is very important if you work in an enterprise environment).
-But drop shadows do not provide any additional information; instead, they just add visual clutter to the scenery.
-Therefore we should not use drop shadows at all.
+But drop shadows do not provide any additional information; instead, they just add visual clutter to the scenery, and hence we should not use them at all.
 
 **Example:** 
 The following example diagram shows directly what the problems with the drop shadows are:
@@ -200,7 +200,7 @@ This can be confusing, and even if not, the audience need some extra effort to r
 
 #### Do not use the "sketch" visual style
 
-Some graphical tools seem to "know" that they are typically used in concept phases, and that the created diagrams represent something which is not yet implemented, but still in draft.
+Some graphical tools seem to "know" that they are typically used in concept phases, and that the created diagrams represent something which is not yet implemented, but still is in draft.
 To represent this draft status, these tools provide some "sketch" or "concept" or "draft" or "scribble" mode.
 In such a mode, the diagram should look like as if a human being has manually drawn everything by hand.
 The problem with such sketchy-looking diagrams is that it is just more difficult for the audience to understand what the diagrams want to say.
@@ -211,18 +211,18 @@ The example below shows the difference when comparing the normal style with the 
 
 ![normal vs. sketch mode](diagrams/general-guideline_no-sketch-mode.png)
 
-While I have to admit that the sketch style looks appealing, it adds visual clutter which is not neccessary, and therefore I would strongly vote for the normal style.
+While I have to admit that the sketch style looks appealing, it adds visual clutter which is not necessary, and therefore I strongly vote for using the normal style.
 
 
 ### Guideline 2: Add a legend to the diagram
 
 Always add a legend to your diagram.
 A legend explains the meaning of all visual elements and attributes used in the diagram.
-Without this legend, the audience has no other choice than to interprete the meaning of the elements of your visual language.
-And if the audience needs to interprete, then this will surely cause misunderstandings.
+Without this legend, the audience has no other choice than to interpret the meaning of the elements of your visual language.
+And if the audience needs to interpret, then this will cause misunderstandings.
 
 Even if you use a well-defined visual language like UML for your diagrams, add a legend to your diagram.
-Maybe you know all the elements of - for example - UML deployment diagram style (see https://en.wikipedia.org/wiki/Deployment_diagram), but you cannot assume that the audience knows this as well.
+Maybe you know all the elements of - for example - UML deployment diagram style (see <https://en.wikipedia.org/wiki/Deployment_diagram>), but you cannot assume that the audience knows this as well.
 Adding a legend becomes even more important if you use your own visual language (like I do all the time).
 If you don't define this language, the audience cannot know what a box with rounded corners means and how it is different from the boxes with sharp corners, or what is the difference between yellow and green fill style.
 
@@ -266,11 +266,11 @@ This results in a lower contrast because
 * the black text is now closer to the luminosity value of the fill colors, and 
 * the grey color of the borders and arrows is now closer to the white background color.
 
-In principle we should always use white as the fill color of boxes when we have black as the color for the borders around the boxes.
-But
+In principle, we should always use white as the fill color of boxes when we have black as the color for the borders around the boxes.
+But:
 
-* we might need different fill colors in the same diagram because fill color is one major visual aspect we can use to express different values for the same type of system attribute, and
-* we also have white as the background color. If all the boxes are white, as well as the background, then again it might become a little bit difficult to separate everything.
+* We might need different fill colors in the same diagram because fill color is one major visual aspect we can use to express different values for the same type of system attribute, and
+* we also have white as the background color. If all the boxes are white, as well as the background, then again it might become a bit difficult to separate everything.
 
 
 ## Canvas
