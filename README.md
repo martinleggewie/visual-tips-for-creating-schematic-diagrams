@@ -1,44 +1,44 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2021-01-04
+Martin Leggewie, 2021-01-05
 
 ## Abstract
 
-This article describes a collection of visual tips for creating so-called system diagrams.
-The goal of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
+In this article I describe a collection of visual tips for creating so-called system diagrams.
+The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
 Therefore, it is a good advice to keep these diagrams as simple as possible.
 If you want/need to create such diagrams yourself, then these tips can support you in reaching this "as simple as possible" goal.
 
 
 ## Introduction
 
-Before we start with the actual tips, let us first define what a system diagram is and what it is good for.
+Before I start with the actual tips, let me first define what a system diagram is and what it is good for.
 
 
 ### Definition and goal: System diagram
 
 A **system diagram** is a visual representation of a given real-world system landscape, typically located in the IT world.
-In such a landscape a collection of systems and contained system components are connected to each other in order to achieve a specific functionality.
-The goal of a system landscape is to make this functionality available to its users.
+In such a landscape a collection of systems and contained system components are connected to each other in order to make a specific functionality available to its users.
 
-Now, the **goal of a system diagram** is to explain how the structure of a system landscape looks like, and how the users interact with it.
-A system diagram is a visual communication tool, not more, not less.
-Its sole purpose is to explain the system landscape, and be the basis for discussions.
+The **goal of a system diagram** is to explain how the structure of a system landscape looks like, and how the users interact with it.
+Once the audience has understood this structure, the system diagram can be the  basis for discussions.
 
-A system diagram could look like something shown below:
+A system diagram could look like this:
 
 ![example system diagram - horizontal layout](diagrams/example-systemdiagram_horizontal-layout.png)
 
 
-Typically, the **visual language of system diagrams** consists of
+Typically, the **visual language of system diagrams** consists of the following elements:
 
-* stick figures,
-* boxes,
-* cylinders,
-* clouds,
-* arrows which connect shapes with each other, and
-* texts which are place either inside or next to the shapes.
+| Element | used to represent |
+|---|---|
+| stick figure | users |
+| box | system, system component, environment |
+| cylinder | data storage system |
+| cloud | environment which is huge and/or unknown |
+| arrow | call dependency, data flow |
+| text | name of a visual element |
 
-In addition, certain types of shapes (typically the boxes) can be placed inside other shapes which allows a recursive structure.
+In addition, certain types of shapes (typically the boxes) can be placed inside other shapes to represent that one element contains or consists of other elements.
 
 
 ### Why should you care about how system diagrams look like?
@@ -76,7 +76,7 @@ But this time the creator applied a different visual style to the diagram elemen
 
 In my point-of-view this diagram is much more difficult to read.
 It is difficult to understand what all the elements are, and how they are related to each other.
-The reason for this IMHO is a suboptimal usage of colors, fonts, shapes, and sizes and arrangement of elements in relation to each other.
+The reason for this is a suboptimal usage of colors, fonts, shapes, and sizes and arrangement of elements in relation to each other.
 
 Maybe you think that it was me who has created this second diagram in this difficult-to-read way on purpose, just to make a point, and that I exaggerated quite a bit.
 The answer is: Yes, and no.
@@ -88,12 +88,7 @@ If you don't believe me, please do an Internet search for the term "system diagr
 Some of them will be in a clean style, maybe similar to the first example diagram shown above.
 But there also will be quite some images which are visually closer to the second example diagram.
 
-Please don't misunderstand me:
-I do not want to finger-point on others who have created such diagrams.
-Most of us including me are not trained designers who had some education about the use of such visual elements.
-Also, in my opinion, the visual tools out there not always provide a default configuration which would help us with creating simple designs.
-
-But I do think that if we put effort in the creation process to come to simple diagrams which strip unneeded clutter, the audience will thank us because it will be easier for them to get the information.
+I do think that if we put effort in the creation process to come to simple diagrams which strip unneeded clutter, the audience will thank us because it will be easier for them to get the information.
 After all, these diagrams are not meant to be pieces of art.
 Instead, their sole purpose is to convey information and to trigger people to talk about the diagram's topic.
 
@@ -102,21 +97,17 @@ Instead, their sole purpose is to convey information and to trigger people to ta
 
 If you agree with me that the second diagram is somehow suboptimal, and if you also agree that the creator should and could have done better, then we are on the same page.
 
-I strongly believe in the following rule:
-
-> *It is better if one person (the creator) invests effort in the creation than if many persons (the audience) have to all invest the effort in understanding the creation.*
-
-To follow this rule, I have experimented a lot with visual tools which can be used to create system diagrams over the past years.
-From those experiment results I distilled some general tips and tricks I now (try to) apply when I need to create such diagrams.
-These tips helped me to create diagrams with a clean and consistent structure.
+Over the past years I have experimented a lot with visual tools which can be used to create system diagrams.
+From those experiment results I distilled general tips and tricks I now apply when I need to create such diagrams.
+These tips help me to create diagrams with a clean and consistent structure.
 
 Now, if you invest your precious time in reading this text, you will find the list of all these tips.
-I am aware that these tips will most likely not change the world, but maybe you can take-away some ideas which support you the next time you have to create such diagrams yourselves.
+Maybe you can take-away some ideas which support you the next time you have to create such diagrams yourself.
 
 
-### Mind-map of the things to come
+## Mind-map of the things to come
 
-TODO: Create a proper and readable version of the following mind-map
+_TODO: Create a proper and readable version of the following mind-map_
 ![slice 14](images/slice14.png)
 
 
@@ -129,9 +120,10 @@ Each of the following subsections explain one such rule.
 
 ### Guideline 1: Use simple visual attributes, avoid the "bling-bling"
 
-Only use simple visual attributes like solid fill colors and 2D elements, and avoid any unnecessary other visual expression ways like drop shadows, pseudo 3D elements, and color gradients just "because you can".
+Only use simple visual attributes like solid fill colors and 2D elements.
+Avoid any other visual expression ways like drop shadows, pseudo 3D elements, and color gradients just "because you can".
 Any type of visual aspect you use in your diagram should be connected to one type of information.
-If you use a visual aspect just because your graphics software offers it, then resist the temptation.
+If you use a visual aspect just because your graphics software offers it, then resist the temptation:
 Don't use it if it does not add any information to your diagram.
 
 In the following I would like to show you some visual aspects I normally strongly recommend not to use.
