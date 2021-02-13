@@ -251,6 +251,17 @@ To achieve the highest possible **contrast with luminosity**, you need to put a 
 
 To achieve the highest possible **contrast with color**, you need to put elements with their corresponding complementary colors next to each other.
 
+This means in principle:
+You should always use white as the fill color when you choose black as the border color (or the other way around).
+In whatever way, putting black and white next to each other results in the highest possible contrast at all, and so we should only use this, right?
+
+Well.
+The world is not only black and white:
+
+* You might need different fill colors in the same diagram because fill color is one major visual aspect you can use to express different values for the same type of system attribute.
+* You typically have white also as the background color.
+Now, if all the boxes are white, as well as the background, then again it might become a bit difficult to separate everything, even when there is black as a border color.
+
 **Example:**
 The diagram below, left side, shows one way of achieving high contrast:
 Use black as the color for borders and arrows, as well as for text in these boxes, and use bright colors to fill the boxes.
@@ -259,16 +270,10 @@ Use black as the color for borders and arrows, as well as for text in these boxe
 
 On the right side you see the very same system landscape, but this time the brightness of all four different fill colors is significantly decreased while at the same time the color for borders and arrows is increased.
 
-This results in a lower contrast because
+This results in a lower contrast and thus bad readability because
 
 * the black text is now closer to the luminosity value of the fill colors, and 
 * the grey color of the borders and arrows is now closer to the white background color.
-
-In principle, we should always use white as the fill color of boxes when we have black as the color for the borders around the boxes.
-But:
-
-* We might need different fill colors in the same diagram because fill color is one major visual aspect we can use to express different values for the same type of system attribute, and
-* we also have white as the background color. If all the boxes are white, as well as the background, then again it might become a bit difficult to separate everything.
 
 
 ## Canvas
