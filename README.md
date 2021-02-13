@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2021-01-05
+Martin Leggewie, 2021-02-13
 
 ## Abstract
 
@@ -206,10 +206,10 @@ The example below shows the difference when comparing the normal style with the 
 While I have to admit that the sketch style looks appealing, it adds visual clutter which is not necessary, and therefore I strongly vote for using the normal style.
 
 
-### Guideline 2: Add a legend to the diagram
+### Guideline 2: Define the meaning of all visual elements in a legend
 
-Always add a legend to your diagram.
 A legend explains the meaning of all visual elements and attributes used in the diagram.
+Well, always add a legend to your diagram.
 Without this legend, the audience has no other choice than to interpret the meaning of the elements of your visual language.
 And if the audience needs to interpret, then this will cause misunderstandings.
 
@@ -218,8 +218,14 @@ Maybe you know all the elements of - for example - UML deployment diagram style 
 Adding a legend becomes even more important if you use your own visual language (like I do all the time).
 If you don't define this language, the audience cannot know what a box with rounded corners means and how it is different from the boxes with sharp corners, or what is the difference between yellow and green fill style.
 
-A very typical confusion arises when the diagram contains directed connections.
-What does the direction stand for?
+It does not stop with the boxes.
+Maybe even more important than the boxes are the connection lines, with or without arrow heads.
+Such a connection line expresses that there is some kind of association between the entities it connects to each other.
+And if you find arrow heads at the end of a line, then obviously the association has a direction of some kind.
+
+But: What does the connection line and its direction stand for?
+What kind of information is transferred via the connection?
+Is this connection relevant during design, deploy, or runtime?
 Do the arrow heads show the direction in which data flows, or do they show which systems call which other systems?
 We cannot know until there is a legend which clearly defines this.
 
