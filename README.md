@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2021-02-13
+Martin Leggewie, 2021-02-14
 
 ## Abstract
 
@@ -278,7 +278,183 @@ This results in a lower contrast and thus bad readability because
 
 ## Canvas
 
-TODO
+The canvas is the virtual piece of paper or whiteboard on which you draw your system diagram.
+
+Typically, when you create a new file in your drawing application, there is a blank page with a white background color visible which awaits your creativity output.
+This blank page is the canvas.
+
+Even if the canvas naturally stays in the background all the time, there are some tips here as well which support you later when creating the actual diagram.
+
+
+### Canvas guideline 1: Use infinite space
+
+If possible, configure the canvas to have no boundaries which otherwise would restrict the available drawing estate.
+The canvas should provide endless space to you so that you can place new visual elements anywhere you want during your design process.
+
+If you have to define a canvas size upfront like 210x297 mm (DIN-A4) or 1920x1080 pixels (FullHD), this might tempt you to violate any layout principles which you normally would follow just "because the available space is out".
+At the beginning of your creative process the drawing tool you use should not enforce any boundaries to you.
+Such boundaries have no good reason because the only thing they do by restricting the available space is that they also might restrict your creativity process.
+
+----
+
+**Example:**
+Let's say your company wants to increase marketshare and therefore would like to offer a new set of features to their service portfolio.
+The idea is that these new features would attract many more customers.
+
+You are in the position of a solution architect, and it is therefore your task to make a first draft of which new systems your company would need and how they would integrate into the existing system landscape.
+Before you spend hours with describing all of this in a text document which nobody would read, you instead decide to create a system diagram which shows the upcoming changes visually.
+
+*Step 1: You create a new file to get started*
+
+So, you start you favorite drawing application and create a new file.
+The drawing application asks you which page size you need.
+Well, you are at the beginning, you don't really know how many visual elements you need to add to your system diagram.
+If you would know this already now, then most likely your job as a solution architect has already been finished.
+In lack of any second-sight-abilities you just pick the default value which is FullHD (1920x1080 pixels).
+
+The drawing application presents a canvas and a grid like this:
+
+![infinite space 1](diagrams/canvas-guideline_infinite-space_1.png)
+
+As you have no idea how the new systems can be integrated, you start warming up your diagramming skills by first drawing the current situation.
+
+*Step 2: You add visual elements to represent the existing system landscape*
+
+You add the typical frontend, backend, and database elements.
+You start more or less at the upper left corner, and then add all other elements from left to right.
+
+The diagram now looks like this:
+
+![infinite space 2](diagrams/canvas-guideline_infinite-space_2.png)
+
+Hm, looks good!
+You have made use of the grid to align all elements in a evenly distributed way.
+The horizontal distance between the elements is three blocks.
+And the two boxes have a width of four boxes.
+You like the airy design, leaving enough negative space to make it easy to the reader to understand the structure of the current system landscape.
+
+But then you realize that you have forgotten an important part of any such diagram.
+
+*Step 3: You have forgotten the user*
+
+How could that happen? you ask yourself.
+You have forgotten to add the user to the diagram.
+The original goal of this whole exercise was and still is to offer new services to the customers.
+Then maybe the system diagram should also contain a visual representation for them.
+
+You want to add the stick-figure to the diagram.
+You realize that you need to place it left of the "Frontend" box because you like the idea of arranging all visual elements from left to right, following the direction of the dependencies.
+Unfortunately, there is not enough room because left of that box is already the boundary of the canvas.
+
+But ok, not a big deal, you think.
+You just grab all elements and move them to the right to free the space left of the "Frontend" box.
+And then you add the stick-figure to represent the user.
+
+After that change, the diagram looks like this:
+
+![infinite space 3](diagrams/canvas-guideline_infinite-space_3.png)
+
+The result still looks pleasing.
+But you already get a first hint that maybe you were lucky so far that there has been enough horizontal canvas space available.
+
+*Step 4: You add more visual elements to represent possible changes to the system landcape*
+
+For the new features your company has been in discussion with a third-party vendor.
+This vendor states to have a solution which would cover most of the features your company has in mind.
+After careful consideration of the vendor's advertising material, and after a first meeting with them, you think you have understood enough about how a possible integration could look like.
+
+You add more visual elements to the diagram.
+To be able to better separate existing from possible new elements, you choose a different fill color for the new elements.
+And yes, you already make a mental note that you definitely need to add a legend later.
+
+After a short break and a coffee, you look at the result again:
+
+![infinite space 4](diagrams/canvas-guideline_infinite-space_4.png)
+
+Well, it still looks nice, but actually you had to violate the guideline that the placement of visual elements should follow a left-to-right order, according to the order of the dependencies.
+
+And also you realize that the "Backend Integration Adapter" box needs more vertical space because currently its text looks a little bit crammed.
+
+You decide that it is time for a bigger refactoring of the diagram.
+
+*Step 5: You refactor the diagram*
+
+Because you are quite picky when it comes to diagrams, you plan to refactor the diagram to meet the following rules:
+
+* Any connection arrow needs to go from left to right because only then the connections follow the dependency order.
+* All boxes need to have the same size.
+* All distances between elements need to have the same size.
+
+After some reshuffling of visual elements you realize that the canvas in its current size does not provide enough horizontal space, at least not if you also want to have a distance of three boxes between any two boxes.
+You decide that a distance of two boxes would also be ok.
+You do the change.
+
+Dayum, the available horizontal space still is not enough:
+
+![infinite space 5a](diagrams/canvas-guideline_infinite-space_5a.png)
+
+
+You have to make a decision: either you increase the canvas size, or you decrease gap sizes even more.
+As it is the whole point of this section to show that these canvas boundaries are not doing any good in the first place, you can't help but to decrease distances again, at least at some places.
+
+After the refactoring, the diagram looks like this:
+
+![infinite space 5b](diagrams/canvas-guideline_infinite-space_5b.png)
+
+Now the distances between elements don't have the same size anymore.
+Some are one, some are two boxes wide.
+But ok, some say that perfectionism can be sub-optimal at times.
+Admittedly, the diagram still looks nice, and the reader can still understand how the different systems are connected to each other.
+
+Therefore, you call it a diagram day.
+For many creative processes it is a good advice to regularly step away from the current state of your creation, let some time pass, and come back later to re-evaluate your work with a refreshed mind.
+
+*Step 6: You have forgotten something again (DWH and a database)*
+
+When you come back several hours later, you realize that it has been a good idea to step away.
+You have to face the fact that you have forgotten a major aspect of the integration.
+The vendor people told you that in order to get proper reporting, you need to have an event bus mechanism in place which consumes event data during runtime and sends it to the datawarehouse (DWH) systems.
+
+Of course your company already has a DWH up and running - you only forgot to add it to the diagram.
+The DWH currently gets its data from the database via an asynchronous process.
+Each time the backend changes data, the database sends a message including the data to an event bus, and the DWH consumes these events and data from there.
+
+And while you think about the database, you realize that you also have forgotten that the vendor backend also needs to store its own data in a separate database.
+
+Sigh.
+It can't be helped, you have to extend the diagram even further.
+
+Like this:
+
+![infinite space 6a](diagrams/canvas-guideline_infinite-space_6a.png)
+
+Again there is not enough horizontal space available, and this holds true even if you would not increase the database symbol width from two to three boxes (you just noticed this inconsistency at this point in time).
+Whatever, you don't see how you can solve the lack of space without further bending of the rules you wanted to follow for designing the diagram.
+
+After careful bending of the rules, you come up with the following result:
+
+![infinite space 6b](diagrams/canvas-guideline_infinite-space_6b.png)
+
+Well, this diagram might still look pleasing to the eye, but you cannot deny that you had to violate the layout rules even further.
+And you only had to do it because the canvas size is too limited, and for no good reason.
+
+*Final step: The diagram you actually wanted to create*
+
+Just to get an idea of how the diagram could/should look like if you would be able to follow the layout rules, you disable the canvas size at all and just draw with no boundaries in mind.
+
+The result looks like this:
+
+![infinite space final](diagrams/canvas-guideline_infinite-space_9.png)
+
+This diagram follows several layout rules:
+
+* Any system box (incl. database) has a size of 3x2 units.
+* There is an invisible grid which defines four horizontal and seven vertical lanes on which symbols are located.
+* The connection arrows follow the flow of dependencies.
+Any incoming dependency enters a box from the left, and any outgoing dependeny leaves a box from the right.
+
+You can find more details about layout rules in a later section of this document.
+
 
 ### Set-up a square-like grid
 
@@ -288,10 +464,6 @@ TODO. Example: 10x10, unit is in fact meaningless if you use a vector based grap
 
 TODO.
 
-### Use infinite space, disable any page size
-
-TODO
-![slice 17](images/slice17.png)
 
 
 ## Text
