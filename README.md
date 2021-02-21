@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2021-02-14
+Martin Leggewie, 2021-02-21
 
 ## Abstract
 
@@ -118,7 +118,7 @@ These rules are the **mission statement** for the style of visual representation
 Each of the following subsections explain one such rule.
 
 
-### Guideline 1: Use simple visual attributes, avoid the "bling-bling"
+### General guideline 1: Use simple visual attributes, avoid the "bling-bling"
 
 Only use simple visual attributes like solid fill colors and 2D elements.
 Avoid any other visual expression ways like drop shadows, pseudo 3D elements, and color gradients just "because you can".
@@ -126,7 +126,7 @@ Any type of visual aspect you use in your diagram should be connected to one typ
 If you use a visual aspect just because your graphics software offers it, then resist the temptation:
 Don't use it if it does not add any information to your diagram.
 
-In the following I would like to show you some visual aspects I normally strongly recommend not to use.
+In the following I would like to show you some visual aspects I recommend not to use.
 
 
 #### Do not use color gradients
@@ -134,6 +134,8 @@ In the following I would like to show you some visual aspects I normally strongl
 Using a color gradient just because it "looks cool" is not very helpful.
 It irritates the audience because they think that this gradient has some special meaning which in fact it does not.
 And the gradient effect typically breaks down when you apply it to visual elements of different sizes.
+
+----
 
 **Example:**
 The diagram below compares two system diagrams using solid and gradient fill colors for the boxes, respectively.
@@ -160,6 +162,8 @@ All in all this creates a different color appearance for the taller box although
 As long as you do not plan to create a three-dimensional world in which the third dimension really has some specific meaning, stay away from any 3D perspective.
 In my opinion, you will only stumble upon this additional dimension of complexity for no good.
 
+----
+
 **Example:**
 In the example below, the two diagrams on the right side both apply an isometric 3D perspective.
 
@@ -179,7 +183,9 @@ Either way, you will only have some extra work to do with no real benefit as the
 
 Using drop shadows is a bit like using 3D for the diagrams:
 It might look "more pleasing" or maybe even "more professional" (some say this is very important if you work in an enterprise environment).
-But drop shadows do not provide any additional information; instead, they just add visual clutter to the scenery, and hence we should not use them at all.
+But drop shadows do not provide any additional information; instead, they just add visual clutter to the scenery, and hence I recommend not using them at all.
+
+----
 
 **Example:** 
 The following example diagram shows directly what the problems with the drop shadows are:
@@ -198,6 +204,8 @@ In such a mode, the diagram should look like as if a human being has manually dr
 The problem with such sketchy-looking diagrams is that it is just more difficult for the audience to understand what the diagrams want to say.
 Therefore, just don't use these sketch modes.
 
+----
+
 **Example:** 
 The example below shows the difference when comparing the normal style with the sketch style.
 
@@ -206,10 +214,10 @@ The example below shows the difference when comparing the normal style with the 
 While I have to admit that the sketch style looks appealing, it adds visual clutter which is not necessary, and therefore I strongly vote for using the normal style.
 
 
-### Guideline 2: Define the meaning of all visual elements in a legend
+### General guideline 2: Define the meaning of all visual elements in a legend
 
+Always add a legend to your diagram.
 A legend explains the meaning of all visual elements and attributes used in the diagram.
-Well, always add a legend to your diagram.
 Without this legend, the audience has no other choice than to interpret the meaning of the elements of your visual language.
 And if the audience needs to interpret, then this will cause misunderstandings.
 
@@ -229,6 +237,8 @@ Is this connection relevant during design, deploy, or runtime?
 Do the arrow heads show the direction in which data flows, or do they show which systems call which other systems?
 We cannot know until there is a legend which clearly defines this.
 
+----
+
 **Example:**
 The following system diagram I have already shown in the introduction section, but now it finally also contains a legend (which I should have added to the example in the first place anyway).
 
@@ -240,7 +250,7 @@ I could have put this type of relation "User uses system" also as an additional 
 But as this "User uses system" relation type only exists once in the diagram, I find it easier for the reader if the type of relation (i.e., "uses") appears directly next to the connection arrow.
 
 
-### Guideline 3: Apply high-contrast coloring style
+### General guideline 3: Apply high-contrast coloring style
 
 If you apply "enough" contrast to your diagrams, it becomes easier for the audience to tell all the contained elements apart.
 
@@ -261,6 +271,8 @@ The world is not only black and white:
 * You might need different fill colors in the same diagram because fill color is one major visual aspect you can use to express different values for the same type of system attribute.
 * You typically have white also as the background color.
 Now, if all the boxes are white, as well as the background, then again it might become a bit difficult to separate everything, even when there is black as a border color.
+
+----
 
 **Example:**
 The diagram below, left side, shows one way of achieving high contrast:
@@ -308,7 +320,7 @@ Before you spend hours with describing all of this in a text document which nobo
 
 So, you start you favorite drawing application and create a new file.
 The drawing application asks you which page size you need.
-Well, you are at the beginning, you don't really know how many visual elements you need to add to your system diagram.
+Well, as you are at the beginning, you don't really know how many visual elements you need to add to your system diagram.
 If you would know this already now, then most likely your job as a solution architect has already been finished.
 In lack of any second-sight-abilities you just pick the default value which is FullHD (1920x1080 pixels).
 
@@ -335,7 +347,7 @@ You like the airy design, leaving enough negative space to make it easy to the r
 
 But then you realize that you have forgotten an important part of any such diagram.
 
-*Step 3: You have forgotten the user*
+*Step 3: You add a forgotten element (the user)*
 
 How could that happen? you ask yourself.
 You have forgotten to add the user to the diagram.
@@ -371,7 +383,7 @@ After a short break and a coffee, you look at the result again:
 
 ![infinite space 4](diagrams/canvas-guideline_infinite-space_4.png)
 
-Well, it still looks nice, but actually you had to violate the guideline that the placement of visual elements should follow a left-to-right order, according to the order of the dependencies.
+The diagram still looks nice, but actually you had to violate the guideline that the placement of visual elements should follow a left-to-right order, according to the order of the dependencies.
 
 And also you realize that the "Backend Integration Adapter" box needs more vertical space because currently its text looks a little bit crammed.
 
@@ -409,7 +421,7 @@ Admittedly, the diagram still looks nice, and the reader can still understand ho
 Therefore, you call it a diagram day.
 For many creative processes it is a good advice to regularly step away from the current state of your creation, let some time pass, and come back later to re-evaluate your work with a refreshed mind.
 
-*Step 6: You have forgotten something again (DWH and a database)*
+*Step 6: You add some more forgotten elements (the DWH and a database)*
 
 When you come back several hours later, you realize that it has been a good idea to step away.
 You have to face the fact that you have forgotten a major aspect of the integration.
@@ -435,10 +447,10 @@ After careful bending of the rules, you come up with the following result:
 
 ![infinite space 6b](diagrams/canvas-guideline_infinite-space_6b.png)
 
-Well, this diagram might still look pleasing to the eye, but you cannot deny that you had to violate the layout rules even further.
+This diagram might still look pleasing to the eye, but you cannot deny that you had to violate the layout rules even further.
 And you only had to do it because the canvas size is too limited, and for no good reason.
 
-*Final step: The diagram you actually wanted to create*
+*Final step: You create the diagram you actually wanted to create*
 
 Just to get an idea of how the diagram could/should look like if you would be able to follow the layout rules, you disable the canvas size at all and just draw with no boundaries in mind.
 
