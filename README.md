@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2021-02-21
+Martin Leggewie, 2021-02-27
 
 ## Abstract
 
@@ -468,9 +468,40 @@ Any incoming dependency enters a box from the left, and any outgoing dependeny l
 You can find more details about layout rules in a later section of this document.
 
 
-### Set-up a square-like grid
+### Canvas guideline 2: Set-up a square-shaped grid with reasonable absolute dimensions
 
-TODO. Example: 10x10, unit is in fact meaningless if you use a vector based graphics program.
+Select a square-shaped background grid with absolute dimensions as a layout guide, for example something like 10 mm x 10 mm, or 50 pixels x 50 pixels.
+
+Any decent graphics application allows to specify such a grid which is only shown in the background, but is not part of the actual graphics you design.
+The grid supports you with aligning visual elements horizontally and vertically by just looking at your graphics, with no need to use alignment tools the graphics applications typically offer.
+It is of course nice that the applications have such alignment tools, but if you need to always use them to align any two boxes or connection arrows, it will cost you quite some time (and nerves).
+
+There is no general rule for which exact grid values you should choose because this heavily depends on the type of graphics application and screen size you use.
+The chosen grid size should be reasonable in such a way that it
+
+* already allows you to horizontally and vertically align visual elements just by looking at them, but
+* also leaves enough granularity to place the visual elements in the way you need.
+
+As a rule of thumb I suggest the following process to come to reasonable values for the grid dimensions:
+
+1. Bring your graphics application into fullscreen mode.
+2. Select a view factor of 100%.
+3. Have all the typically needed panels (e.g. "Shapes", "Properties", "Layers") visible which the graphics application offers. 
+3. Now, select the grid dimensions in such a way that about 40 squares fit horizontally.
+
+----
+
+**Example:**
+The screenshot below shows how I chose a 20 pt x 20 pt grid in the graphics application "draw.io", and that about 39 square boxes fit in the available horizontal space.
+
+![square grid](images/screenshot_drawio_canvas-guideline_grid.png)
+
+----
+
+Whatever grid size you use, make sure that these values are defined as absolute values like 10 mm, and not as relative values like "small" or "10% of view window".
+Some graphics applications offer a relative or adaptive grid mode in which the grid size change depending on the current zoom level you chose.
+While this relative or adaptive grid makes sense when you - for example - need to fine-tune an organic-looking illustration, it can be irritating when creating system diagrams.
+
 
 ### Enable snap to grid
 
