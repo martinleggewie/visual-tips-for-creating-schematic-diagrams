@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2021-02-27
+Martin Leggewie, 2021-03-06
 
 ## Abstract
 
@@ -503,10 +503,30 @@ Some graphics applications offer a relative or adaptive grid mode in which the g
 While this relative or adaptive grid makes sense when you - for example - need to fine-tune an organic-looking illustration, it can be irritating when creating system diagrams.
 
 
-### Enable snap to grid
+### Canvas guideline 3: Enable snap to grid
 
-TODO.
+Enable the snap-to-grid feature in your graphics application to make sure that the grid you have selected (see [canvas guideline 2](#canvas-guideline-2-set-up-a-square-shaped-grid-with-reasonable-absolute-dimensions)) really supports you with getting all visual elements aligned.
 
+If possible, configure the snap feature to be "merciless".
+That means:
+Your graphics application should not allow you to place visual elements to locations which do not fit the grid settings.
+Only then you can be sure that you get the intended horizontal and vertical alignment out of the box.
+
+----
+
+**Example:**
+The diagram below shows what can happen if you just set a grid, but do not enable the snap-to-grid feature.
+
+![square grid](diagrams/canvas-guideline_snap-to-grid.png)
+
+On the left side all the six visual elements (three boxes, three connection arrows) are perfectly aligned to the grid.
+
+The right side, however, shows what can happen if you have admittedly defined the grid, but for whatever reason not enabled the snap feature.
+At first glance, the six visual elements are aligned more or less ok, but if you look closer, you see that the elements are placed a little bit "off".
+This results in that the connection arrows are jagged, giving the whole diagram a somewhat noisy look.
+
+For such a small diagram it might not be a big issue, but imagine a larger diagram which contains several dozens elements.
+In such complicated diagrams it disturbs the reader if straight lines are in fact not straight lines, and if boxes which belong in one invisible row or column are slightly off-balanced.
 
 
 ## Text
