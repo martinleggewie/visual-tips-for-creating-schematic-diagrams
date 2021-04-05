@@ -1,5 +1,5 @@
 # Visual tips for system diagrams
-Martin Leggewie, 2021-03-06
+Martin Leggewie, 2021-04-05
 
 ## Abstract
 
@@ -531,12 +531,57 @@ In such complicated diagrams it disturbs the reader if straight lines are in fac
 
 ## Text
 
-TODO
+Although a system diagram mainly focuses on combining graphical elements like boxes and connecting arrows, it cannot live without text.
+The reason for this is that the boxes and arrows alone are too abstract.
+They do not provide enough variety to express all the details of the system landscape which the diagram strives to explain.
+In the end, they are just boxes and connecting arrows.
 
-### Use sans-serif font face
+Even a quite extensive visual modeling language like [BPMN 2.0](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) with its plethora of different shapes which all have concrete meaning cannot work without text.
+The modeler needs to label a given shape to define what she exactly means with that shape in the given situation.
 
-TODO
-![slice 04](images/slice4.png)
+Likewise, in a system diagram the main usage for text is to label the boxes which represent different components of the system landscape.
+Each label stands for the corresponding component's name, giving it a unique identity.
+Otherwise, without the labels, there would be only boxes which would all look the same.
+The reader would have a hard time with understanding what all the components in the system landscape were.
+
+As with the other graphical elements, there are also some guidelines for using text in such a diagram, and as you have already expected, you can find the in following sections.
+
+
+### Text guideline 1: Use sans-serif font face
+
+Choose a sans-serif font face with a homogenic stroke width for all kinds of text in your system diagram.
+Typical examples for such sans-serif font faces which are installed out-of-the box on many operating systems are Arial, Helvetica, Tahoma, and Verdana.
+
+----
+
+**Example:**
+Following table shows three sans-serif font faces in four different sizes to give you a first impression about how these look.
+
+![example sans-serif font faces](diagrams/text-guideline_sans-serif-font-face_1.png)
+
+----
+
+Do not use serif, fancy display, or - worst of all - handwritten font faces because they can significantly reduce the readability.
+All the addendums to the font faces like serifs and all the other fiddly odds-and-ends "pollute" the image, making it harder for the reader to read what is written.
+
+This is especially important when you need to put a lot of visual elements and hence a lot of name labels to your diagram.
+When you have that many elements in your diagram, the reader obviously needs to zoom out quite a bit if she wants to see the whole diagram, and then all the text will become relatively small.
+In general it is true that the smaller the text, the more difficult it becomes to read.
+But when not using a clean font face, the negative effect becomes unnecessarily amplified.
+
+By the way:
+This is the very same reason why traffic signs also use simple sans-serif fonts instead of more complicated ones.
+The written text needs to be readable already from far away as good as possible, and this is perspective-wise the same as zooming out a given diagram.
+
+----
+
+**Example:**
+Below you can see the same text first in the sans-serif font face Helvetica compared to two common serif font faces Garamond and Times New Roman.
+
+![compare sans-serif font face with serif font faces](diagrams/text-guideline_sans-serif-font-face_2.png)
+
+Depending on the zoom size you are currently using when viewing this text, you might see the difference when comparing text set in sans-serif with serif font faces.
+Especially in small sizes the text set in sans-serif font is better readable than the one in serif font faces.
 
 
 ### Select font size in relation to canvas grid size.
