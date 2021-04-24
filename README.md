@@ -1,13 +1,84 @@
-# Visual tips for system diagrams
-Martin Leggewie, 2021-04-05
 
-## Abstract
+<!--
+    Some meta information about this document:
+
+    * I use the GitHub flavor of markdown.
+    See [https://guides.github.com/features/mastering-markdown](https://guides.github.com/features/mastering-markdown) for how to use it.
+
+    * I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor).
+    See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach.
+ -->
+
+
+# Visual tips for system diagrams
+
+_Martin Leggewie, 2021-04-24_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
 Therefore, it is a good advice to keep these diagrams as simple as possible.
 If you want/need to create such diagrams yourself, then these tips can support you in reaching this "as simple as possible" goal.
 
+----
+
+<!-- TOC -->
+
+- [Introduction](#introduction)
+    - [Definition and goal: System diagram](#definition-and-goal-system-diagram)
+    - [Why should you care about how system diagrams look like?](#why-should-you-care-about-how-system-diagrams-look-like)
+- [What is in for you?](#what-is-in-for-you)
+- [Mind-map of the things to come](#mind-map-of-the-things-to-come)
+- [General guidelines](#general-guidelines)
+    - [General guideline 1: Use simple visual attributes, avoid the "bling-bling"](#general-guideline-1-use-simple-visual-attributes-avoid-the-bling-bling)
+        - [Do not use color gradients](#do-not-use-color-gradients)
+        - [Do not use 3D elements](#do-not-use-3d-elements)
+        - [Do not use drop shadows](#do-not-use-drop-shadows)
+        - [Do not use the "sketch" visual style](#do-not-use-the-sketch-visual-style)
+    - [General guideline 2: Define the meaning of all visual elements in a legend](#general-guideline-2-define-the-meaning-of-all-visual-elements-in-a-legend)
+    - [General guideline 3: Apply high-contrast coloring style](#general-guideline-3-apply-high-contrast-coloring-style)
+- [Canvas](#canvas)
+    - [Canvas guideline 1: Use infinite space](#canvas-guideline-1-use-infinite-space)
+    - [Canvas guideline 2: Set-up a square-shaped grid with reasonable absolute dimensions](#canvas-guideline-2-set-up-a-square-shaped-grid-with-reasonable-absolute-dimensions)
+    - [Canvas guideline 3: Enable snap to grid](#canvas-guideline-3-enable-snap-to-grid)
+- [Text](#text)
+    - [Text guideline 1: Use sans-serif font face](#text-guideline-1-use-sans-serif-font-face)
+    - [Select font size in relation to canvas grid size.](#select-font-size-in-relation-to-canvas-grid-size)
+    - [Select font style according to the type of texts](#select-font-style-according-to-the-type-of-texts)
+        - [Use bold font style for all important names](#use-bold-font-style-for-all-important-names)
+        - [Use normal font style for all companion text](#use-normal-font-style-for-all-companion-text)
+        - [Do not use italics font style](#do-not-use-italics-font-style)
+- [Lines](#lines)
+    - [Choose line thickness](#choose-line-thickness)
+- [Layout](#layout)
+    - [Apply a "hidden grid" when positioning shapes](#apply-a-hidden-grid-when-positioning-shapes)
+- [Shapes](#shapes)
+    - [Use same size for all boxes representing the same element style](#use-same-size-for-all-boxes-representing-the-same-element-style)
+    - [Use size for inner-most elements to be even multiples of canvas grid size](#use-size-for-inner-most-elements-to-be-even-multiples-of-canvas-grid-size)
+    - [Use well-defined height-width ratio for inner-most elements](#use-well-defined-height-width-ratio-for-inner-most-elements)
+    - [Watch out when using rounded corners for boxes](#watch-out-when-using-rounded-corners-for-boxes)
+- [Arrows](#arrows)
+    - [Choose arrow heads to be big enough compared to diagram size](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size)
+    - [Define exactly what the arrow directions mean](#define-exactly-what-the-arrow-directions-mean)
+    - [Avoid arrow heads in both directions.](#avoid-arrow-heads-in-both-directions)
+    - [Attach a bigger dot at the arrow start](#attach-a-bigger-dot-at-the-arrow-start)
+- [Color](#color)
+    - [Choose color so that audience's attention will be guided to the most important diagram elements first](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first)
+    - [Color styles](#color-styles)
+        - [Black border, normal fill](#black-border-normal-fill)
+        - [Black border, inverted fill](#black-border-inverted-fill)
+        - [No border, inverted fill](#no-border-inverted-fill)
+- [Layout of shapes and their connection arrows](#layout-of-shapes-and-their-connection-arrows)
+    - [Flow either top-to-down or left-to-right](#flow-either-top-to-down-or-left-to-right)
+    - [Try to avoid crossing connection arrows](#try-to-avoid-crossing-connection-arrows)
+    - [Never ever allow overlapping connection arrows](#never-ever-allow-overlapping-connection-arrows)
+    - [Don't start or end different connection arrows at the same point](#dont-start-or-end-different-connection-arrows-at-the-same-point)
+    - [Connection routing path styles](#connection-routing-path-styles)
+    - [Choose gap between boxes](#choose-gap-between-boxes)
+- [Closing words](#closing-words)
+
+<!-- /TOC -->
+
+----
 
 ## Introduction
 
