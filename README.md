@@ -7,6 +7,8 @@
 
     * I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor).
     See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach.
+
+    * Most parts of this whole article I have written with Visual Studio Code, benefitting from its in-built Markdown support. To get the table of content created automically, I have added the extension "alanwalk.markdown-toc". So, in case you would like to change something in the structure of this article, please consider using this extension as well to keep the toc consistent with the content.
  -->
 
 
