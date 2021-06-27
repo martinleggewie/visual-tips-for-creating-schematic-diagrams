@@ -14,7 +14,7 @@
 
 # Visual tips for system diagrams
 
-_Martin Leggewie, 2021-04-24_
+_Martin Leggewie, 2021-06-27_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -29,7 +29,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Definition and goal: System diagram](#definition-and-goal-system-diagram)
     - [Why should you care about how system diagrams look like?](#why-should-you-care-about-how-system-diagrams-look-like)
 - [What is in for you?](#what-is-in-for-you)
-- [Mind-map of the things to come](#mind-map-of-the-things-to-come)
+- [Mind-map of the things to come (TODO)](#mind-map-of-the-things-to-come-todo)
 - [General guidelines](#general-guidelines)
     - [General guideline 1: Use simple visual attributes, avoid the "bling-bling"](#general-guideline-1-use-simple-visual-attributes-avoid-the-bling-bling)
         - [Do not use color gradients](#do-not-use-color-gradients)
@@ -38,45 +38,44 @@ If you want/need to create such diagrams yourself, then these tips can support y
         - [Do not use the "sketch" visual style](#do-not-use-the-sketch-visual-style)
     - [General guideline 2: Define the meaning of all visual elements in a legend](#general-guideline-2-define-the-meaning-of-all-visual-elements-in-a-legend)
     - [General guideline 3: Apply high-contrast coloring style](#general-guideline-3-apply-high-contrast-coloring-style)
+    - [General guideline 4: Apply high-contrast border style (TODO)](#general-guideline-4-apply-high-contrast-border-style-todo)
 - [Canvas](#canvas)
     - [Canvas guideline 1: Use infinite space](#canvas-guideline-1-use-infinite-space)
     - [Canvas guideline 2: Set-up a square-shaped grid with reasonable absolute dimensions](#canvas-guideline-2-set-up-a-square-shaped-grid-with-reasonable-absolute-dimensions)
     - [Canvas guideline 3: Enable snap to grid](#canvas-guideline-3-enable-snap-to-grid)
 - [Text](#text)
     - [Text guideline 1: Use sans-serif font face](#text-guideline-1-use-sans-serif-font-face)
-    - [Select font size in relation to canvas grid size.](#select-font-size-in-relation-to-canvas-grid-size)
-    - [Select font style according to the type of texts](#select-font-style-according-to-the-type-of-texts)
-        - [Use bold font style for all important names](#use-bold-font-style-for-all-important-names)
-        - [Use normal font style for all companion text](#use-normal-font-style-for-all-companion-text)
-        - [Do not use italics font style](#do-not-use-italics-font-style)
-- [Lines](#lines)
-    - [Choose line thickness](#choose-line-thickness)
-- [Layout](#layout)
-    - [Apply a "hidden grid" when positioning shapes](#apply-a-hidden-grid-when-positioning-shapes)
-- [Shapes](#shapes)
-    - [Use same size for all boxes representing the same element style](#use-same-size-for-all-boxes-representing-the-same-element-style)
-    - [Use size for inner-most elements to be even multiples of canvas grid size](#use-size-for-inner-most-elements-to-be-even-multiples-of-canvas-grid-size)
-    - [Use well-defined height-width ratio for inner-most elements](#use-well-defined-height-width-ratio-for-inner-most-elements)
-    - [Watch out when using rounded corners for boxes](#watch-out-when-using-rounded-corners-for-boxes)
-- [Arrows](#arrows)
-    - [Choose arrow heads to be big enough compared to diagram size](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size)
-    - [Define exactly what the arrow directions mean](#define-exactly-what-the-arrow-directions-mean)
-    - [Avoid arrow heads in both directions.](#avoid-arrow-heads-in-both-directions)
-    - [Attach a bigger dot at the arrow start](#attach-a-bigger-dot-at-the-arrow-start)
-- [Color](#color)
-    - [Choose color so that audience's attention will be guided to the most important diagram elements first](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first)
-    - [Color styles](#color-styles)
-        - [Black border, normal fill](#black-border-normal-fill)
-        - [Black border, inverted fill](#black-border-inverted-fill)
-        - [No border, inverted fill](#no-border-inverted-fill)
-- [Layout of shapes and their connection arrows](#layout-of-shapes-and-their-connection-arrows)
-    - [Flow either top-to-down or left-to-right](#flow-either-top-to-down-or-left-to-right)
-    - [Try to avoid crossing connection arrows](#try-to-avoid-crossing-connection-arrows)
-    - [Never ever allow overlapping connection arrows](#never-ever-allow-overlapping-connection-arrows)
-    - [Don't start or end different connection arrows at the same point](#dont-start-or-end-different-connection-arrows-at-the-same-point)
-    - [Connection routing path styles](#connection-routing-path-styles)
-    - [Choose gap between boxes](#choose-gap-between-boxes)
-- [Closing words](#closing-words)
+    - [Select font size in relation to canvas grid size (TODO)](#select-font-size-in-relation-to-canvas-grid-size-todo)
+    - [Use bold font style for all important names (TODO)](#use-bold-font-style-for-all-important-names-todo)
+    - [Use normal font style for all companion text (TODO)](#use-normal-font-style-for-all-companion-text-todo)
+    - [Do not use italics font style (TODO)](#do-not-use-italics-font-style-todo)
+- [Shapes (TODO)](#shapes-todo)
+    - [Use same size for all boxes representing the same element style (TODO)](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
+    - [Use size for inner-most elements to be even multiples of canvas grid size (TODO)](#use-size-for-inner-most-elements-to-be-even-multiples-of-canvas-grid-size-todo)
+    - [Use well-defined height-width ratio for inner-most elements (TODO)](#use-well-defined-height-width-ratio-for-inner-most-elements-todo)
+    - [Watch out when using rounded corners for boxes (TODO)](#watch-out-when-using-rounded-corners-for-boxes-todo)
+- [Arrows (TODO)](#arrows-todo)
+    - [Each arrow has at least one arrow head (TODO)](#each-arrow-has-at-least-one-arrow-head-todo)
+    - [Define exactly what the arrow directions mean (TODO)](#define-exactly-what-the-arrow-directions-mean-todo)
+    - [Choose arrow heads to be big enough compared to diagram size (TODO)](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size-todo)
+    - [Avoid arrow heads in both directions for call dependencies (TODO)](#avoid-arrow-heads-in-both-directions-for-call-dependencies-todo)
+    - [Attach a bigger dot at the arrow start (TODO)](#attach-a-bigger-dot-at-the-arrow-start-todo)
+- [Color (TODO)](#color-todo)
+    - [Choose color so that audience's attention will be guided to the most important diagram elements first (TODO)](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first-todo)
+    - [Color styles (TODO)](#color-styles-todo)
+        - [Black border, normal fill (TODO)](#black-border-normal-fill-todo)
+        - [Black border, inverted fill (TODO)](#black-border-inverted-fill-todo)
+        - [No border, inverted fill (TODO)](#no-border-inverted-fill-todo)
+- [Layout of shapes and their connection arrows (TODO)](#layout-of-shapes-and-their-connection-arrows-todo)
+    - [Apply a "hidden grid" when positioning shapes (TODO)](#apply-a-hidden-grid-when-positioning-shapes-todo)
+    - [Flow either top-to-down or left-to-right (TODO)](#flow-either-top-to-down-or-left-to-right-todo)
+    - [Place boxes in such a way to minimize the amount of corners in the connection arrows (TODO)](#place-boxes-in-such-a-way-to-minimize-the-amount-of-corners-in-the-connection-arrows-todo)
+    - [Try to avoid crossing connection arrows (TODO)](#try-to-avoid-crossing-connection-arrows-todo)
+    - [Never ever allow overlapping connection arrows (TODO)](#never-ever-allow-overlapping-connection-arrows-todo)
+    - [Don't start or end different connection arrows at the same point (TODO)](#dont-start-or-end-different-connection-arrows-at-the-same-point-todo)
+    - [Connection routing path styles (TODO)](#connection-routing-path-styles-todo)
+    - [Choose gap between boxes (TODO)](#choose-gap-between-boxes-todo)
+- [Closing words (TODO)](#closing-words-todo)
 
 <!-- /TOC -->
 
@@ -178,7 +177,7 @@ Now, if you invest your precious time in reading this text, you will find the li
 Maybe you can take-away some ideas which support you the next time you have to create such diagrams yourself.
 
 
-## Mind-map of the things to come
+## Mind-map of the things to come (TODO)
 
 _TODO: Create a proper and readable version of the following mind-map_
 ![slice 14](images/slice14.png)
@@ -359,6 +358,13 @@ This results in a lower contrast and thus bad readability because
 
 * the black text is now closer to the luminosity value of the fill colors, and 
 * the grey color of the borders and arrows is now closer to the white background color.
+
+
+### General guideline 4: Apply high-contrast border style (TODO)
+
+![slice 18](images/slice18.png)
+
+_TODO: describe that the most important shapes (arrows, boxes) should have a thicker border and/or a more contrast color than the less important shapes. Example: The border of a component/system should be thicker than the border for the network boundary box in which component/system are placed (assuming that the focus of your diagram really stays on these components/systems). So, if you want to put the focus really on the different network boundaries then either remove the components/systems completely or at least make the border of the network boundary boxes thicker than the component/system boxes._
 
 
 ## Canvas
@@ -657,166 +663,151 @@ Depending on the zoom size you are currently using when viewing this text, you m
 Especially in small sizes the text set in sans-serif font is better readable than the one in serif font faces.
 
 
-### Select font size in relation to canvas grid size.
+### Select font size in relation to canvas grid size (TODO)
 
-TODO
 ![text font size small vs big](diagrams/text_fontsize_small-vs-big.png)
 ![slice 05](images/slice5.png)
 
-### Select font style according to the type of texts
 
-TODO
+### Use bold font style for all important names (TODO)
 
-#### Use bold font style for all important names
-
-TODO
 ![slice 02](images/slice2.png)
 
 
-#### Use normal font style for all companion text
+### Use normal font style for all companion text (TODO)
 
-TODO
 
-#### Do not use italics font style
+### Do not use italics font style (TODO)
 
-TODO
 ![slice 03](images/slice3.png)
 
 
-## Lines
+## Shapes (TODO)
 
-TODO. At the moment I only have one general rule for lines. Let's see then if it makes sense to have a separate chapter when there is only one subsection.
-
-### Choose line thickness
-
-TODO
-![slice 18](images/slice18.png)
+_TODO: write introduction text to give an overview of what this section and its subsection contains._
 
 
-## Layout
+### Use same size for all boxes representing the same element style (TODO)
 
-TODO. At the moment I only have one general rule for layout. Let's see then if it makes sense to have a separate chapter when there is only one subsection.
-
-### Apply a "hidden grid" when positioning shapes
-
-TODO
-
-
-## Shapes
-
-TODO
-
-### Use same size for all boxes representing the same element style
-
-TODO
 ![slice 06](images/slice6.png)
 
-### Use size for inner-most elements to be even multiples of canvas grid size
 
-TODO
+### Use size for inner-most elements to be even multiples of canvas grid size (TODO)
+
 ![slice 22](images/slice22.png)
 
 
-### Use well-defined height-width ratio for inner-most elements
+### Use well-defined height-width ratio for inner-most elements (TODO)
 
-TODO. 1:2, 1:3, 1:4, 2:3, 3:4, 3:5
+1:2, 1:3, 1:4, 2:3, 3:4, 3:5
 ![slice 15](images/slice15.png)
 ![slice 16](images/slice16.png)
 
-### Watch out when using rounded corners for boxes
+### Watch out when using rounded corners for boxes (TODO)
 
-TODO
 ![slice 01](images/slice1.png)
 
 
-## Arrows
+## Arrows (TODO)
 
-TODO
+_TODO: write introduction text to give an overview of what this section and its subsection contains._
 
-### Choose arrow heads to be big enough compared to diagram size
 
-TODO
+### Each arrow has at least one arrow head (TODO)
 
-### Define exactly what the arrow directions mean
 
-TODO. Call dependency? Data flow direction?
+### Define exactly what the arrow directions mean (TODO)
 
-### Avoid arrow heads in both directions.
+_TODO: Do they mean a call dependency? Or a data flow direction? In case you need both types of meanings, you need to define two types of arrows which look different enough from each other so that the reader has a chance to get the two different meanings. Bad example: Two dashed lines patterns which have a slightly different gap size. Good example: call dependency: black color and the same thickness as the borders of the components they connect; data flow: blue color and a bigger thickness than the call dependency arrows._
 
-TODO. To me having arrow heads in both directions have a strong smell of being lazy or not precise enough.
 
-### Attach a bigger dot at the arrow start
+### Choose arrow heads to be big enough compared to diagram size (TODO)
 
-TODO. This is especially useful if you cannot avoid that arrows cross each other because then the audience can make a difference between a real connection or just the restriction of the 2D projection.
+
+### Avoid arrow heads in both directions for call dependencies (TODO)
+
+_TODO. To me having arrow heads in both directions for a call dependency have a strong smell of being lazy or not precise enough. If you really have the same type of dependency in both directions, then make two arrows, one for each direction._
+
+
+### Attach a bigger dot at the arrow start (TODO)
+
+_TODO. This is especially useful if you cannot avoid that arrows cross each other because then the audience can make a difference between a real connection or just the restriction of the 2D projection._
+
 ![slice 07](images/slice7.png)
 
-## Color
 
-TODO
+## Color (TODO)
 
-### Choose color so that audience's attention will be guided to the most important diagram elements first
+_TODO: write introduction text to give an overview of what this section and its subsection contains._
 
-TODO
+
+### Choose color so that audience's attention will be guided to the most important diagram elements first (TODO)
+
 ![slice 21](images/slice21.png)
 
-### Color styles
+_TODO: An additional way to put emphasis on certain shapes (boxes and arrows) you can give them an outline border which is located behind the actual shapes. This can be handy if you want to tell the audience that some parts of your system landscape will be changed, added, or deleted. This additional outlone color is especially useful for the connection arrows because if you would change their fill color ... well, they don't have any fill color, do they? But if you do this, then you must add this part of your visual language to the legend._
 
-TODO
+![borders](images/visual-tips-for-diagrams_borders.png)
+
+
+### Color styles (TODO)
+
 ![slice 19](images/slice19.png)
 
-#### Black border, normal fill
 
-TODO
-
-#### Black border, inverted fill
-
-TODO
-
-#### No border, inverted fill
-
-TODO
+#### Black border, normal fill (TODO)
 
 
-## Layout of shapes and their connection arrows
+#### Black border, inverted fill (TODO)
 
-TODO
 
-### Flow either top-to-down or left-to-right
+#### No border, inverted fill (TODO)
 
-TODO
+
+## Layout of shapes and their connection arrows (TODO)
+
+_TODO: write introduction text to give an overview of what this section and its subsection contains. This section is actually the "Grand Finale" of this whole article: All the tips for single aspects like boxes or arrows or colors only make sense if we finally put everything together in one complete diagram. And this section here does exactly this._
+
+
+### Apply a "hidden grid" when positioning shapes (TODO)
+
+
+### Flow either top-to-down or left-to-right (TODO)
+
 ![slice 11](images/slice11.png)
 ![slice 12](images/slice12.png)
 
-### Try to avoid crossing connection arrows
 
-TODO
+### Place boxes in such a way to minimize the amount of corners in the connection arrows (TODO)
 
-### Never ever allow overlapping connection arrows
 
-TODO
+### Try to avoid crossing connection arrows (TODO)
+
+
+### Never ever allow overlapping connection arrows (TODO)
+
 ![slice 10](images/slice10.png)
 
-### Don't start or end different connection arrows at the same point
 
-TODO
+### Don't start or end different connection arrows at the same point (TODO)
+
 ![slice 09](images/slice9.png)
 
-### Connection routing path styles
 
-TODO
+### Connection routing path styles (TODO)
+
 ![slice 08](images/slice8.png)
 
-### Choose gap between boxes
 
-TODO
+### Choose gap between boxes (TODO)
+
 ![slice 13](images/slice13.png)
 
 
-## Closing words
+## Closing words (TODO)
 
-TODO.
-* Thank the audience for spending their time.
-* Hope that it has been useful for the audience.
-* Invite audience to provide feedback.
-* Add contact information.
-* Recommend my favorite graphical application for creating system diagrams (which is draw.io). Make clear that I am not related to draw.io in any way. This is not advertisement.
+* _Thank the audience for spending their time._
+* _Hope that it has been useful for the audience._
+* _Invite audience to provide feedback._
+* _Add contact information._
+* _Recommend my favorite graphical application for creating system diagrams (which is draw.io). Make clear that I am not related to draw.io in any way. This is not advertisement._
