@@ -38,7 +38,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
         - [Do not use the "sketch" visual style](#do-not-use-the-sketch-visual-style)
     - [General guideline 2: Define the meaning of all visual elements in a legend](#general-guideline-2-define-the-meaning-of-all-visual-elements-in-a-legend)
     - [General guideline 3: Apply high-contrast coloring style](#general-guideline-3-apply-high-contrast-coloring-style)
-    - [General guideline 4: Apply high-contrast border style (TODO)](#general-guideline-4-apply-high-contrast-border-style-todo)
+    - [General guideline 4: Use stroke width to support high-contrast](#general-guideline-4-use-stroke-width-to-support-high-contrast)
 - [Canvas](#canvas)
     - [Canvas guideline 1: Use infinite space](#canvas-guideline-1-use-infinite-space)
     - [Canvas guideline 2: Set-up a square-shaped grid with reasonable absolute dimensions](#canvas-guideline-2-set-up-a-square-shaped-grid-with-reasonable-absolute-dimensions)
@@ -49,11 +49,12 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Use bold font style for all important names (TODO)](#use-bold-font-style-for-all-important-names-todo)
     - [Use normal font style for all companion text (TODO)](#use-normal-font-style-for-all-companion-text-todo)
     - [Do not use italics font style (TODO)](#do-not-use-italics-font-style-todo)
-- [Shapes (TODO)](#shapes-todo)
+- [Boxes (TODO)](#boxes-todo)
     - [Use same size for all boxes representing the same element style (TODO)](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
-    - [Use size for inner-most elements to be even multiples of canvas grid size (TODO)](#use-size-for-inner-most-elements-to-be-even-multiples-of-canvas-grid-size-todo)
-    - [Use well-defined height-width ratio for inner-most elements (TODO)](#use-well-defined-height-width-ratio-for-inner-most-elements-todo)
+    - [Use size for inner-most boxes to be even multiples of canvas grid size (TODO)](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
+    - [Use well-defined height-width ratio for inner-most boxes (TODO)](#use-well-defined-height-width-ratio-for-inner-most-boxes-todo)
     - [Watch out when using rounded corners for boxes (TODO)](#watch-out-when-using-rounded-corners-for-boxes-todo)
+    - [Use different stroke widths when boxes are located inside other boxes (TODO)](#use-different-stroke-widths-when-boxes-are-located-inside-other-boxes-todo)
 - [Arrows (TODO)](#arrows-todo)
     - [Each arrow has at least one arrow head (TODO)](#each-arrow-has-at-least-one-arrow-head-todo)
     - [Define exactly what the arrow directions mean (TODO)](#define-exactly-what-the-arrow-directions-mean-todo)
@@ -66,8 +67,8 @@ If you want/need to create such diagrams yourself, then these tips can support y
         - [Black border, normal fill (TODO)](#black-border-normal-fill-todo)
         - [Black border, inverted fill (TODO)](#black-border-inverted-fill-todo)
         - [No border, inverted fill (TODO)](#no-border-inverted-fill-todo)
-- [Layout of shapes and their connection arrows (TODO)](#layout-of-shapes-and-their-connection-arrows-todo)
-    - [Apply a "hidden grid" when positioning shapes (TODO)](#apply-a-hidden-grid-when-positioning-shapes-todo)
+- [Layout of boxes and their connection arrows (TODO)](#layout-of-boxes-and-their-connection-arrows-todo)
+    - [Apply a "hidden grid" when positioning boxes (TODO)](#apply-a-hidden-grid-when-positioning-boxes-todo)
     - [Flow either top-to-down or left-to-right (TODO)](#flow-either-top-to-down-or-left-to-right-todo)
     - [Place boxes in such a way to minimize the amount of corners in the connection arrows (TODO)](#place-boxes-in-such-a-way-to-minimize-the-amount-of-corners-in-the-connection-arrows-todo)
     - [Try to avoid crossing connection arrows (TODO)](#try-to-avoid-crossing-connection-arrows-todo)
@@ -360,11 +361,26 @@ This results in a lower contrast and thus bad readability because
 * the grey color of the borders and arrows is now closer to the white background color.
 
 
-### General guideline 4: Apply high-contrast border style (TODO)
+### General guideline 4: Use stroke width to support high-contrast
 
-![slice 18](images/slice18.png)
+In addition to using color to increase the contrast, you can (and should) also include the appearance of lines to your visual toolbox as well.
+Lines are the main ingredient of the connection arrows, but they also come into play if you add borders to your boxes.
 
-_TODO: describe that the most important shapes (arrows, boxes) should have a thicker border and/or a more contrast color than the less important shapes. Example: The border of a component/system should be thicker than the border for the network boundary box in which component/system are placed (assuming that the focus of your diagram really stays on these components/systems). So, if you want to put the focus really on the different network boundaries then either remove the components/systems completely or at least make the border of the network boundary boxes thicker than the component/system boxes._
+To support high-contrast to the diagram, make the lines "thick enough" so that they stand out and thus clearly separate both the inner areas of boxes and the connection arrows from their surroundings, respectively.
+
+Diagram applications typically call this "thickness of a line" the **stroke width**.
+As both boxes and connection arrows consist of lines, you can typically change the stroke width for both.
+
+Unfortunately, it is hard to define concrete values for stroke widths to make lines "thick enough" because these values are completely relative to the complete size and shape of the whole diagram.
+As a rule of thumb, choose the stroke width in such a way that it has a similar impact on the reader's attention as the boxes themselves and the text inside and outside these boxes.
+
+----
+
+**Example:**
+Have a look at the following example diagram which shows different stroke width's values in action.
+In this concrete example I would strongly vote for the "medium stroke width".
+
+![stroke width](diagrams/general-guideline_stroke-width.png)
 
 
 ## Canvas
@@ -682,7 +698,7 @@ Especially in small sizes the text set in sans-serif font is better readable tha
 ![slice 03](images/slice3.png)
 
 
-## Shapes (TODO)
+## Boxes (TODO)
 
 _TODO: write introduction text to give an overview of what this section and its subsection contains._
 
@@ -692,20 +708,32 @@ _TODO: write introduction text to give an overview of what this section and its 
 ![slice 06](images/slice6.png)
 
 
-### Use size for inner-most elements to be even multiples of canvas grid size (TODO)
+### Use size for inner-most boxes to be even multiples of canvas grid size (TODO)
 
 ![slice 22](images/slice22.png)
 
 
-### Use well-defined height-width ratio for inner-most elements (TODO)
+### Use well-defined height-width ratio for inner-most boxes (TODO)
 
 1:2, 1:3, 1:4, 2:3, 3:4, 3:5
 ![slice 15](images/slice15.png)
 ![slice 16](images/slice16.png)
 
+
 ### Watch out when using rounded corners for boxes (TODO)
 
 ![slice 01](images/slice1.png)
+
+_TODO: Give a hint that diagram applications typically allow you to choose  fixed value for roundness of the corners, compared to a relative value. Choose the fixed value option to avoid this ugly big rounded corners when you need to place small boxes inside big boxes. Or maybe consider to only use the rounded borders for the inner-most boxes, and use sharp corners for all the other boxes._
+
+
+### Use different stroke widths when boxes are located inside other boxes (TODO)
+
+_TODO: describe that the most important shapes (arrows, boxes) should have a thicker border and/or a more contrast color than the less important shapes. Example: The border of a component/system should be thicker than the border for the network boundary box in which component/system are placed (assuming that the focus of your diagram really stays on these components/systems). So, if you want to put the focus really on the different network boundaries then either remove the components/systems completely or at least make the border of the network boundary boxes thicker than the component/system boxes._
+
+_TODO: Maybe add a statement about stroke style in here:_
+* _I normally would not used anything else but solid line style._
+* _Using dash line style can become useful if you want to show that something is not yet there but planned for the future. But keep in mind that these dashed lines are more difficult to read and thus not so prominent than the solid lines._
 
 
 ## Arrows (TODO)
@@ -764,12 +792,12 @@ _TODO: An additional way to put emphasis on certain shapes (boxes and arrows) yo
 #### No border, inverted fill (TODO)
 
 
-## Layout of shapes and their connection arrows (TODO)
+## Layout of boxes and their connection arrows (TODO)
 
 _TODO: write introduction text to give an overview of what this section and its subsection contains. This section is actually the "Grand Finale" of this whole article: All the tips for single aspects like boxes or arrows or colors only make sense if we finally put everything together in one complete diagram. And this section here does exactly this._
 
 
-### Apply a "hidden grid" when positioning shapes (TODO)
+### Apply a "hidden grid" when positioning boxes (TODO)
 
 
 ### Flow either top-to-down or left-to-right (TODO)
