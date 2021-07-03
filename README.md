@@ -14,7 +14,7 @@
 
 # Visual tips for system diagrams
 
-_Martin Leggewie, 2021-06-27_
+_Martin Leggewie, 2021-07-03_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -45,7 +45,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Canvas guideline 3: Enable snap to grid](#canvas-guideline-3-enable-snap-to-grid)
 - [Text](#text)
     - [Text guideline 1: Use sans-serif font face](#text-guideline-1-use-sans-serif-font-face)
-    - [Select font size in relation to canvas grid size (TODO)](#select-font-size-in-relation-to-canvas-grid-size-todo)
+    - [Text guideline 2: Select font size in relation to box size](#text-guideline-2-select-font-size-in-relation-to-box-size)
     - [Use bold font style for all important names (TODO)](#use-bold-font-style-for-all-important-names-todo)
     - [Use normal font style for all companion text (TODO)](#use-normal-font-style-for-all-companion-text-todo)
     - [Do not use italics font style (TODO)](#do-not-use-italics-font-style-todo)
@@ -679,10 +679,24 @@ Depending on the zoom size you are currently using when viewing this text, you m
 Especially in small sizes the text set in sans-serif font is better readable than the one in serif font faces.
 
 
-### Select font size in relation to canvas grid size (TODO)
+### Text guideline 2: Select font size in relation to box size
 
-![text font size small vs big](diagrams/text_fontsize_small-vs-big.png)
-![slice 05](images/slice5.png)
+When placing text inside boxes, choose a font size which sets the text in a good-readable relation to the box sizes.
+The font size should be chosen in such a way that the reader can still read the text when looking at the diagram as a whole.
+Stated differently: Neither should the text get lost in the vast emtpy area inside the boxes, and nor should the text constantly touch or even leap over the border of the boxes. 
+
+Like with other settings, it it not really possible to define absolut size values here because such sizes depend on the size of the boxes.
+Therefore, following example shows good and bad choices of font sizes to make it understandable what I mean.
+
+----
+
+**Example:**
+Below you see the same system diagram in three different variants.
+
+![font size and box size](diagrams/text-guideline_font-size.png)
+
+The one on the left shows a quite balanced relationship between the sizes of font and boxes.
+The two on the right, however, show what happens when the font size is either too small or too large compared to the box sizes.
 
 
 ### Use bold font style for all important names (TODO)
