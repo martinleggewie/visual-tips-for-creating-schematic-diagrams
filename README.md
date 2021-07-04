@@ -753,6 +753,9 @@ The two on the right, however, show what happens when the font size is either to
 In addition to font attributes like face and size, you can also use the font's style to your benefit.
 If you choose styles "**bold**", "normal", and "*italics*" in a meaningful way, then this will guide the reader to the important parts first, and only when she has understood these she will head over to the remaining parts of the diagram.
 
+When solely looking on the difference between these three different styles, it seems that this does not make a big difference, and yes, this might be true.
+But when combined with all the other guidelines, small differences like font style add up to something which makes a huge difference when applied to a complete and complicated system diagram.
+
 
 #### Use bold style for all important names
 
