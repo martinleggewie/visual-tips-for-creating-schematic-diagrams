@@ -55,7 +55,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Text guideline 3: Use font style to guide to important parts first](#text-guideline-3-use-font-style-to-guide-to-important-parts-first)
         - [Use bold style for all important names](#use-bold-style-for-all-important-names)
         - [Use normal font style for all companion text](#use-normal-font-style-for-all-companion-text)
-        - [Do not use italics font style TODO](#do-not-use-italics-font-style-todo)
+        - [Use italics style for meta information only](#use-italics-style-for-meta-information-only)
 - [Boxes TODO](#boxes-todo)
     - [Use same size for all boxes representing the same element style TODO](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
     - [Use size for inner-most boxes to be even multiples of canvas grid size TODO](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
@@ -808,10 +808,23 @@ Compare this to the "all bold style" approach on the right side.
 Yes, the text in general is well readable, but as all text is in bold style, the reader does not really see where to look first.
 
 
+#### Use italics style for meta information only
 
-#### Do not use italics font style (TODO)
+In general, text in italics style is less readable than normal style.
+Therefore, do not use it for the main content of your system diagram because it only makes it even harder for the reader to get a grip on the information.
 
-![slice 03](images/slice3.png)
+Instead, use italics style for information which has meaning on a meta level.
+Typical example would be if you have some todos or questions about the diagram which you plan to discuss with your colleagues.
+
+----
+
+**Example:**
+The system diagram below shows how italics style text can be used.
+
+![font style italicy for meta information](diagrams/text-guideline_font-style_4.png)
+
+There is a bullet point list titled "TODO" to the left free area to show the reader that certain aspects are not yet completely decided or clear.
+Once these open points have been clarified, I would completely remove this text section from the diagram.
 
 
 ## Boxes (TODO)
