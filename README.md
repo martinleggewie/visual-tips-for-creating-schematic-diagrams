@@ -8,11 +8,14 @@
     * I follow the one sentence per line approach which I came across several years ago when learning AsciiDoc(tor).
     See [https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) for the reasoning behind this approach.
 
-    * Most parts of this whole article I have written with Visual Studio Code, benefitting from its in-built Markdown support. To get the table of content created automically, I have added the extension "alanwalk.markdown-toc". So, in case you would like to change something in the structure of this article, please consider using this extension as well to keep the toc consistent with the content.
+    * Most parts of this whole article I have written with Visual Studio Code, benefitting from its in-built Markdown support.
+    To get the table of content created automically, I have added the extension "huntertran.auto-markdown-toc" and use it with its default configuration.
+    So, in case you would like to change something in the structure of this article, please consider using this extension as well to keep the toc consistent with the content.
  -->
 
 
 # Visual tips for system diagrams
+
 
 _Martin Leggewie, 2021-07-04_
 
@@ -23,64 +26,69 @@ If you want/need to create such diagrams yourself, then these tips can support y
 
 ----
 
+<!-- TOC ignore:true -->
+## Table of Contents
+
 <!-- TOC -->
 
-- [Introduction](#introduction)
-    - [Definition and goal: System diagram](#definition-and-goal-system-diagram)
-    - [Why should you care about how system diagrams look like?](#why-should-you-care-about-how-system-diagrams-look-like)
-- [What is in for you?](#what-is-in-for-you)
-- [Mind-map of the things to come (TODO)](#mind-map-of-the-things-to-come-todo)
-- [General guidelines](#general-guidelines)
-    - [General guideline 1: Use simple visual attributes, avoid the "bling-bling"](#general-guideline-1-use-simple-visual-attributes-avoid-the-bling-bling)
-        - [Do not use color gradients](#do-not-use-color-gradients)
-        - [Do not use 3D elements](#do-not-use-3d-elements)
-        - [Do not use drop shadows](#do-not-use-drop-shadows)
-        - [Do not use the "sketch" visual style](#do-not-use-the-sketch-visual-style)
-    - [General guideline 2: Define the meaning of all visual elements in a legend](#general-guideline-2-define-the-meaning-of-all-visual-elements-in-a-legend)
-    - [General guideline 3: Apply high-contrast coloring style](#general-guideline-3-apply-high-contrast-coloring-style)
-    - [General guideline 4: Use stroke width to support high-contrast](#general-guideline-4-use-stroke-width-to-support-high-contrast)
-- [Canvas](#canvas)
-    - [Canvas guideline 1: Use infinite space](#canvas-guideline-1-use-infinite-space)
-    - [Canvas guideline 2: Set-up a square-shaped grid with reasonable absolute dimensions](#canvas-guideline-2-set-up-a-square-shaped-grid-with-reasonable-absolute-dimensions)
-    - [Canvas guideline 3: Enable snap to grid](#canvas-guideline-3-enable-snap-to-grid)
-- [Text](#text)
-    - [Text guideline 1: Use sans-serif font face](#text-guideline-1-use-sans-serif-font-face)
-    - [Text guideline 2: Select font size in relation to box size](#text-guideline-2-select-font-size-in-relation-to-box-size)
-    - [Use bold font style for all important names (TODO)](#use-bold-font-style-for-all-important-names-todo)
-    - [Use normal font style for all companion text (TODO)](#use-normal-font-style-for-all-companion-text-todo)
-    - [Do not use italics font style (TODO)](#do-not-use-italics-font-style-todo)
-- [Boxes (TODO)](#boxes-todo)
-    - [Use same size for all boxes representing the same element style (TODO)](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
-    - [Use size for inner-most boxes to be even multiples of canvas grid size (TODO)](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
-    - [Use well-defined height-width ratio for inner-most boxes (TODO)](#use-well-defined-height-width-ratio-for-inner-most-boxes-todo)
-    - [Watch out when using rounded corners for boxes (TODO)](#watch-out-when-using-rounded-corners-for-boxes-todo)
-    - [Use different stroke widths when boxes are located inside other boxes (TODO)](#use-different-stroke-widths-when-boxes-are-located-inside-other-boxes-todo)
-- [Arrows (TODO)](#arrows-todo)
-    - [Each arrow has at least one arrow head (TODO)](#each-arrow-has-at-least-one-arrow-head-todo)
-    - [Define exactly what the arrow directions mean (TODO)](#define-exactly-what-the-arrow-directions-mean-todo)
-    - [Choose arrow heads to be big enough compared to diagram size (TODO)](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size-todo)
-    - [Avoid arrow heads in both directions for call dependencies (TODO)](#avoid-arrow-heads-in-both-directions-for-call-dependencies-todo)
-    - [Attach a bigger dot at the arrow start (TODO)](#attach-a-bigger-dot-at-the-arrow-start-todo)
-- [Color (TODO)](#color-todo)
-    - [Choose color so that audience's attention will be guided to the most important diagram elements first (TODO)](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first-todo)
-    - [Color styles (TODO)](#color-styles-todo)
-        - [Black border, normal fill (TODO)](#black-border-normal-fill-todo)
-        - [Black border, inverted fill (TODO)](#black-border-inverted-fill-todo)
-        - [No border, inverted fill (TODO)](#no-border-inverted-fill-todo)
-- [Layout of boxes and their connection arrows (TODO)](#layout-of-boxes-and-their-connection-arrows-todo)
-    - [Apply a "hidden grid" when positioning boxes (TODO)](#apply-a-hidden-grid-when-positioning-boxes-todo)
-    - [Flow either top-to-down or left-to-right (TODO)](#flow-either-top-to-down-or-left-to-right-todo)
-    - [Place boxes in such a way to minimize the amount of corners in the connection arrows (TODO)](#place-boxes-in-such-a-way-to-minimize-the-amount-of-corners-in-the-connection-arrows-todo)
-    - [Try to avoid crossing connection arrows (TODO)](#try-to-avoid-crossing-connection-arrows-todo)
-    - [Never ever allow overlapping connection arrows (TODO)](#never-ever-allow-overlapping-connection-arrows-todo)
-    - [Don't start or end different connection arrows at the same point (TODO)](#dont-start-or-end-different-connection-arrows-at-the-same-point-todo)
-    - [Connection routing path styles (TODO)](#connection-routing-path-styles-todo)
-    - [Choose gap between boxes (TODO)](#choose-gap-between-boxes-todo)
-- [Closing words (TODO)](#closing-words-todo)
+- [Visual tips for system diagrams](#visual-tips-for-system-diagrams)
+    - [Introduction](#introduction)
+        - [Definition and goal: System diagram](#definition-and-goal-system-diagram)
+        - [Why should you care about how system diagrams look like?](#why-should-you-care-about-how-system-diagrams-look-like)
+        - [What is in for you?](#what-is-in-for-you)
+        - [Mind-map of the things to come TODO](#mind-map-of-the-things-to-come-todo)
+    - [General guidelines](#general-guidelines)
+        - [General guideline 1: Use simple visual attributes, avoid the "bling-bling"](#general-guideline-1-use-simple-visual-attributes-avoid-the-bling-bling)
+            - [Do not use color gradients](#do-not-use-color-gradients)
+            - [Do not use 3D elements](#do-not-use-3d-elements)
+            - [Do not use drop shadows](#do-not-use-drop-shadows)
+            - [Do not use the "sketch" visual style](#do-not-use-the-sketch-visual-style)
+        - [General guideline 2: Define the meaning of all visual elements in a legend](#general-guideline-2-define-the-meaning-of-all-visual-elements-in-a-legend)
+        - [General guideline 3: Apply high-contrast coloring style](#general-guideline-3-apply-high-contrast-coloring-style)
+        - [General guideline 4: Use stroke width to support high-contrast](#general-guideline-4-use-stroke-width-to-support-high-contrast)
+    - [Canvas](#canvas)
+        - [Canvas guideline 1: Use infinite space](#canvas-guideline-1-use-infinite-space)
+        - [Canvas guideline 2: Set-up a square-shaped grid with reasonable absolute dimensions](#canvas-guideline-2-set-up-a-square-shaped-grid-with-reasonable-absolute-dimensions)
+        - [Canvas guideline 3: Enable snap to grid](#canvas-guideline-3-enable-snap-to-grid)
+    - [Text](#text)
+        - [Text guideline 1: Use sans-serif font face](#text-guideline-1-use-sans-serif-font-face)
+        - [Text guideline 2: Select font size in relation to box size](#text-guideline-2-select-font-size-in-relation-to-box-size)
+        - [Use bold font style for all important names TODO](#use-bold-font-style-for-all-important-names-todo)
+        - [Use normal font style for all companion text TODO](#use-normal-font-style-for-all-companion-text-todo)
+        - [Do not use italics font style TODO](#do-not-use-italics-font-style-todo)
+    - [Boxes TODO](#boxes-todo)
+        - [Use same size for all boxes representing the same element style TODO](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
+        - [Use size for inner-most boxes to be even multiples of canvas grid size TODO](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
+        - [Use well-defined height-width ratio for inner-most boxes TODO](#use-well-defined-height-width-ratio-for-inner-most-boxes-todo)
+        - [Watch out when using rounded corners for boxes TODO](#watch-out-when-using-rounded-corners-for-boxes-todo)
+        - [Use different stroke widths when boxes are located inside other boxes TODO](#use-different-stroke-widths-when-boxes-are-located-inside-other-boxes-todo)
+    - [Arrows TODO](#arrows-todo)
+        - [Each arrow has at least one arrow head TODO](#each-arrow-has-at-least-one-arrow-head-todo)
+        - [Define exactly what the arrow directions mean TODO](#define-exactly-what-the-arrow-directions-mean-todo)
+        - [Choose arrow heads to be big enough compared to diagram size TODO](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size-todo)
+        - [Avoid arrow heads in both directions for call dependencies TODO](#avoid-arrow-heads-in-both-directions-for-call-dependencies-todo)
+        - [Attach a bigger dot at the arrow start TODO](#attach-a-bigger-dot-at-the-arrow-start-todo)
+    - [Color TODO](#color-todo)
+        - [Choose color so that audience's attention will be guided to the most important diagram elements first TODO](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first-todo)
+        - [Color styles TODO](#color-styles-todo)
+            - [Black border, normal fill TODO](#black-border-normal-fill-todo)
+            - [Black border, inverted fill TODO](#black-border-inverted-fill-todo)
+            - [No border, inverted fill TODO](#no-border-inverted-fill-todo)
+    - [Layout of boxes and their connection arrows TODO](#layout-of-boxes-and-their-connection-arrows-todo)
+        - [Apply a "hidden grid" when positioning boxes TODO](#apply-a-hidden-grid-when-positioning-boxes-todo)
+        - [Flow either top-to-down or left-to-right TODO](#flow-either-top-to-down-or-left-to-right-todo)
+        - [Place boxes in such a way to minimize the amount of corners in the connection arrows TODO](#place-boxes-in-such-a-way-to-minimize-the-amount-of-corners-in-the-connection-arrows-todo)
+        - [Try to avoid crossing connection arrows TODO](#try-to-avoid-crossing-connection-arrows-todo)
+        - [Never ever allow overlapping connection arrows TODO](#never-ever-allow-overlapping-connection-arrows-todo)
+        - [Don't start or end different connection arrows at the same point TODO](#dont-start-or-end-different-connection-arrows-at-the-same-point-todo)
+        - [Connection routing path styles TODO](#connection-routing-path-styles-todo)
+        - [Choose gap between boxes TODO](#choose-gap-between-boxes-todo)
+    - [Closing words TODO](#closing-words-todo)
 
 <!-- /TOC -->
 
 ----
+
 
 ## Introduction
 
@@ -132,10 +140,14 @@ Below you see an example system diagram:
 ![example system diagram - reduced to the max](diagrams/example-systemdiagram_reduced-to-the-max.png)
 
 I don't know about you, but I think that this diagram is already quite readable, and the audience should be able to understand
-* with which system the user interacts,
-* which systems store something in the database,
-* which systems are somehow connected to which other systems, and
-* what are the boundaries of the different elements.
+
+- with which system the user interacts,
+
+- which systems store something in the database,
+
+- which systems are somehow connected to which other systems, and
+
+- what are the boundaries of the different elements.
 
 Admittedly, this diagram is not very complicated because it contains only one user, three systems, one database, and in total six connection arrows.
 With such a simple example, it should not be so important to put much emphasis on the visual style.
@@ -154,8 +166,9 @@ The reason for this is a suboptimal usage of colors, fonts, shapes, and sizes an
 Maybe you think that it was me who has created this second diagram in this difficult-to-read way on purpose, just to make a point, and that I exaggerated quite a bit.
 The answer is: Yes, and no.
 
-* Yes, I created the diagram intentionally like this, to make my point.
-* No, I did not exaggerate.
+- Yes, I created the diagram intentionally like this, to make my point.
+
+- No, I did not exaggerate.
 
 If you don't believe me, please do an Internet search for the term "system diagram", and check the images your preferred search engine returns.
 Some of them will be in a clean style, maybe similar to the first example diagram shown above.
@@ -166,7 +179,7 @@ After all, these diagrams are not meant to be pieces of art.
 Instead, their sole purpose is to convey information and to trigger people to talk about the diagram's topic.
 
 
-## What is in for you?
+### What is in for you?
 
 If you agree with me that the second diagram is somehow suboptimal, and if you also agree that the creator should and could have done better, then we are on the same page.
 
@@ -178,7 +191,7 @@ Now, if you invest your precious time in reading this text, you will find the li
 Maybe you can take-away some ideas which support you the next time you have to create such diagrams yourself.
 
 
-## Mind-map of the things to come (TODO)
+### Mind-map of the things to come (TODO)
 
 _TODO: Create a proper and readable version of the following mind-map_
 ![slice 14](images/slice14.png)
@@ -219,15 +232,18 @@ The fill algorithm of the graphical application I have used to create this diagr
 
 The visuals of the diagram on the right side introduce some problems:
 
-* The gradient fill makes it harder to read the text. Of course, you could apply a brighter color as blue, but then there would not much be left from the gradient. A gradient from a bright color to another bright color does not create much color transition.
+- The gradient fill makes it harder to read the text.
+Of course, you could apply a brighter color as blue, but then there would not much be left from the gradient.
+A gradient from a bright color to another bright color does not create much color transition.
 
-* The gradient fill color looks different when comparing the taller box ("Huge Other System") with the other two.
+- The gradient fill color looks different when comparing the taller box ("Huge Other System") with the other two.
 As the taller box offers more vertical space to be filled, the audience can see more of all the intermediate colors.
 In the example, a (quite muddy) green-ish color appears in the vertical middle.
 The other two smaller boxes do not show this green-ish color because there is just not enough room available.
 All in all this creates a different color appearance for the taller box although all three boxes should get the same color.
 
-* Maybe just a minor thing: At least in my perception the intermediate colors look somewhat polluted, as if there was some dust cover which has not been removed by the cleaning personnel.
+- Maybe just a minor thing:
+At least in my perception the intermediate colors look somewhat polluted, as if there was some dust cover which has not been removed by the cleaning personnel.
 
 
 #### Do not use 3D elements
@@ -244,10 +260,10 @@ In the example below, the two diagrams on the right side both apply an isometric
 
 This shows the problems which arise because of not using 2D.
 
-* In the upper right diagram the drawing tool's connection feature is used.
+- In the upper right diagram the drawing tool's connection feature is used.
 As the tool does not support real 3D, it applies the connectors in a wrong inconsistent way.
 
-* In the lower right diagram I have manually corrected the inconsistencies, but now some arrow heads (visually correctly!) vanish.
+- In the lower right diagram I have manually corrected the inconsistencies, but now some arrow heads (visually correctly!) vanish.
 
 Either way, you will only have some extra work to do with no real benefit as the third dimension does not convey any additional information.
 
@@ -279,7 +295,7 @@ Therefore, just don't use these sketch modes.
 
 ----
 
-**Example:** 
+**Example:**
 The example below shows the difference when comparing the normal style with the sketch style.
 
 ![normal vs. sketch mode](diagrams/general-guideline_no-sketch-mode.png)
@@ -341,8 +357,9 @@ In whatever way, putting black and white next to each other results in the highe
 Well.
 The world is not only black and white:
 
-* You might need different fill colors in the same diagram because fill color is one major visual aspect you can use to express different values for the same type of system attribute.
-* You typically have white also as the background color.
+- You might need different fill colors in the same diagram because fill color is one major visual aspect you can use to express different values for the same type of system attribute.
+
+- You typically have white also as the background color.
 Now, if all the boxes are white, as well as the background, then again it might become a bit difficult to separate everything, even when there is black as a border color.
 
 ----
@@ -357,8 +374,9 @@ On the right side you see the very same system landscape, but this time the brig
 
 This results in a lower contrast and thus bad readability because
 
-* the black text is now closer to the luminosity value of the fill colors, and 
-* the grey color of the borders and arrows is now closer to the white background color.
+- the black text is now closer to the luminosity value of the fill colors, and
+
+- the grey color of the borders and arrows is now closer to the white background color.
 
 
 ### General guideline 4: Use stroke width to support high-contrast
@@ -488,9 +506,11 @@ You decide that it is time for a bigger refactoring of the diagram.
 
 Because you are quite picky when it comes to diagrams, you plan to refactor the diagram to meet the following rules:
 
-* Any connection arrow needs to go from left to right because only then the connections follow the dependency order.
-* All boxes need to have the same size.
-* All distances between elements need to have the same size.
+- Any connection arrow needs to go from left to right because only then the connections follow the dependency order.
+
+- All boxes need to have the same size.
+
+- All distances between elements need to have the same size.
 
 After some reshuffling of visual elements you realize that the canvas in its current size does not provide enough horizontal space, at least not if you also want to have a distance of three boxes between any two boxes.
 You decide that a distance of two boxes would also be ok.
@@ -555,9 +575,11 @@ The result looks like this:
 
 This diagram follows several layout rules:
 
-* Any system box (incl. database) has a size of 3x2 units.
-* There is an invisible grid which defines four horizontal and seven vertical lanes on which symbols are located.
-* The connection arrows follow the flow of dependencies.
+- Any system box (incl. database) has a size of 3x2 units.
+
+- There is an invisible grid which defines four horizontal and seven vertical lanes on which symbols are located.
+
+- The connection arrows follow the flow of dependencies.
 Any incoming dependency enters a box from the left, and any outgoing dependeny leaves a box from the right.
 
 You can find more details about layout rules in a later section of this document.
@@ -574,15 +596,19 @@ It is of course nice that the applications have such alignment tools, but if you
 There is no general rule for which exact grid values you should choose because this heavily depends on the type of graphics application and screen size you use.
 The chosen grid size should be reasonable in such a way that it
 
-* already allows you to horizontally and vertically align visual elements just by looking at them, but
-* also leaves enough granularity to place the visual elements in the way you need.
+- already allows you to horizontally and vertically align visual elements just by looking at them, but
+
+- also leaves enough granularity to place the visual elements in the way you need.
 
 As a rule of thumb I suggest the following process to come to reasonable values for the grid dimensions:
 
 1. Bring your graphics application into fullscreen mode.
+
 2. Select a view factor of 100%.
-3. Have all the typically needed panels (e.g. "Shapes", "Properties", "Layers") visible which the graphics application offers. 
-3. Now, select the grid dimensions in such a way that about 40 squares fit horizontally.
+
+3. Have all the typically needed panels (e.g. "Shapes", "Properties", "Layers") visible which the graphics application offers.
+
+4. Now, select the grid dimensions in such a way that about 40 squares fit horizontally.
 
 ----
 
@@ -706,7 +732,7 @@ One drawback of such a fixed font face might be that you typically need more hor
 
 When placing text inside boxes, choose a font size which sets the text in a good-readable relation to the box sizes.
 The font size should be chosen in such a way that the reader can still read the text when looking at the diagram as a whole.
-Stated differently: Neither should the text get lost in the vast emtpy area inside the boxes, and nor should the text constantly touch or even leap over the border of the boxes. 
+Stated differently: Neither should the text get lost in the vast emtpy area inside the boxes, and nor should the text constantly touch or even leap over the border of the boxes.
 
 Like with other settings, it it not really possible to define absolut size values here because such sizes depend on the size of the boxes.
 Therefore, following example shows good and bad choices of font sizes to make it understandable what I mean.
@@ -769,8 +795,10 @@ _TODO: Give a hint that diagram applications typically allow you to choose  fixe
 _TODO: describe that the most important shapes (arrows, boxes) should have a thicker border and/or a more contrast color than the less important shapes. Example: The border of a component/system should be thicker than the border for the network boundary box in which component/system are placed (assuming that the focus of your diagram really stays on these components/systems). So, if you want to put the focus really on the different network boundaries then either remove the components/systems completely or at least make the border of the network boundary boxes thicker than the component/system boxes._
 
 _TODO: Maybe add a statement about stroke style in here:_
-* _I normally would not used anything else but solid line style._
-* _Using dash line style can become useful if you want to show that something is not yet there but planned for the future. But keep in mind that these dashed lines are more difficult to read and thus not so prominent than the solid lines._
+
+- _I normally would not used anything else but solid line style._
+
+- _Using dash line style can become useful if you want to show that something is not yet there but planned for the future. But keep in mind that these dashed lines are more difficult to read and thus not so prominent than the solid lines._
 
 
 ## Arrows (TODO)
@@ -871,8 +899,14 @@ _TODO: write introduction text to give an overview of what this section and its 
 
 ## Closing words (TODO)
 
-* _Thank the audience for spending their time._
-* _Hope that it has been useful for the audience._
-* _Invite audience to provide feedback._
-* _Add contact information._
-* _Recommend my favorite graphical application for creating system diagrams (which is draw.io). Make clear that I am not related to draw.io in any way. This is not advertisement._
+- _Thank the audience for spending their time._
+
+- _Hope that it has been useful for the audience._
+
+- _Invite audience to provide feedback._
+
+- _Add contact information._
+
+- _Recommend my favorite graphical application for creating system diagrams (which is draw.io).
+Make clear that I am not related to draw.io in any way.
+This is not advertisement._
