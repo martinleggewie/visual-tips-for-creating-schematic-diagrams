@@ -14,7 +14,7 @@
 
 # Visual tips for system diagrams
 
-_Martin Leggewie, 2021-07-03_
+_Martin Leggewie, 2021-07-04_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -649,7 +649,7 @@ Typical examples for such sans-serif font faces which are installed out-of-the b
 
 ----
 
-**Example:**
+**Example: various sans-serif font faces**
 Following table shows three sans-serif font faces in four different sizes to give you a first impression about how these look.
 
 ![example sans-serif font faces](diagrams/text-guideline_sans-serif-font-face_1.png)
@@ -670,13 +670,36 @@ The written text needs to be readable already from far away as good as possible,
 
 ----
 
-**Example:**
-Below you can see the same text first in the sans-serif font face Helvetica compared to two common serif font faces Garamond and Times New Roman.
+**Example: sans-serif vs. serif font faces**
+Below you can see the same text first in the sans-serif font face "Helvetica" compared to two common serif font faces "Garamond" and "Times New Roman".
 
 ![compare sans-serif font face with serif font faces](diagrams/text-guideline_sans-serif-font-face_2.png)
 
 Depending on the zoom size you are currently using when viewing this text, you might see the difference when comparing text set in sans-serif with serif font faces.
 Especially in small sizes the text set in sans-serif font is better readable than the one in serif font faces.
+
+----
+
+**Example: sans-serif vs. fixed font faces**
+If you don't like to use a sans-serif font face, but agree that standard serif font faces are also no good alternative, then a possible compromise could be using a serif fixed font face.
+
+So far, the font faces shown in the examples above were all proportional fonts.
+"Proportional" means that separate characters get a different width when put next to each other to form complete words.
+The character "i" needs less horizontal space than the character "w".
+When using a proportional font face, the character "i" really gets less horizontal space than the character "w".
+
+In contrast, when showing the same characters "i" and "w" in a fixed font face, all characters get the very same width.
+This can lead to unbalanced (and therefore ugly) use of whitespace in written text, and this unbalance is the reason why you should not use a fixed font when displaying a longer text. 
+
+But in system diagrams we typically don't display longer text, but instead we just have to show names of components and the like.
+Using a fixed serif font face can be an alternative.
+
+Below you see the comparison between the sans-serif proportional font face "Helvetica" and the serif fixed font face "Courier New".
+
+![compare sans-serif font face with fixed font faces](diagrams/text-guideline_sans-serif-font-face_3.png)
+
+Personally, I could accept using "Courier New", but only in the bold style (right column) because in the normal style (middle column) the stroke is too small, resulting in quite thin letters, and therefore make the text more difficult to read.
+One drawback of such a fixed font face might be that you typically need more horizontal space for the same text compared to proportional font face.
 
 
 ### Text guideline 2: Select font size in relation to box size
