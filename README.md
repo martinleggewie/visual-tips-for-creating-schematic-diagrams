@@ -54,7 +54,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Text guideline 2: Select font size in relation to box size](#text-guideline-2-select-font-size-in-relation-to-box-size)
     - [Text guideline 3: Use font style to guide to important parts first](#text-guideline-3-use-font-style-to-guide-to-important-parts-first)
         - [Use bold style for all important names](#use-bold-style-for-all-important-names)
-        - [Use normal font style for all companion text TODO](#use-normal-font-style-for-all-companion-text-todo)
+        - [Use normal font style for all companion text](#use-normal-font-style-for-all-companion-text)
         - [Do not use italics font style TODO](#do-not-use-italics-font-style-todo)
 - [Boxes TODO](#boxes-todo)
     - [Use same size for all boxes representing the same element style TODO](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
@@ -785,7 +785,25 @@ Because the bold style names pop out more, they catch the reader's attention fir
 Just as comparison the two system diagrams on the right side show how to maybe not use the option between bold and normal style.
 
 
-#### Use normal font style for all companion text (TODO)
+#### Use normal font style for all companion text
+
+The previous section already contains an example in which we mix both bold and normal style text for the same type of diagram elements.
+To generalize this: Use normal style for text which you would like the reader to notice and focus on after she has seen the most important text of the diagram.
+
+Typical examples for such companion text are notes attached to certain boxes, or the description shown in the legend.
+
+----
+
+**Example:**
+The image shown below compares how a slightly more complicated system diagram looks if bold and normal style used together to set the focus on the more important parts first.
+
+![font style normal for companion text](diagrams/text-guideline_font-style_3.png)
+
+The diagram on the left shows how the system names make use of the bold style, while the additional notes and the text in the legend is written in normal style.
+
+Compare this to the "all bold style" approach on the right side.
+Yes, the text in general is well readable, but as all text is in bold style, the reader does not really see where to look first.
+
 
 
 #### Do not use italics font style (TODO)
