@@ -52,9 +52,10 @@ If you want/need to create such diagrams yourself, then these tips can support y
 - [Text](#text)
     - [Text guideline 1: Use sans-serif font face](#text-guideline-1-use-sans-serif-font-face)
     - [Text guideline 2: Select font size in relation to box size](#text-guideline-2-select-font-size-in-relation-to-box-size)
-    - [Use bold font style for all important names TODO](#use-bold-font-style-for-all-important-names-todo)
-    - [Use normal font style for all companion text TODO](#use-normal-font-style-for-all-companion-text-todo)
-    - [Do not use italics font style TODO](#do-not-use-italics-font-style-todo)
+    - [Text guideline 3: Use font style to guide to important parts first](#text-guideline-3-use-font-style-to-guide-to-important-parts-first)
+        - [Use bold style for all important names](#use-bold-style-for-all-important-names)
+        - [Use normal font style for all companion text TODO](#use-normal-font-style-for-all-companion-text-todo)
+        - [Do not use italics font style TODO](#do-not-use-italics-font-style-todo)
 - [Boxes TODO](#boxes-todo)
     - [Use same size for all boxes representing the same element style TODO](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
     - [Use size for inner-most boxes to be even multiples of canvas grid size TODO](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
@@ -747,15 +748,47 @@ The one on the left shows a quite balanced relationship between the sizes of fon
 The two on the right, however, show what happens when the font size is either too small or too large compared to the box sizes.
 
 
-### Use bold font style for all important names (TODO)
+### Text guideline 3: Use font style to guide to important parts first
 
-![slice 02](images/slice2.png)
-
-
-### Use normal font style for all companion text (TODO)
+In addition to font attributes like face and size, you can also use the font's style to your benefit.
+If you choose styles "**bold**", "normal", and "*italics*" in a meaningful way, then this will guide the reader to the important parts first, and only when she has understood these she will head over to the remaining parts of the diagram.
 
 
-### Do not use italics font style (TODO)
+#### Use bold style for all important names
+
+This might not come as a surprise to you:
+Text set in the bold style catches the reader's attention, especially when set in contrast to text in normal style.
+You can make use of this feature to guide the reader to the important parts of your system diagram first.
+
+----
+
+**Example - all names are set in bold style:**
+Below you see the standard way of how to use bold style in a system diagram.
+
+![font style bold for all names](diagrams/text-guideline_font-style_1.png)
+
+The left variant uses bold style for all the system names, whereas the right variant just uses the normal style.
+When using the bold style, the system names pop out more and therefore better catch the reader's attention.
+Especially when zoomed out, text in bold style is better readable because the font's stroke is larger.
+
+----
+
+**Example - names set in bold style emphasize a certain property:**
+Sometimes you don't want to lead the reader's attention to all the systems, but only to those with a certain property.
+The example diagram below shows how you can use bold style to put focus on the new systems first, and only then to the old systems.
+
+![font style bold for names of new systems](diagrams/text-guideline_font-style_2.png)
+
+The left variant shows how only the new systems' names are set in bold style, while the remaining old systems' names are set in normal style.
+Because the bold style names pop out more, they catch the reader's attention first.
+
+Just as comparison the two system diagrams on the right side show how to maybe not use the option between bold and normal style.
+
+
+#### Use normal font style for all companion text (TODO)
+
+
+#### Do not use italics font style (TODO)
 
 ![slice 03](images/slice3.png)
 
