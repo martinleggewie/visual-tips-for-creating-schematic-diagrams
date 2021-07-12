@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-07-04_
+_Martin Leggewie, 2021-07-12_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -56,7 +56,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
         - [Use bold style for all important names](#use-bold-style-for-all-important-names)
         - [Use normal font style for all companion text](#use-normal-font-style-for-all-companion-text)
         - [Use italics style for meta information only](#use-italics-style-for-meta-information-only)
-- [Boxes TODO](#boxes-todo)
+- [Boxes](#boxes)
     - [Use same size for all boxes representing the same element style TODO](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
     - [Use size for inner-most boxes to be even multiples of canvas grid size TODO](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
     - [Use well-defined height-width ratio for inner-most boxes TODO](#use-well-defined-height-width-ratio-for-inner-most-boxes-todo)
@@ -827,9 +827,28 @@ There is a bullet point list titled "TODO" to the left free area to show the rea
 Once these open points have been clarified, I would completely remove this text section from the diagram.
 
 
-## Boxes (TODO)
+## Boxes
 
-_TODO: write introduction text to give an overview of what this section and its subsection contains._
+Besides the connection arrows (see next chapter), boxes are THE basic types of visual elements in our system diagrams.
+I consider boxes and connection arrows as the backbone tools when creating abstractions.
+
+Using a box in a diagram to represent something from the real world serves two purposes:
+
+1. **Each box represents an entity.**
+If we want to give that entity a name, we add the name as text inside the box.
+With this high abstraction, we do not tell the reader more than a) there is something which can be told apart from the rest, and b) this something has a name.
+This "reduced to the max" approach helps the reader to focus when we want to discuss a certain system landscape on a high level.
+
+2. **Boxes inside other boxes represent a hierarchical structure.**
+Extending the simple abstraction from the previous paragraph:
+We can draw boxes inside other boxes, forming a hierarchical structure (aka a tree).
+With such a tree we tell the reader that some entity belongs to or is contained in another entity.
+A typical example in a system diagram would be a complete application which consists of several components.
+To represent this structure in a diagram, you would create a big box (the application), and in that big box you would add some smaller boxes, one box for each component.
+
+If you need to represent more types of information besides "There is something", "This something has a name", and "This something belongs to something else", you can use additional visual attributes like size, border stroke width, or background color as abstractions for these information.
+
+The remaining sections of this chapter define certain guidelines for how to use these visual attributes to help the reader to get a good grip on the information.
 
 
 ### Use same size for all boxes representing the same element style (TODO)
