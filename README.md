@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-07-12_
+_Martin Leggewie, 2021-07-18_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -57,7 +57,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
         - [Use normal font style for all companion text](#use-normal-font-style-for-all-companion-text)
         - [Use italics style for meta information only](#use-italics-style-for-meta-information-only)
 - [Boxes](#boxes)
-    - [Use same size for all boxes representing the same element style TODO](#use-same-size-for-all-boxes-representing-the-same-element-style-todo)
+    - [Box guideline 1: Use same size for boxes which represent the same type of entity](#box-guideline-1-use-same-size-for-boxes-which-represent-the-same-type-of-entity)
     - [Use size for inner-most boxes to be even multiples of canvas grid size TODO](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
     - [Use well-defined height-width ratio for inner-most boxes TODO](#use-well-defined-height-width-ratio-for-inner-most-boxes-todo)
     - [Watch out when using rounded corners for boxes TODO](#watch-out-when-using-rounded-corners-for-boxes-todo)
@@ -851,9 +851,40 @@ If you need to represent more types of information besides "There is something",
 The remaining sections of this chapter define certain guidelines for how to use these visual attributes to help the reader to get a good grip on the information.
 
 
-### Use same size for all boxes representing the same element style (TODO)
+### Box guideline 1: Use same size for boxes which represent the same type of entity
 
-![slice 06](images/slice6.png)
+If you want to represent different entities as boxes in your system diagram, and if these entities are of the same type, then make all these boxes the same size.
+
+The size of such a box is a visual attribute like color or stroke width.
+Bigger boxes attract the reader's eye more than the smaller ones.
+If you choose different sizes for the same type of entity you signal to the reader that the size has some special meaning.
+She might think that entities represented by bigger boxes are more important, more complicated, or more expensive than the smaller ones.
+
+If you choose different box sizes intentionally because you are aware of this effect, then kudos to you.
+But: If you do this by intention, then you need to specify the meaning of these different sizes in the legend because otherwise the reader cannot know what that meaning might be.
+Ha, gotcha, I bet you didn't think of this. :-)
+
+And while we are at betting:
+I would also bet that in 99.9% of the diagrams the real reason for having different sizes for boxes which represent the same type of entities is because the various names of the entities need significantly different space.
+Diagram tools dynamically adjust the size (typically, the width) of boxes when you extend the number of characters needed for the names above a certain threshold.
+
+That the tools have this auto-adjust feature is nice when you are just right in the middle of creating something when speed is very important.
+But once you finished getting the information represented correctly in your diagram, you should invest some additional time to synchronize all the box sizes.
+If you notice that you would need to extend the size for all boxes because there is just one box with a significantly longer name, then consider to abbreviate the long name until it fits to the current box size for the entity type.
+
+----
+
+**Example:**
+A typical example of such types of entities are the "system" or the "application", or the contained "components" or "modules".
+
+The two system diagrams shown below both represent the very same system landscape, but use the box sizes differently.
+
+![same box size for same entity type](diagrams/box-guideline_same-size-for-same-entity-type.png)
+
+The diagram to the left shows the in total seven boxes in the exact same size because each box represent one system.
+
+Compare this to its pendant to the right which shows the same seven boxes as well, but this time uses different sizes for each of the boxes.
+As the seven systems are just that, namely systems, with no further meaning or property, chosing different box sizes can be (and in my opinion is) confusing.
 
 
 ### Use size for inner-most boxes to be even multiples of canvas grid size (TODO)
