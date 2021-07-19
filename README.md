@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-07-18_
+_Martin Leggewie, 2021-07-19_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -58,7 +58,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
         - [Use italics style for meta information only](#use-italics-style-for-meta-information-only)
 - [Boxes](#boxes)
     - [Box guideline 1: Use same size for boxes which represent the same type of entity](#box-guideline-1-use-same-size-for-boxes-which-represent-the-same-type-of-entity)
-    - [Use size for inner-most boxes to be even multiples of canvas grid size TODO](#use-size-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size-todo)
+    - [Box guideline 2: Choose width and height for inner-most boxes to be even multiples of canvas grid size](#box-guideline-2-choose-width-and-height-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size)
     - [Use well-defined height-width ratio for inner-most boxes TODO](#use-well-defined-height-width-ratio-for-inner-most-boxes-todo)
     - [Watch out when using rounded corners for boxes TODO](#watch-out-when-using-rounded-corners-for-boxes-todo)
     - [Use different stroke widths when boxes are located inside other boxes TODO](#use-different-stroke-widths-when-boxes-are-located-inside-other-boxes-todo)
@@ -887,9 +887,48 @@ Compare this to its pendant to the right which shows the same seven boxes as wel
 As the seven systems are just that, namely systems, with no further meaning or property, chosing different box sizes can be (and in my opinion is) confusing.
 
 
-### Use size for inner-most boxes to be even multiples of canvas grid size (TODO)
+### Box guideline 2: Choose width and height for inner-most boxes to be even multiples of canvas grid size
 
-![slice 22](images/slice22.png)
+Choose values for the inner-most boxes' width and height to be even multiples of the canvas grid size.
+Let's invent a specific name for this: the "even multiple rule".
+
+If you follow this rule, it will be very easy for you to align the connection arrows directly at the center of any of the box's edge.
+The grid (with [snap-to-grid enabled](#canvas-guideline-3-enable-snap-to-grid)) will guide you to place the connection arrow at exactly the correct points.
+This can come quite in handy especially if your diagram tool does not support boxes with "magnetic connectors" which glue connection arrows to the center of either the box itself or the edge of the box.
+
+But even if your diagram tool has such a magnetic connector feature, it still has advantages to choose the width and height according to this "even multiples rule":
+Sooner or later, when you need to connect more and more boxes with connection arrows, you will need to manually layout the path of the connection arrows.
+And if the boxes' width and height are even multiples of the grid size, it will be straightforward to layout the paths because the snap-to-grid feature can support you here as well.
+
+----
+
+**Example:**
+The following image shows how the "even multiple rule" allows you to benefit from the snap-to-grid feature (and how it does not if you apply an "odd multiple" rule).
+
+![even multiple rule 1](diagrams/box-guideline_even-multiple-rule_1.png)
+
+The diagram on the left follows the "even multiple rule", and therefore the start points and end points of the connection arrows are exactly aligned to the grid.
+The snap-to-grid feature of your diagram tool can support you to align the connection arrows directly by hand.
+
+The diagram on the right, on the other hand, shows how the start points and end points are just in between the grid when you want to have them connected to the middle of the box edges.
+If your diagram tool does not have a "magnetic connector" feature, if will become more difficult to align everything correctly.
+
+----
+
+**Example:**
+To continue from the first example shown above:
+The system diagrams in the following images contain more boxes and more connection arrows which forces you to bend the arrows and do some manual layout of their paths.
+
+![even multiple rule 2](diagrams/box-guideline_even-multiple-rule_2.png)
+
+Here the advantage of following the "even multiple rule" becomes even more apparent.
+In the left system diagram the corners in the connection arrow paths still fit exactly to the grid.
+Because of this and combined with the snap-to-grid feature, setting up the paths like this would be a breeze.
+
+On the contrary, the diagram on the right clearly shows that also the corners of the connection arrows do not fit to the canvas grid.
+It would be tedious to get the path layout setup like this because the snap-to-grid feature is of no use at all.
+Even worse:
+you need to disable snap-to-grid in this situation because otherwise it will actively prevent you from layouting the paths like this.
 
 
 ### Use well-defined height-width ratio for inner-most boxes (TODO)
