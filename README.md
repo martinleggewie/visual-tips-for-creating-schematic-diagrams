@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-07-19_
+_Martin Leggewie, 2021-07-23_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -59,7 +59,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
 - [Boxes](#boxes)
     - [Box guideline 1: Use same size for boxes which represent the same type of entity](#box-guideline-1-use-same-size-for-boxes-which-represent-the-same-type-of-entity)
     - [Box guideline 2: Choose width and height for inner-most boxes to be even multiples of canvas grid size](#box-guideline-2-choose-width-and-height-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size)
-    - [Use well-defined height-width ratio for inner-most boxes TODO](#use-well-defined-height-width-ratio-for-inner-most-boxes-todo)
+    - [Box guideline 3: Choose suitable size for inner-most boxes to allow making good use of the snap-to-grid feature](#box-guideline-3-choose-suitable-size-for-inner-most-boxes-to-allow-making-good-use-of-the-snap-to-grid-feature)
     - [Watch out when using rounded corners for boxes TODO](#watch-out-when-using-rounded-corners-for-boxes-todo)
     - [Use different stroke widths when boxes are located inside other boxes TODO](#use-different-stroke-widths-when-boxes-are-located-inside-other-boxes-todo)
 - [Arrows TODO](#arrows-todo)
@@ -931,11 +931,44 @@ Even worse:
 you need to disable snap-to-grid in this situation because otherwise it will actively prevent you from layouting the paths like this.
 
 
-### Use well-defined height-width ratio for inner-most boxes (TODO)
+### Box guideline 3: Choose suitable size for inner-most boxes to allow making good use of the snap-to-grid feature
 
-1:2, 1:3, 1:4, 2:3, 3:4, 3:5
-![slice 15](images/slice15.png)
-![slice 16](images/slice16.png)
+Choose values for height and width for the inner-most boxes in such a way that these boxes get just the right size compared to the canvas grid so that the snap-to-grid feature of your diagram tool can help you aligning boxes easily.
+The boxes should be large enough that the snap-to-grid feature of your diagram tool still leaves you some flexibility while aligning the boxes to each other and adding connection arrows.
+But the boxes should also be not so large that the canvas grid gets too fine-grained and therefore the snap-to-grid feature cannot help you anymore with the manual aligning.
+
+Well, this is a pretty vague and also complicated-sounding guideline so far, I know.
+
+Let's make it concrete:
+A good starting point for the box size would be to just multiply the intended box's width-to-height ratio with the absolute size of the squares of the canvas grid.
+If we assume that you would like to have boxes with a width-to-height ratio of 4:2, and if we also assume that the canvas grid squares have a size of 10x10 pt, then the resulting size for the boxes would be 40x20 pt.
+
+If you need to assign many connection arrows between the boxes or put boxes inside other boxes, it might be a good idea to double the box sizes.
+So, the boxes would get a size of 80x40 pt.
+That would mean that the snap-to-grid feature's resolution would be twice as high, but most likely this would still be course-grained enough that the feature helps you.
+
+But if you would increase the box sizes even more, you would soon reach the point where the snap-to-grid feature would have so many snapping positions in such a high resolution that the feature would not really help you any longer.
+
+In the end you have to find the "sweet spot" compromise for your diagram tool and your needs by yourself.
+Maybe you have a really good eye and can easily detect that boxes are not exactly aligned to each other - in that case you can choose bigger box sizes.
+But in case you want to make the most out of the snap-to-grid feature, then you might want to select rather small box sizes.
+
+----
+
+**Example:**
+The diagrams below show two different box-to-canvas-grid-size ratios.
+
+![width and height and canvas size](diagrams/box-guideline_width-height-and-canvas-size.png)
+
+The left diagram shows a useful box-to-grid size ratio:
+The boxes cover 4x2 canvas grid squares.
+This still gives some flexibility when aligning the boxes to each other.
+For example, we could manually increase the gap between boxes from 2 up to 3 canvas grid squares just by dragging the boxes around.
+The snap-to-grid feature would support you directly because you can easily tell the difference between a gap of 2 and 3 squares.
+
+Compare this to the diagram on the right.
+The canvas grid squares are four times smaller, thus the boxes cover 16x8 canvas squares.
+At this ratio, the snap-to-grid feature becames less useful because it can easier happen that you accidentally align boxes and connection just a little bit off.
 
 
 ### Watch out when using rounded corners for boxes (TODO)
