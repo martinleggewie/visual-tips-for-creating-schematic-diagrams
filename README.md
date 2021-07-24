@@ -61,7 +61,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Box guideline 2: Choose width and height for inner-most boxes to be even multiples of canvas grid size](#box-guideline-2-choose-width-and-height-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size)
     - [Box guideline 3: Choose suitable size for inner-most boxes to allow making good use of the snap-to-grid feature](#box-guideline-3-choose-suitable-size-for-inner-most-boxes-to-allow-making-good-use-of-the-snap-to-grid-feature)
     - [Box guideline 4: Choose consistent corner curvature for rounded boxes](#box-guideline-4-choose-consistent-corner-curvature-for-rounded-boxes)
-    - [Use different stroke widths when boxes are located inside other boxes TODO](#use-different-stroke-widths-when-boxes-are-located-inside-other-boxes-todo)
+    - [Box guideline 5: Choose different stroke widths when boxes are located inside other boxes](#box-guideline-5-choose-different-stroke-widths-when-boxes-are-located-inside-other-boxes)
 - [Arrows TODO](#arrows-todo)
     - [Each arrow has at least one arrow head TODO](#each-arrow-has-at-least-one-arrow-head-todo)
     - [Define exactly what the arrow directions mean TODO](#define-exactly-what-the-arrow-directions-mean-todo)
@@ -1032,15 +1032,27 @@ And this happened although the selected radius value for all boxes are same.
 But here the relative mode has been selected, and therefore the diagram tool needed to apply a larger radius to corners compared to the ones of the inner boxes.
 
 
-### Use different stroke widths when boxes are located inside other boxes (TODO)
+### Box guideline 5: Choose different stroke widths when boxes are located inside other boxes
 
-_TODO: describe that the most important shapes (arrows, boxes) should have a thicker border and/or a more contrast color than the less important shapes. Example: The border of a component/system should be thicker than the border for the network boundary box in which component/system are placed (assuming that the focus of your diagram really stays on these components/systems). So, if you want to put the focus really on the different network boundaries then either remove the components/systems completely or at least make the border of the network boundary boxes thicker than the component/system boxes._
+When you need to place boxes inside other boxes, then choose a different width for the strokes of the outer boxes than for the inner boxes.
+By choosing different stroke widths you guide the reader's attention to the more important parts of your diagram first.
 
-_TODO: Maybe add a statement about stroke style in here:_
+A typical scenario for using boxes inside other boxes would be when you want to represent that there are several systems located in different network zones.
+In such a scenario I would reckon that the systems and how they are connected to each other are more important than how they are distributed over these different network zones.
+Therefore, the strokes of the system boxes (and the connection arrows) should be thicker compared to the ones of the network boundery boxes.
 
-- _I normally would not used anything else but solid line style._
+----
 
-- _Using dash line style can become useful if you want to show that something is not yet there but planned for the future. But keep in mind that these dashed lines are more difficult to read and thus not so prominent than the solid lines._
+**Example:**
+The diagrams below compare the effect of having different stroke widths for different types of boxes.
+
+![different stroke widths](diagrams/box-guideline_different-stroke-widths-for-boxes-within-boxes.png) 
+
+The two diagrams on the left show how you can either put focus on the systems or on the network zones because of the differently sized stroke widths.
+
+In the diagram on the right all the stroke widths are all of the same size.
+The reader might interpret this as that the systems and how they are connected is equally important as to which systems are located within which network zone.
+This does not necessarily need to be a bad thing, but normally you can decide which aspect is more important than another, and in such situation it would be a missed opportunity if you would not use the stroke width to lead the reader's focus accordingly.
 
 
 ## Arrows (TODO)
