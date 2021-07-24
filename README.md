@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-07-23_
+_Martin Leggewie, 2021-07-24_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -60,7 +60,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Box guideline 1: Use same size for boxes which represent the same type of entity](#box-guideline-1-use-same-size-for-boxes-which-represent-the-same-type-of-entity)
     - [Box guideline 2: Choose width and height for inner-most boxes to be even multiples of canvas grid size](#box-guideline-2-choose-width-and-height-for-inner-most-boxes-to-be-even-multiples-of-canvas-grid-size)
     - [Box guideline 3: Choose suitable size for inner-most boxes to allow making good use of the snap-to-grid feature](#box-guideline-3-choose-suitable-size-for-inner-most-boxes-to-allow-making-good-use-of-the-snap-to-grid-feature)
-    - [Watch out when using rounded corners for boxes TODO](#watch-out-when-using-rounded-corners-for-boxes-todo)
+    - [Box guideline 4: Choose consistent corner curvature for rounded boxes](#box-guideline-4-choose-consistent-corner-curvature-for-rounded-boxes)
     - [Use different stroke widths when boxes are located inside other boxes TODO](#use-different-stroke-widths-when-boxes-are-located-inside-other-boxes-todo)
 - [Arrows TODO](#arrows-todo)
     - [Each arrow has at least one arrow head TODO](#each-arrow-has-at-least-one-arrow-head-todo)
@@ -971,11 +971,65 @@ The canvas grid squares are four times smaller, thus the boxes cover 16x8 canvas
 At this ratio, the snap-to-grid feature becames less useful because it can easier happen that you accidentally align boxes and connection just a little bit off.
 
 
-### Watch out when using rounded corners for boxes (TODO)
+### Box guideline 4: Choose consistent corner curvature for rounded boxes
 
-![slice 01](images/slice1.png)
+If you use boxes with rounded (instead of sharp) corners, then watch out what happens to the curvature of these rounded corners when you change the boxes' sizes.
+Depending on the diagram tool you use it can happen that when you change the size of the box by dragging one of its corners, the diagram tool not only changes the box's size (which you wanted), but also changes the curvature of the box's corners accordingly (which you most likely not wanted).
 
-_TODO: Give a hint that diagram applications typically allow you to choose  fixed value for roundness of the corners, compared to a relative value. Choose the fixed value option to avoid this ugly big rounded corners when you need to place small boxes inside big boxes. Or maybe consider to only use the rounded borders for the inner-most boxes, and use sharp corners for all the other boxes._
+A typical name for the attribute which lets you define the curvature is "radius" or "arc size".
+For the remainder of this chapter I will stick to the term "radius".
+
+The radius feature typically comes into two modes: **relative** and **absolute**.
+
+In my experience, diagram tools have the relative mode selected by default, and it is this mode which can cause problems when you need to change the box's size later.
+When the relative radius mode is selected, then the diagram tool will allow you to specify the radius value as a percentage.
+Now, when you - for example - would double the box's size in both width and height, then the diagram tool has to make the corners twice as round as before because it needs to follow the configured percentage value.
+
+Maybe this result is what you want.
+But if you mix up boxes with softer and harder curvatures, then this can confuse the reader because she might start to think about if these different curvatures would have a special meaning.
+Also, when you need to place boxes inside other boxes, the outer boxes would have softer curvatures, thus leaving less space inside the box.
+This can lead to situations in which you place text or inner boxes already in the curvature area of the outer box which at least to my eye looks not very pleasant.
+
+So, the best practice to prevent this kind of situation is to always choose the absolute radius mode.
+
+If you change this mode from relative to absolute, the diagram tool will also change the corresponding value from a percentage to an absolute value.
+Instead of something like "25%" the diagram tool would select a value of "20 pt" or just "10".
+How such an absolute value concretely influences how soft or hard the diagram tool draws the rounded corners is specific to the tool.
+You need to experiment how changing these absolute values affect how the tool draws the boxes.
+
+But with the absolute value, you can be sure that when you change the size of a box this has no effect on how soft or hard the corners will appear.
+Instead, the curvature does not change at all, and this is what you typically want.
+
+----
+
+**Example:**
+For starters, the diagrams below show how same-sized boxes with different curvatures might confuse the reader.
+
+![consistent corner curvature 1](diagrams/box-guideline_consistent-corner-curvature_1.png)
+
+To the left you see how both systems A and B are represented by boxes of same size and curvature. Nice!
+
+Compare this to the diagram on the right in which both boxes have the same size, but different curvatures.
+The box corners for "System B" have a softer curvature than the ones for "System A".
+The difference in the curvatures is so significant that the reader might think that this difference has a specific meaning.
+
+If you go for the harder or softer curvature is up to you, but you need to choose the same curvature for the same type of boxes.
+
+----
+
+**Example:**
+After the previous warm-up example let's now check how relative and absolute radius values affect how the diagram tool paints boxes and their corners in different sizes.
+
+![consistent corner curvature 2](diagrams/box-guideline_consistent-corner-curvature_2.png)
+
+As you can see in the left diagram, the actual size of any box does not affect how soft or hard their corners appear.
+All corners have the same absolute radius value, and therefore the diagram tool draws all the boxes with the same curvature.
+This not only appears pleasant to the eye (at least to my eyes), it also allows a consistent use of the available area inside the box.
+You can keep the corner areas empty and still stick to the intended horizontal and vertical gaps between the boxes.
+
+The diagram to right, however, shows that the corner curvature of the big surrounding "Network Zone" box is significantly softer than the ones of the inside "System" boxes.
+And this happened although the selected radius value for all boxes are same.
+But here the relative mode has been selected, and therefore the diagram tool needed to apply a larger radius to corners compared to the ones of the inner boxes.
 
 
 ### Use different stroke widths when boxes are located inside other boxes (TODO)
