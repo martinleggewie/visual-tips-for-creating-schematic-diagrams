@@ -838,6 +838,8 @@ Using a box in a diagram to represent something from the real world serves two p
 If we want to give that entity a name, we add the name as text inside the box.
 With this high abstraction, we do not tell the reader more than a) there is something which can be told apart from the rest, and b) this something has a name.
 This "reduced to the max" approach helps the reader to focus when we want to discuss a certain system landscape on a high level.
+Typically, such entities are systems and/or system components of some sort.
+![call dependency](diagrams/box_representing-systems.png)
 
 2. **Boxes inside other boxes represent a hierarchical structure.**
 Extending the simple abstraction from the previous paragraph:
@@ -845,6 +847,7 @@ We can draw boxes inside other boxes, forming a hierarchical structure (aka a tr
 With such a tree we tell the reader that some entity belongs to or is contained in another entity.
 A typical example in a system diagram would be a complete application which consists of several components.
 To represent this structure in a diagram, you would create a big box (the application), and in that big box you would add some smaller boxes, one box for each component.
+![call dependency](diagrams/box_representing-systems-containing-components.png)
 
 If you need to represent more types of information besides "There is something", "This something has a name", and "This something belongs to something else", you can use additional visual attributes like size, border stroke width, or background color as abstractions for these information.
 
