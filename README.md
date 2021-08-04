@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-07-24_
+_Martin Leggewie, 2021-08-04_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -62,7 +62,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Box guideline 3: Choose suitable size for inner-most boxes to allow making good use of the snap-to-grid feature](#box-guideline-3-choose-suitable-size-for-inner-most-boxes-to-allow-making-good-use-of-the-snap-to-grid-feature)
     - [Box guideline 4: Choose consistent corner curvature for rounded boxes](#box-guideline-4-choose-consistent-corner-curvature-for-rounded-boxes)
     - [Box guideline 5: Choose different stroke widths when boxes are located inside other boxes](#box-guideline-5-choose-different-stroke-widths-when-boxes-are-located-inside-other-boxes)
-- [Arrows TODO](#arrows-todo)
+- [Connection arrows](#connection-arrows)
     - [Each arrow has at least one arrow head TODO](#each-arrow-has-at-least-one-arrow-head-todo)
     - [Define exactly what the arrow directions mean TODO](#define-exactly-what-the-arrow-directions-mean-todo)
     - [Choose arrow heads to be big enough compared to diagram size TODO](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size-todo)
@@ -1055,9 +1055,26 @@ The reader might interpret this as that the systems and how they are connected i
 This does not necessarily need to be a bad thing, but normally you can decide which aspect is more important than another, and in such situation it would be a missed opportunity if you would not use the stroke width to lead the reader's focus accordingly.
 
 
-## Arrows (TODO)
+## Connection arrows
 
-_TODO: write introduction text to give an overview of what this section and its subsection contains._
+In case you have already read the chapter about [boxes](#boxes), then the following sentences might sound familiar to you:
+
+Besides the boxes, connection arrows are THE basic types of visual elements in a system diagrams.
+I consider boxes and connection arrows as the backbone tools when creating abstractions.
+
+While the box represents some kind of entity like a system or a system component, and - in case such a box contains another box - a "consists of" relationship, an arrow which connects two boxes represents any other kind of relationship between entities.
+In a system diagram, there are typically two types of such relationships:
+
+- **Call dependency:** The connection arrow shows that one system calls another system.
+![call dependency](diagrams/connectionarrow_call-dependency.png)
+
+- **Data flow:** The connection arrow shows that data flows from one system to another system.
+![call dependency](diagrams/connectionarrow_data-flow.png)
+
+Note the difference in the style of the arrow heads in the two diagrams above.
+Which arrow head style you use is mainly up to you, but of course if you would have both call dependency and data flow living together in your diagram, you need to choose a different arrow head style for each of the two relationship types.
+
+You will find more details about all of this in the following sections.
 
 
 ### Each arrow has at least one arrow head (TODO)
