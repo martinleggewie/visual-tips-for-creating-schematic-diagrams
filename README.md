@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-08-04_
+_Martin Leggewie, 2021-08-26_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -63,8 +63,9 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Box guideline 4: Choose consistent corner curvature for rounded boxes](#box-guideline-4-choose-consistent-corner-curvature-for-rounded-boxes)
     - [Box guideline 5: Choose different stroke widths when boxes are located inside other boxes](#box-guideline-5-choose-different-stroke-widths-when-boxes-are-located-inside-other-boxes)
 - [Connection arrows](#connection-arrows)
-    - [Each arrow has at least one arrow head TODO](#each-arrow-has-at-least-one-arrow-head-todo)
-    - [Define exactly what the arrow directions mean TODO](#define-exactly-what-the-arrow-directions-mean-todo)
+    - [Connection arrow guideline 1: Define what different types of connection arrows actually mean](#connection-arrow-guideline-1-define-what-different-types-of-connection-arrows-actually-mean)
+    - [Connection arrow guideline 2: Make different types of connection arrows appear differently enough](#connection-arrow-guideline-2-make-different-types-of-connection-arrows-appear-differently-enough)
+    - [Connection arrow guideline 3: For call dependencies provide exactly one arrow head](#connection-arrow-guideline-3-for-call-dependencies-provide-exactly-one-arrow-head)
     - [Choose arrow heads to be big enough compared to diagram size TODO](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size-todo)
     - [Avoid arrow heads in both directions for call dependencies TODO](#avoid-arrow-heads-in-both-directions-for-call-dependencies-todo)
     - [Attach a bigger dot at the arrow start TODO](#attach-a-bigger-dot-at-the-arrow-start-todo)
@@ -1080,12 +1081,122 @@ Which arrow head style you use is mainly up to you, but of course if you would h
 You will find more details about all of this in the following sections.
 
 
-### Each arrow has at least one arrow head (TODO)
+### Connection arrow guideline 1: Define what different types of connection arrows actually mean
+
+If you use connection arrows (and you most like will use them), then define the meaning(s) of each type of connection arrow in the legend.
+
+Yes, this is a repetition of the overall rule of [general guideline 2](#general-guideline-2-define-the-meaning-of-all-visual-elements-in-a-legend).
+But it can't be helped, I need to repeat and detail it here.
+I have seen it all too often that diagrams contained all types of connection arrows (or connection lines, when there were no arrow heads), but unfortunately they did not contain any explanation about their kind of meaning.
+
+If you don't define the meaning, then readers need to start guessing about it.
+They will ask themselves "Does this connection between these boxes mean a call dependency, or is just data flowing around, or both? Or is this even a different kind of animal?".
+And you don't want that.
+You want that the reader directly knows what kind of information you wanted to express with these connection arrows.
 
 
-### Define exactly what the arrow directions mean (TODO)
+### Connection arrow guideline 2: Make different types of connection arrows appear differently enough
 
-_TODO: Do they mean a call dependency? Or a data flow direction? In case you need both types of meanings, you need to define two types of arrows which look different enough from each other so that the reader has a chance to get the two different meanings. Bad example: Two dashed lines patterns which have a slightly different gap size. Good example: call dependency: black color and the same thickness as the borders of the components they connect; data flow: blue color and a bigger thickness than the call dependency arrows._
+If you want to express more than one type of relation in your diagram, make sure that each type of corresponding connection arrow looks different enough.
+Otherwise it will be more difficult than necessary for the reader to tell the difference.
+
+While this guideline of "make different types of things look different enough" is relevant for all kind of visual elements, it is most important for the connection arrows.
+And that is because even with thicker stroke widths the connection arrows are small when compared to the other elements of the system diagrams.
+
+----
+
+**Example:**
+The two system diagrams shown below visualize the very same system landscape, but they vary the visual representation style for the two types of relations.
+Check for yourself in which diagram you can better tell the difference between call dependency and data flow.
+
+![different types look different enough](diagrams/connectionarrow-guideline_different-types-look-different-enough.png)
+
+In the left diagram the visual styles for the call dependency on the one hand and data flow on the other hand differ quite a bit:
+
+| Style                       | Call dependency | Data flow |
+|-----------------------------|-----------------|-----------|
+| Stroke width                | medium          | thick     |
+| Stroke color                | black           | blue      |
+| Style of end arrow head     | filled triangle | two lines |
+| Style of start arrow head   | filled dot      | none      |
+| Lines connected with boxes? | yes             | no        |
+
+Compare this to the diagram on the right:
+There the only difference between the two visual styles is the shape of the arrow head end.
+The connection arrow end heads for call dependencies have the shape of a filled triangle, while the ones for the data flow have a "curvy" filled triangle.
+
+
+### Connection arrow guideline 3: For call dependencies provide exactly one arrow head
+
+If your connection arrow visualizes that a system calls another system, then provide exactly one arrow head at the end of the arrow.
+By using one arrow head (and not zero or two), you give your arrow its direction, and this clearly defines which system calls which other system:
+**The arrow always points from the caller to the callee**.
+
+If you have difficulty in memorizing this meaning of the direction (I surely had in the beginning!), try the following mnemonic in which the arrow represents that someone is looking at someone else.
+
+---
+**Example:** Given is this situation in which A is looking at B:
+
+```
+A --> B
+```
+B might notice that someone (or something?) is looking at it, but as the direction arrow points towards B, B cannot see who is looking.
+
+Now ask yourself:
+What will happen if you remove B?
+Let's see.
+
+```
+A --> (void)
+```
+
+If you remove B, then the outgoing arrow of A will direct into the void.
+So, A surely will detect that something has changed, and this means that A somewho depends on B.
+You cannot remove B without A noticing it.
+And this is exactly the case in a system landscape in which a system A wants to call system B.
+If B is not there anymore, then A cannot do this call, and thus A cannot work correctly.
+
+Now do the cross-check by asking yourself:
+What will happen if you remove A instead of B?
+This results in the following situation:
+
+```
+(void) --> B
+```
+
+Hm, from B's perspective not much has changed.
+There is still this incoming arrow, and that means that someone might be looking at B.
+But as B could not see who has been on the other side of the arrow in the first place, B is in pretty much the same situation as before.
+Translated into the world of system landscapes this means that system B still offers some functionality to the outside, even when there is no system A which would call system B.
+Apparently, system B does not depend on system A.
+
+---
+
+Now that we have defined the meaning of the direction of a call dependency arrow, let's discuss why you should always have such a direction and why there should be only one (and not two).
+
+If you just provide the connection arrow without any arrow head, you mainly tell the reader that you have no clue about which system needs which other system.
+Instead you only say that "somehow" these systems depend on or know each other.
+While this is maybe better than nothing, it is not good enough.
+If you are already at the point that you can create such a system diagram, you already need to know enough to be able to define which systems need which other systems.
+
+In the end, you must know about these dependencies anyways because otherwise you have no chance to detect if there are dependency cycles in your system landscape.
+And because of this, you also don't want to have the arrow heads at both ends of the connection arrow as this would just mean that both systems need each other, and that would directly be such a cycle.
+While there might be situations in which such a cycle might be acceptable, it is in general not a good idea to have them.
+
+----
+
+**Example:**
+In the diagrams shown below you can see the difference between having arrow heads and having no arrow heads.
+
+![have at least one arrow head](diagrams/connectionarrow-guideline_at-least-one-arrow-head.png)
+
+In the left diagram you can directly see which system calls which other system.
+For example, "System D" calls "System E" and "System F", while it is called by "System B" and "System C".
+Even without knowing more details about these call dependencies, you can get a first impression on which system might be the entry point of the whole landscape (it is "System A" because there are only outgoing dependency arrows), and which system seems to be more of a data sink (it is "System G" as it only has incoming dependency arrows).
+Besides, you can directly check if there are any call dependency cycles in this system landscape (there aren't, I double-checked this).
+
+If you compare this with the pendant on the right side, you notice that without arrow heads this important dependency information is missing.
+All these systems somehow have a relationship, but you cannot see where the entry points are or if there are any dependency cycles.
 
 
 ### Choose arrow heads to be big enough compared to diagram size (TODO)
