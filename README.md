@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-08-26_
+_Martin Leggewie, 2021-08-29_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -66,7 +66,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Connection arrow guideline 1: Define what different types of connection arrows actually mean](#connection-arrow-guideline-1-define-what-different-types-of-connection-arrows-actually-mean)
     - [Connection arrow guideline 2: Make different types of connection arrows appear differently enough](#connection-arrow-guideline-2-make-different-types-of-connection-arrows-appear-differently-enough)
     - [Connection arrow guideline 3: For call dependencies provide exactly one arrow head](#connection-arrow-guideline-3-for-call-dependencies-provide-exactly-one-arrow-head)
-    - [Choose arrow heads to be big enough compared to diagram size TODO](#choose-arrow-heads-to-be-big-enough-compared-to-diagram-size-todo)
+    - [Connection arrow guideline 4: Choose suitable size for arrow heads compared to the boxes' size](#connection-arrow-guideline-4-choose-suitable-size-for-arrow-heads-compared-to-the-boxes-size)
     - [Avoid arrow heads in both directions for call dependencies TODO](#avoid-arrow-heads-in-both-directions-for-call-dependencies-todo)
     - [Attach a bigger dot at the arrow start TODO](#attach-a-bigger-dot-at-the-arrow-start-todo)
 - [Color TODO](#color-todo)
@@ -1199,7 +1199,28 @@ If you compare this with the pendant on the right side, you notice that without 
 All these systems somehow have a relationship, but you cannot see where the entry points are or if there are any dependency cycles.
 
 
-### Choose arrow heads to be big enough compared to diagram size (TODO)
+### Connection arrow guideline 4: Choose suitable size for arrow heads compared to the boxes' size
+
+Make sure the size of the arrow heads fits in relation to the size of the boxes which the connection arrows connect.
+The arrow heads should not be too small so that the reader does not have problems to see arrows' direction.
+But of course, the arrow heads should also not be too big because otherwise the reader might find them too obtrusive and distracting.
+
+As this guideline defines a size relative to another size, it is not possible to provide absolute values for these sizes.
+Besides, such absolute values heavily depend on the concrete diagram tool you use.
+
+Therefore please check the following example diagrams to get a grip on the size relations.
+
+----
+
+**Example:**
+The diagrams below show the same system landscape, but with different sizes for the arrow heads.
+See for yourself what you like most (but of course you will find out that the examples are very opinionated).
+
+![suitable size for arrow heads](diagrams/connectionarrow-guideline_suitable-size-for-arrow-heads.png)
+
+As usual, the diagram on the left show the opinionated version of the system diagram in which the size of the arrow heads fit to the size of the boxes.
+
+Conversely, the two diagrams on the right show how the readability of the arrow heads (and therefore the direction of the connection arrows) becomes worse when the arrow heads are either too small or too big compared to the boxes size.
 
 
 ### Avoid arrow heads in both directions for call dependencies (TODO)
