@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-08-29_
+_Martin Leggewie, 2021-08-31_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -67,8 +67,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Connection arrow guideline 2: Make different types of connection arrows appear differently enough](#connection-arrow-guideline-2-make-different-types-of-connection-arrows-appear-differently-enough)
     - [Connection arrow guideline 3: For call dependencies provide exactly one arrow head](#connection-arrow-guideline-3-for-call-dependencies-provide-exactly-one-arrow-head)
     - [Connection arrow guideline 4: Choose suitable size for arrow heads compared to the boxes' size](#connection-arrow-guideline-4-choose-suitable-size-for-arrow-heads-compared-to-the-boxes-size)
-    - [Avoid arrow heads in both directions for call dependencies TODO](#avoid-arrow-heads-in-both-directions-for-call-dependencies-todo)
-    - [Attach a bigger dot at the arrow start TODO](#attach-a-bigger-dot-at-the-arrow-start-todo)
+    - [Connection arrow guideline 5: Provide a dot at the arrow start](#connection-arrow-guideline-5-provide-a-dot-at-the-arrow-start)
 - [Color TODO](#color-todo)
     - [Choose color so that audience's attention will be guided to the most important diagram elements first TODO](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first-todo)
     - [Color styles TODO](#color-styles-todo)
@@ -1223,16 +1222,32 @@ As usual, the diagram on the left show the opinionated version of the system dia
 Conversely, the two diagrams on the right show how the readability of the arrow heads (and therefore the direction of the connection arrows) becomes worse when the arrow heads are either too small or too big compared to the boxes size.
 
 
-### Avoid arrow heads in both directions for call dependencies (TODO)
+### Connection arrow guideline 5: Provide a dot at the arrow start
 
-_TODO. To me having arrow heads in both directions for a call dependency have a strong smell of being lazy or not precise enough. If you really have the same type of dependency in both directions, then make two arrows, one for each direction._
+If your connection arrows have a direction (and by now you hopefully agree that they normally should have one), then provide a dot symbol at the start of the arrows, in addition to the arrow head at their ends.
 
+By specifying the dot you explicitly tell the reader that this connection point really exists, that there is no discussion about it.
+If you don't use the dot, then it does not become so prominent and explicit.
+The reader might ask herself "Maybe the connection arrow just accidentally stop at the border of the box?
+Or maybe you have forgotten to think about if the connection point is really there?"
 
-### Attach a bigger dot at the arrow start (TODO)
+The dot at the start of the connection arrow becomes even more important if your system diagram contains so many boxes and connections that it is not possible anymore to avoid crossing lines.
+This can happen because of the limitations of a 2D projection constraint of a diagram.
+If all the connections have a dot at their starting points, then the reader can tell the difference between real connections and just crossing lines with no further meaning.
 
-_TODO. This is especially useful if you cannot avoid that arrows cross each other because then the audience can make a difference between a real connection or just the restriction of the 2D projection._
+----
 
-![slice 07](images/slice7.png)
+**Example:**
+The diagrams below show the same slightly complicated system landscape in two variants, one in which the connection arrows have dot at their starting points, one without such dots.
+
+![dot at the starting point of connection arrows](diagrams/connectionarrow-guideline_dot-at-starting-point.png)
+
+The difference between the left and the right diagram might be rather subtle.
+Still, the diagram on the left makes it a little bit easier for the reader to clearly identify the starting points of connection arrows.
+Because of these dots the reader can implicitly deduct that the crossings of several connection lines have no further meaning because there are no dots at these crossing points.
+(Yes, I know, in the example diagram it is possible to reduce the amount of crossing lines by routing them differently.
+I deliberately layouted the diagrams in that way to make the point.
+There are separate sections about layouting in the later parts of this article.)
 
 
 ## Color (TODO)
