@@ -68,7 +68,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Connection arrow guideline 3: For call dependencies provide exactly one arrow head](#connection-arrow-guideline-3-for-call-dependencies-provide-exactly-one-arrow-head)
     - [Connection arrow guideline 4: Choose suitable size for arrow heads compared to the boxes' size](#connection-arrow-guideline-4-choose-suitable-size-for-arrow-heads-compared-to-the-boxes-size)
     - [Connection arrow guideline 5: Provide a dot at the arrow start](#connection-arrow-guideline-5-provide-a-dot-at-the-arrow-start)
-- [Color TODO](#color-todo)
+- [Color](#color)
     - [Choose color so that audience's attention will be guided to the most important diagram elements first TODO](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first-todo)
     - [Color styles TODO](#color-styles-todo)
         - [Black border, normal fill TODO](#black-border-normal-fill-todo)
@@ -1250,9 +1250,57 @@ I deliberately layouted the diagrams in that way to make the point.
 There are separate sections about layouting in the later parts of this article.)
 
 
-## Color (TODO)
+## Color
 
-_TODO: write introduction text to give an overview of what this section and its subsection contains._
+In the earlier part of this article I have already described some [general guidelines](#general-guidelines) which partly related to the use of color.
+But these general guidelines were exactly that, namely general, but they did not really suggest how to apply and use color in a concrete scenario.
+I will catch up on this in this chapter.
+
+Maybe besides the size of an object, color can be the strongest attribute you can give to a visual element.
+For example, if you choose intensive colors for some elements and place them next to others with muted colors, the reader's eye will be first guided to the elements with the intensive colors.
+You can make good use of this and color your elements accordingly in order to guide the reader's eye in the way it makes sense for the concrete situation you want to visualize.
+
+Before we start with the concrete guidelines in the remainder of this chapter, let's first define some terminology related to color which I will be using the following sections (fear not, I will not go into all the physical nitty-gritty about [what color really is](https://en.wikipedia.org/wiki/Color), [how humans and other lifeforms perceive it](https://en.wikipedia.org/wiki/Color_vision), and why it is [impossible to create a black body](https://en.wikipedia.org/wiki/Black_body) in the real world).
+
+If we want to make use of color in our diagrams, we take care of the following three properties of color which you normally can select in a graphical application:
+
+- **Hue:** Defines the basic part of a given color. People typically mean the hue of a color when they talk about that this object has a different color than another object. Values for hue are represented as degrees and therefore stay within the interval [0..360]. For example, a hue value of 0° represents red, 120° green, and 240° blue.
+
+- **Saturation:** Defines how much gray there is in the color. If there is no gray in the color, then you get the brightest and, well, most saturated version of that hue. Values for saturation are represented as a percentage, hence stay within the interval [0..100]. A saturation value of 0% represents a gray value, whereas 100% represents the cleanest and brightest color.
+
+- **Lightness:** Defines how much white **or** black there is in the color. This sounds similar to the definition of saturation because, hey, gray is just a mix of black and white. But the "or" in "black or white" is actually an exclusive or. So either there is some white, or there is some black, but there cannot be white and black in the color (because then you would have a shade of gray, and that would affect the saturation). Lightness is also represented as a percentage, hence stay within the interval [0..100]. A lightness value of 0% means black, whereas a value of 100% means white.
+
+If you select either 0% or 100% for both saturation or lightness, then this will somehow sabotage the effect of other values.
+To be concrete:
+
+- If you select **saturation = 0%**, then **hue does not matter** anymore because you will end up in a shade of gray.
+
+- If you select **lightness = 0%**, then both **saturation and hue do not matter** because you end up in just black.
+
+- Likewise, if you select **lightness = 100%**, then again **saturation and hue do not matter** anymore because you will get just white.
+
+So, if you want to have the **hue in its purest form**, you need to **select saturation = 100% and lightness = 50%**.
+Yes, I know that this is a little bit confusing, but I did not invent this.
+And maybe there is some good reasoning for why color is defined like this in graphical applications.
+
+In the following example color grids you can see how these different values affect the resulting color.
+
+----
+
+**Example:**
+The color table below shows different values of hue in its purest form.
+![various values for hue](diagrams/color_hue-vs-sat-vs-light_sat100-light50.png)
+
+To demonstrate what effect saturation and lightness have on the color, the three color tables below show values for both saturation and lightness from 0% to 100% for three selected hue values.
+
+![various values for saturation and lightness with hue = 090%](diagrams/color_hue-vs-sat-vs-light_hue090.png)
+
+![various values for saturation and lightness with hue = 210%](diagrams/color_hue-vs-sat-vs-light_hue210.png)
+
+![various values for saturation and lightness with hue = 330%](diagrams/color_hue-vs-sat-vs-light_hue330.png)
+
+As these color tables also contain the values for saturation = 100% and lightness = 50% (middle row, right-most column), you will find the hue in its purest form there.
+Actually, these are the same colors which are also shown in the hue table above.
 
 
 ### Choose color so that audience's attention will be guided to the most important diagram elements first (TODO)
