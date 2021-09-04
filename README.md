@@ -1360,6 +1360,9 @@ _TODO: write introduction text to give an overview of what this section and its 
 
 ![slice 08](images/slice8.png)
 
+_Make a reference to the London underground map approach to motivate that we should not only focus on where the boxes are located, but also how the connection arrows are routed._
+_If we want to follow the London underground map approach, then connection arrows can only be bent in 45 degrees steps._
+_Maybe add a URL to an image of that London underground map from Harry Beck from 1933 to make it clear to the reader, especially when there is also a URL showing how the underground maps had looked before._
 
 ### Choose gap between boxes (TODO)
 
