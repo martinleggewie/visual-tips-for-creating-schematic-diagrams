@@ -68,6 +68,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Connection arrow guideline 3: For call dependencies provide exactly one arrow head](#connection-arrow-guideline-3-for-call-dependencies-provide-exactly-one-arrow-head)
     - [Connection arrow guideline 4: Choose suitable size for arrow heads compared to the boxes' size](#connection-arrow-guideline-4-choose-suitable-size-for-arrow-heads-compared-to-the-boxes-size)
     - [Connection arrow guideline 5: Provide a dot at the arrow start](#connection-arrow-guideline-5-provide-a-dot-at-the-arrow-start)
+    - [Connection arrow guideline 6: Use gaps instead of dots in case of crowded system diagram TODO](#connection-arrow-guideline-6-use-gaps-instead-of-dots-in-case-of-crowded-system-diagram-todo)
 - [Color](#color)
     - [Choose color so that audience's attention will be guided to the most important diagram elements first TODO](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first-todo)
     - [Color styles TODO](#color-styles-todo)
@@ -1249,6 +1250,11 @@ Because of these dots the reader can implicitly deduct that the crossings of sev
 (Yes, I know, in the example diagram it is possible to reduce the amount of crossing lines by routing them differently.
 I deliberately layouted the diagrams in that way to make the point.
 There are separate sections about layouting in the later parts of this article.)
+
+
+### Connection arrow guideline 6: Use gaps instead of dots in case of crowded system diagram (TODO)
+
+![gaps instead of dots](diagrams/connectionarrow-guideline_gaps-instead-of-dots.png)
 
 
 ## Color
