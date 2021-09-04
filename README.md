@@ -84,6 +84,7 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Connection routing path styles TODO](#connection-routing-path-styles-todo)
     - [Choose gap between boxes TODO](#choose-gap-between-boxes-todo)
 - [Closing words TODO](#closing-words-todo)
+- [Some more ideas for this article and/or a book](#some-more-ideas-for-this-article-andor-a-book)
 
 <!-- /TOC -->
 
@@ -1382,3 +1383,41 @@ _Maybe add a URL to an image of that London underground map from Harry Beck from
 - _Recommend my favorite graphical application for creating system diagrams (which is draw.io).
 Make clear that I am not related to draw.io in any way.
 This is not advertisement._
+
+
+---
+
+## Some more ideas for this article and/or a book
+
+In fact, I am currently thinking about extending this article even more, maybe create a book out of it.
+In a book I would have more room for going even more into details.
+
+Some ideas which I could/should cover:
+
+- **Demonstrate all the described guidelines in a complete example:** So far the reader has only seen separate guidelines, and I guess and hope that this has already been useful.
+But as I can tell from my own experience, the learning effect significantly improve if the reader can see all the guidelines in action.
+Therefore I need to create a complete example showcase.
+A possible way of doing this is this:
+    - Define the situation, explain the example system landscape, using a fictious company with a fictious existing and running software environment.
+    I think it is more fun for the reader if I would write this in the form of a novel in which the main protagonist (the software architect) joins the company and asks the IT people about their system.
+    Then, step by step the mystery of this system unveils, and the software architect can draw the system diagram step by step as well.
+    The reader can become part of this discussion between the protagonist and the IT people.
+    - I could show the first drawings done on paper (in fact, not on paper, but on my iPad using the pencil).
+    - Once the drawing is finished, the reader can already see how many systems there are and how they are connected to each other.
+    It only does not look so good, and it is difficult to understand.
+    Also, due to the nature of a drawing, the layouting and routing contains some quirks.
+    - To improve this and to finally really show the guidelines in action, the protagonist converts the drawing into a diagram using a graphics application.
+    Again, the reader could see step by step how the diagram evolves.
+    Whenever the protagonist applies a guideline, I would clearly mention the concrete guideline in the text so that the reader can check the guideline, if needed.
+
+- **Show a completely different way of visualizing dependencies:** Maybe the Circos software and its way of showing relations between entities in a circular way is something we could also use for dependencies between systems and system components?
+Check http://www.circos.ca for details.
+And check "Sandra Rendgen - Information Graphics", pages 113 and 202 for examples of how this has been used in a completely different context.
+
+- **Show evolvement of system landscapes over time:** Once we have managed to explain and visualize how our system landscape looks like, the very next and not exactly easier task is to show how this system landscape changes over time.
+This is a very typical task for us software architects because it is our task to explain to others how we think we can migrate our existing system landscape into something different in the coming future.
+So, if you need to show how a given system landscape evolves over time (that is, when new systems appear, when existing systems are changed, and when such existing systems finally disappear), then reserve a fixed spot for each system in your system diagram.
+Then you can arrange all the different versions of the system landscape over time in a flip book.
+The reader can do a quick traversal over all the different diagrams, and can quickly see the difference by switching back and forth through the sequence of diagrams.
+You can even improve this by showing intermediate diagrams in which the upcoming new systems are shown in green, whereas the systems which are about to be deleted are shown in red.
+It is no coincidence that I implemented a rudimentary version of this in https://github.com/martinleggewie/dalandscape.
