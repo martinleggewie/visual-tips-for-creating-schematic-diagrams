@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-08-31_
+_Martin Leggewie, 2021-09-05_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -67,8 +67,8 @@ If you want/need to create such diagrams yourself, then these tips can support y
     - [Connection arrow guideline 2: Make different types of connection arrows appear differently enough](#connection-arrow-guideline-2-make-different-types-of-connection-arrows-appear-differently-enough)
     - [Connection arrow guideline 3: For call dependencies provide exactly one arrow head](#connection-arrow-guideline-3-for-call-dependencies-provide-exactly-one-arrow-head)
     - [Connection arrow guideline 4: Choose suitable size for arrow heads compared to the boxes' size](#connection-arrow-guideline-4-choose-suitable-size-for-arrow-heads-compared-to-the-boxes-size)
-    - [Connection arrow guideline 5: Provide a dot at the arrow start](#connection-arrow-guideline-5-provide-a-dot-at-the-arrow-start)
-    - [Connection arrow guideline 6: Use gaps instead of dots in case of crowded system diagram TODO](#connection-arrow-guideline-6-use-gaps-instead-of-dots-in-case-of-crowded-system-diagram-todo)
+    - [Connection arrow guideline 5: Provide a dot at the arrow start in crowded diagrams](#connection-arrow-guideline-5-provide-a-dot-at-the-arrow-start-in-crowded-diagrams)
+    - [Connection arrow guideline 6: Use gaps at arrow crossings in crowded diagrams](#connection-arrow-guideline-6-use-gaps-at-arrow-crossings-in-crowded-diagrams)
 - [Color](#color)
     - [Choose color so that audience's attention will be guided to the most important diagram elements first TODO](#choose-color-so-that-audiences-attention-will-be-guided-to-the-most-important-diagram-elements-first-todo)
     - [Color styles TODO](#color-styles-todo)
@@ -1224,18 +1224,16 @@ As usual, the diagram on the left show the opinionated version of the system dia
 Conversely, the two diagrams on the right show how the readability of the arrow heads (and therefore the direction of the connection arrows) becomes worse when the arrow heads are either too small or too big compared to the boxes size.
 
 
-### Connection arrow guideline 5: Provide a dot at the arrow start
+### Connection arrow guideline 5: Provide a dot at the arrow start in crowded diagrams
 
-If your connection arrows have a direction (and by now you hopefully agree that they normally should have one), then provide a dot symbol at the start of the arrows, in addition to the arrow head at their ends.
+In case your system diagram gets a little bit crowded, then attach a dot at the start of the connection arrows.
 
-By specifying the dot you explicitly tell the reader that this connection point really exists, that there is no discussion about it.
-If you don't use the dot, then it does not become so prominent and explicit.
-The reader might ask herself "Maybe the connection arrow just accidentally stop at the border of the box?
-Or maybe you have forgotten to think about if the connection point is really there?"
+By adding this dot you explicitly inform the reader about the fact this connection arrow really starts at the box it is attached to.
+If you don't add the dot, then this fact does not become so prominent and explicit.
 
-The dot at the start of the connection arrow becomes even more important if your system diagram contains so many boxes and connections that it is not possible anymore to avoid crossing lines.
-This can happen because of the limitations of a 2D projection constraint of a diagram.
-If all the connections have a dot at their starting points, then the reader can tell the difference between real connections and just crossing lines with no further meaning.
+Simple diagrams do not have this problem because the reader can still overlook the whole landscape at once.
+But in more complicated diagrams the reader needs to follow each and every connection arrow separately.
+If you provide the dot, then it becomes easier for the reader to find the start and the end point of each arrow.
 
 ----
 
@@ -1252,9 +1250,28 @@ I deliberately layouted the diagrams in that way to make the point.
 There are separate sections about layouting in the later parts of this article.)
 
 
-### Connection arrow guideline 6: Use gaps instead of dots in case of crowded system diagram (TODO)
+### Connection arrow guideline 6: Use gaps at arrow crossings in crowded diagrams
 
-![gaps instead of dots](diagrams/connectionarrow-guideline_gaps-instead-of-dots.png)
+This guideline is an addition to the previous one:
+In case your system diagram is so crowded that you cannot avoid that certain connection arrows cross each other, then apply a gap at these crossings.
+
+If your system diagram contains a certain number of boxes and connection arrows which connect these boxes, then sooner or later you will reach the point at which you cannot avoid that some connection arrows cross each other.
+This can and will happen because of the limitations of the 2D projection constraint for such diagrams.
+
+Now, if the connection arrows' crossings show a gap, it becomes more apparent to the reader that these lines do not have anything to do with each other.
+The reader can tell the difference between real connections and just crossing lines with no further meaning.
+Without such a gap the reader might think that these crossings do have some meaning which she needs to understand when in fact there is nothing to them.
+
+----
+
+**Example:**
+Similar to the example in the previous guideline, the diagrams below show the same slightly complicated system landscape, again in two variants:
+One in which crossing lines show a gap, and one in which there is no such gap.
+
+![gaps for connection arrows crossings](diagrams/connectionarrow-guideline_gaps-at-crossings.png)
+
+The left diagram shows how it looks if the crossing connection arrows have this gap - the right shows how it looks if there is no such gap.
+For the reader the visualization with gaps is easier to understand, whereas when looking at the right diagram she might ask herself if or if not there is any connection between the lines at their crossing points.
 
 
 ## Color
