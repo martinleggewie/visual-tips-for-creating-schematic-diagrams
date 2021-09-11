@@ -17,7 +17,7 @@
 # Visual tips for system diagrams
 
 
-_Martin Leggewie, 2021-09-05_
+_Martin Leggewie, 2021-09-11_
 
 In this article I describe a collection of visual tips for creating so-called system diagrams.
 The purpose of such diagrams is to convey information about a system landscape to the audience, and be the basis for discussions.
@@ -1325,6 +1325,25 @@ To demonstrate what effect saturation and lightness have on the color, the three
 
 As these color tables also contain the values for saturation = 100% and lightness = 50% (middle row, right-most column), you will find the hue in its purest form there.
 Actually, these are the same colors which are also shown in the hue table above.
+
+Real-life graphics applications offer their users a dialog to select exactly these values.
+Following screenshot (taken from my personal favorite Affinity Designer) shows how you can fine-grainly select values for lightness and saturation by clicking in this square field in the center.
+
+![screenshot Affinity Designer color chooser hue](images/screenshot_affinitydesigner_color-chooser_hue.png)
+
+Such graphics applications typically also provide other view angles on selecting color.
+Following screenshots - again taken from Affinity Designer - each show how other combinations of hue, lightness, and saturation are put into focus.
+
+![screenshot Affinity Designer color chooser lightness](images/screenshot_affinitydesigner_color-chooser_lightness.png)
+
+![screenshot Affinity Designer color chooser saturation](images/screenshot_affinitydesigner_color-chooser_saturation.png)
+
+The following dialog (again a screenshot taken from Affinity Designer) shows my personal favorite when it comes to color choosing because it allows you to choose from all three types of value in a more or less evenly manner.
+Plus it avoids the redundancy of having areas of complete black (lightness = 0%) or white (lightness = 100%).
+Instead, the dialog only has one spot for each color.
+White and black are just sitting in the corners of the triangle shown in the center.
+
+![screenshot Affinity Designer color chooser HSL color wheel](images/screenshot_affinitydesigner_color-chooser_hsl-color-wheel.png)
 
 
 ### Choose color so that audience's attention will be guided to the most important diagram elements first (TODO)
